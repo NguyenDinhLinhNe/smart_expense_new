@@ -1,0 +1,33 @@
+# Dependency directories
+FE/node_modules/
+BE/venv/
+node_modules/
+venv/
+env/
+.env
+
+# Python build and cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+BE/instance/
+
+# Production build output
+FE/build/
+
+# IDEs and OS files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# Gemini and temporary agent logs
+.agents/
+.gemini/

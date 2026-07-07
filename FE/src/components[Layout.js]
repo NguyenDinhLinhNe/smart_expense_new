@@ -1,0 +1,195 @@
+import React, { useState, useEffect } from 'react';
+import { Outlet, useNavigate, NavLink, useLocation } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
+import { 
+  FaTachometerAlt, 
+  FaMoneyBillWave, 
+  FaPiggyBank, 
+  FaChartLine, 
+  FaRobot, 
+  FaSignOutAlt,
+  FaBars,
+  FaTimes,
+  FaUserShield,
+  FaWallet,
+  FaUserTie,
+  FaClock
+} from 'react-icons/fa';
+
+const Layout = () => {
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [time, setTime] = useState(new Date());
+
+  // Live ticking clock effect
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const handleLogout = () => {
+    logout();
+    navigate('/login');
+  };
+
+  const menuItems = [
+    { path: '/dashboard', icon: FaTachometerAlt, label: 'Dashboard', desc: 'Main control center' },
+    { path: '/transactions', icon: FaMoneyBillWave, label: 'Transactions', desc: 'Income & expenses' },
+    { path: '/budgets', icon: FaPiggyBank, label: 'Budgets', desc: 'Category allowances' },
+    { path: '/reports', icon: FaChartLine, label: 'Reports', desc: 'Financial analysis' },
+    { path: '/ai', icon: FaRobot, label: 'AI Insights', desc: 'Smart copilot chat' },
+  ];
+
+  if (user?.role === 'admin') {
+    menuItems.push({ path: '/admin', icon: FaUserShield, label: 'Admin Panel', desc: 'System management' });
+  }
+
+  // Determine page title based on route
+  const getPageDetails = () => {
+    switch (location.pathname) {
+      case '/dashboard':
+        return { title: 'Dashboard Control', desc: 'Welcome back to your Smart Expense Tracker control panel' };
+      case '/transactions':
+        return { title: 'Transactions Ledger', desc: 'Manage and monitor all your income and expenses' };
+      case '/budgets':
+        return { title: 'Budgets Planning', desc: 'Set monthly limits to build healthier financial habits' };
+      case '/reports':
+        return { title: 'Reports & Statistics', desc: 'Interactive analysis of your cashflows and breakdowns' };
+      case '/ai':
+        return { title: 'AI Copilot Advisor', desc: 'Get professional financial advice powered by Gemini AI' };
+      case '/admin':
+        return { title: 'System Administration', desc: 'Manage categories, check users, and monitor resources' };
+      default:
+        return { title: 'Expense Tracker', desc: 'Manage your finances intelligently' };
+    }
+  };
+
+  const pageDetails = getPageDetails();
+
+  const formatClock = (date) => {
+    const pad = (n) => n.toString().padStart(2, '0');
+    const day = pad(date.getDate());
+    const month = pad(date.getMonth() + 1);
+    const year = date.getFullYear();
+    const hh = pad(date.getHours());
+    const mm = pad(date.getMinutes());
+    const ss = pad(date.getSeconds());
+    return `${hh}:${mm}:${ss} - ${day}/${month}/${year}`;
+  };
+
+  return (
+    <div className="flex h-screen bg-[#090d16] text-white font-body overflow-hidden">
+      {/* Mobile sidebar toggle */}
+      <button
+        className="lg:hidden fixed top-5 left-5 z-50 p-2.5 bg-dark-card border border-dark-border rounded-xl text-white shadow-lg"
+        onClick={() => setSidebarOpen(!sidebarOpen)}
+      >
+        {sidebarOpen ? <FaTimes size={16} /> : <FaBars size={16} />}
+      </button>
+
+      {/* Sidebar navigation */}
+      <div className={`fixed lg:relative z-40 w-[270px] bg-[#0b0f19] h-full flex flex-col flex-shrink-0 border-r border-dark-border transition-transform duration-300 ${
+        sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
+      }`}>
+        {/* Brand header */}
+        <div className="p-6 flex items-center gap-3.5 border-b border-dark-border">
+          <div className="w-[42px] h-[42px] rounded-xl bg-gradient-to-br from-cyan-premium to-teal-premium flex items-center justify-center text-white text-lg shadow-lg shadow-cyan-premium/25">
+            <FaWallet className="text-xl" />
+          </div>
+          <div className="flex flex-col">
+            <h3 className="text-[15px] font-extrabold tracking-wide text-white uppercase font-heading">
+              SMART EXPENSE
+            </h3>
+            <span className="text-[10px] text-cyan-premium font-bold tracking-widest uppercase">
+              PLATFORM
+            </span>
+          </div>
+        </div>
+
+        {/* User profile card */}
+        <div className="px-6 py-4 flex items-center gap-3.5 bg-white/[0.01] border-b border-dark-border">
+          <div className="w-11 h-11 rounded-full bg-slate-900 border border-dark-border flex items-center justify-center text-cyan-premium text-base">
+            <FaUserTie size={18} />
+          </div>
+          <div className="flex flex-col overflow-hidden">
+            <h4 className="text-sm font-semibold text-white truncate">{user?.name || 'User'}</h4>
+            <span className="text-[11px] text-gray-500 capitalize">{user?.role || 'User'}</span>
+          </div>
+        </div>
+
+        {/* Menu Navigation */}
+        <nav className="flex-1 px-4.5 py-6 flex flex-col gap-1.5 overflow-y-auto">
+          {menuItems.map((item) => (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              className={({ isActive }) =>
+                `flex items-center gap-4 px-4.5 py-3 rounded-xl text-sm font-medium transition-all group ${
+                  isActive 
+                    ? 'bg-cyan-premium/10 text-cyan-premium font-bold border-l-3 border-cyan-premium rounded-l-none' 
+                    : 'text-gray-400 hover:text-white hover:bg-white/[0.02]'
+                }`
+              }
+              onClick={() => setSidebarOpen(false)}
+            >
+              {({ isActive }) => (
+                <>
+                  <item.icon className={`text-base transition-colors ${
+                    isActive ? 'text-cyan-premium' : 'text-gray-500 group-hover:text-white'
+                  }`} />
+                  <div className="flex flex-col">
+                    <span>{item.label}</span>
+                    <span className="text-[9px] text-gray-600 group-hover:text-gray-400 transition-colors font-normal -mt-0.5">{item.desc}</span>
+                  </div>
+                </>
+              )}
+            </NavLink>
+          ))}
+        </nav>
+
+        {/* Sidebar Footer - Logout */}
+        <div className="p-5 border-t border-dark-border">
+          <button
+            onClick={handleLogout}
+            className="w-full py-2.5 bg-transparent border border-rose-premium/20 hover:border-rose-premium/100 hover:bg-rose-premium/10 rounded-xl text-rose-premium text-xs font-semibold tracking-wider uppercase flex items-center justify-center gap-2.5 transition-all active:scale-95"
+          >
+            <FaSignOutAlt size={13} />
+            <span>LOGOUT SYSTEM</span>
+          </button>
+        </div>
+      </div>
+
+      {/* Main Container */}
+      <div className="flex-1 flex flex-col h-full overflow-hidden">
+        {/* Top Header */}
+        <header className="h-20 border-b border-dark-border px-8 flex justify-between items-center bg-[#090d16]/30 backdrop-blur-md flex-shrink-0 relative">
+          <div className="flex flex-col lg:pl-0 pl-14">
+            <h1 className="text-[17px] font-extrabold text-white font-heading">{pageDetails.title}</h1>
+            <p className="text-xs text-gray-500 mt-0.5 hidden sm:block">{pageDetails.desc}</p>
+          </div>
+          
+          <div className="flex items-center gap-4.5">
+            {/* Live Ticking Clock */}
+            <div className="flex items-center gap-2.5 bg-white/[0.02] border border-dark-border px-4 py-2 rounded-full text-xs font-semibold text-cyan-premium shadow-md shadow-cyan-premium/5">
+              <FaClock className="text-cyan-premium animate-spin-slow" style={{ animationDuration: '8s' }} />
+              <span className="font-mono tracking-wide">{formatClock(time)}</span>
+            </div>
+          </div>
+        </header>
+
+        {/* View container */}
+        <div className="flex-1 p-6 lg:p-8 overflow-y-auto">
+          <div className="max-w-7xl mx-auto animate-fade-in">
+            <Outlet />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Layout;

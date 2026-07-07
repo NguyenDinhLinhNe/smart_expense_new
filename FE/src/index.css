@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-main: #090d16;
+  --bg-card: #101622;
+  --bg-glass: rgba(16, 22, 34, 0.65);
+  --bg-glass-hover: rgba(26, 34, 52, 0.8);
+  --border-glass: rgba(255, 255, 255, 0.07);
+  --border-glass-focus: rgba(6, 182, 212, 0.4);
+  
+  --cyan: #06b6d4;
+  --cyan-glow: rgba(6, 182, 212, 0.3);
+  --purple: #8b5cf6;
+  --purple-glow: rgba(139, 92, 246, 0.3);
+  --teal: #14b8a6;
+  
+  --emerald: #10b981;
+  --emerald-glow: rgba(16, 185, 129, 0.15);
+  --amber: #f59e0b;
+  --amber-glow: rgba(245, 158, 11, 0.15);
+  --rose: #f43f5e;
+  --rose-glow: rgba(244, 63, 94, 0.15);
+  
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+[data-theme="light"] {
+  --bg-main: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.8);
+  --bg-glass-hover: rgba(241, 245, 249, 0.9);
+  --border-glass: rgba(15, 23, 42, 0.08);
+  --border-glass-focus: rgba(6, 182, 212, 0.6);
+  
+  --cyan-glow: rgba(6, 182, 212, 0.15);
+  --purple-glow: rgba(139, 92, 246, 0.15);
+  --emerald-glow: rgba(16, 185, 129, 0.1);
+  --amber-glow: rgba(245, 158, 11, 0.1);
+  --rose-glow: rgba(244, 63, 94, 0.1);
+}
+
+/* Light Theme Text Color Overrides */
+[data-theme="light"] body {
+  color: #0f172a;
+}
+[data-theme="light"] .text-white {
+  color: #0f172a !important;
+}
+[data-theme="light"] .text-gray-300 {
+  color: #334155 !important;
+}
+[data-theme="light"] .text-gray-400 {
+  color: #475569 !important;
+}
+[data-theme="light"] .text-gray-500 {
+  color: #64748b !important;
+}
+[data-theme="light"] select option {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+/* Light Mode Inputs and Forms overrides */
+[data-theme="light"] input,
+[data-theme="light"] select,
+[data-theme="light"] textarea,
+[data-theme="light"] .bg-\[\#0f172a\]\/80,
+[data-theme="light"] .bg-gradient-to-br input,
+[data-theme="light"] .bg-gradient-to-br input.text-white {
+  background-color: #f8fafc !important; /* Slate-50 */
+  color: #0f172a !important; /* Slate-900 */
+  border-color: #cbd5e1 !important; /* Slate-300 */
+}
+
+[data-theme="light"] input:focus,
+[data-theme="light"] select:focus,
+[data-theme="light"] textarea:focus {
+  border-color: #06b6d4 !important;
+  box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.2) !important;
+}
+
+[data-theme="light"] ::placeholder,
+[data-theme="light"] input::placeholder {
+  color: #64748b !important; /* Slate-500 */
+  opacity: 0.8 !important;
+}
+
+/* Light Mode outer backgrounds of Login / Register pages */
+[data-theme="light"] .min-h-screen.bg-gradient-to-br {
+  background: #f1f5f9 !important;
+}
+
+/* Light Mode Gradient text fallback */
+[data-theme="light"] .text-transparent {
+  color: #0f172a !important;
+  background-clip: unset !important;
+  -webkit-background-clip: unset !important;
+  background-image: none !important;
+}
+
+/* Exceptions: Keep text white for buttons, alerts, badges, and icons with backgrounds */
+[data-theme="light"] button.text-white,
+[data-theme="light"] .btn-text-white,
+[data-theme="light"] .bg-gradient-to-r .text-white,
+[data-theme="light"] .bg-gradient-to-r span,
+[data-theme="light"] button.bg-gradient-to-r,
+[data-theme="light"] button.bg-cyan-premium,
+[data-theme="light"] button.bg-emerald-premium,
+[data-theme="light"] button.bg-rose-premium,
+[data-theme="light"] button.bg-purple-premium,
+[data-theme="light"] .bg-emerald-premium .text-white,
+[data-theme="light"] .bg-rose-premium .text-white,
+[data-theme="light"] .bg-cyan-premium .text-white,
+[data-theme="light"] .bg-purple-premium .text-white,
+[data-theme="light"] .bg-gradient-to-br .text-white,
+[data-theme="light"] .text-emerald-premium,
+[data-theme="light"] .text-rose-premium,
+[data-theme="light"] .text-cyan-premium,
+[data-theme="light"] .text-purple-premium {
+  color: #ffffff !important;
+}
+
+/* Specific elements to keep color intact */
+[data-theme="light"] .text-cyan-premium {
+  color: #0891b2 !important;
+}
+[data-theme="light"] .text-purple-premium {
+  color: #7c3aed !important;
+}
+[data-theme="light"] .text-emerald-premium {
+  color: #059669 !important;
+}
+[data-theme="light"] .text-rose-premium {
+  color: #e11d48 !important;
+}
+
+@layer base {
+  body {
+    @apply bg-dark-main font-body;
+    background-color: var(--bg-main);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold tracking-tight;
+  }
+}
+
+/* Premium Glassmorphic utilities */
+.glass-panel {
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: var(--transition-smooth);
+}
+
+.glass-panel:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cyan);
+}
+
+/* KPI Card Glow and Animation classes */
+.kpi-glow {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  filter: blur(35px);
+  top: -50px;
+  right: -50px;
+  opacity: 0.15;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.kpi-card-hover {
+  transition: var(--transition-bounce);
+}
+
+.kpi-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Modal and Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalScaleUp {
+  from { transform: scale(0.9) translateY(20px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.animate-modal-scale {
+  animation: modalScaleUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Glass table row hover */
+.modern-table-row:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Liquid Wave & Laser Scanner Animations */
+.wave-jar {
+  position: relative;
+  width: 90px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px 12px 18px 18px;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.wave-jar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 60%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0 0 4px 4px;
+}
+
+.wave-liquid {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(180deg, var(--cyan) 0%, #0891b2 100%);
+  transition: height 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+}
+
+/* Liquid swirling waves created by rotating offset masks */
+.wave-liquid::before,
+.wave-liquid::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  top: -240px;
+  left: -80px;
+  background: #101622; /* Matches the jar's card background colors */
+  border-radius: 42%;
+  animation: wave-rotate 9s infinite linear;
+  pointer-events: none;
+}
+
+.wave-liquid::after {
+  background: rgba(16, 22, 34, 0.55);
+  border-radius: 38%;
+  animation: wave-rotate 13s infinite linear;
+}
+
+@keyframes wave-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Laser sweep scan animation */
+@keyframes laserSweep {
+  0% { top: 0%; opacity: 0.3; }
+  50% { top: 100%; opacity: 1; }
+  100% { top: 0%; opacity: 0.3; }
+}
+
+.animate-laser-sweep {
+  animation: laserSweep 3s infinite ease-in-out;
+}
+
+/* Glowing slow rotation */
+.animate-spin-slow {
+  animation: spin 12s infinite linear;
+}
+
+/* Dynamic Arbitrary Background Overrides for Light Mode */
+[data-theme="light"] .bg-\[\#090d16\] {
+  background-color: var(--bg-main) !important;
+}
+[data-theme="light"] .bg-\[\#101622\]\/40 {
+  background-color: rgba(255, 255, 255, 0.45) !important;
+}
+[data-theme="light"] .bg-\[\#101622\]\/50 {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+[data-theme="light"] .bg-\[\#101622\]\/60 {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+}
+[data-theme="light"] .bg-\[\#101622\]\/65 {
+  background-color: rgba(255, 255, 255, 0.65) !important;
+}
+[data-theme="light"] .bg-\[\#101622\]\/70 {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+[data-theme="light"] .bg-\[\#101622\]\/90 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+[data-theme="light"] .bg-\[\#101622\]\/95 {
+  background-color: var(--bg-card) !important;
+}
+[data-theme="light"] .bg-\[\#101622\]\/98 {
+  background-color: var(--bg-card) !important;
+}
+[data-theme="light"] .bg-\[\#0b0f19\]\/60 {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+}
+[data-theme="light"] .bg-\[\#0b0f19\]\/80 {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+[data-theme="light"] .bg-\[\#0f172a\]\/60 {
+  background-color: rgba(241, 245, 249, 0.6) !important;
+}
+[data-theme="light"] .bg-\[\#0f172a\]\/80 {
+  background-color: rgba(241, 245, 249, 0.8) !important;
+}
+[data-theme="light"] .bg-\[\#0f172a\]\/85 {
+  background-color: rgba(241, 245, 249, 0.85) !important;
+}
+[data-theme="light"] .wave-liquid::before {
+  background: var(--bg-card) !important;
+}
+[data-theme="light"] .wave-liquid::after {
+  background: rgba(255, 255, 255, 0.55) !important;
+}
+[data-theme="light"] code.bg-\[\#090d16\] {
+  background-color: #f1f5f9 !important;
+  color: #0891b2 !important;
+}
