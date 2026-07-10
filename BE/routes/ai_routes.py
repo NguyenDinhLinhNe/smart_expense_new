@@ -607,14 +607,25 @@ Guidelines to deliver maximum comfort and elite companion experience:
         if is_handled_offline:
             return jsonify({'response': offline_response}), 200
         
-        if any(kw in message_lower for kw in ['hi', 'hello', 'chào', 'xin chào', 'greetings', 'bạn là ai', 'who are you', 'help', 'giúp']):
+        def match_keywords(text, kw_list):
+            words = set(re.findall(r'\b\w+\b', text))
+            for kw in kw_list:
+                if ' ' in kw:
+                    if kw in text:
+                        return True
+                else:
+                    if kw in words:
+                        return True
+            return False
+
+        if match_keywords(message_lower, ['hi', 'hello', 'chào', 'xin chào', 'greetings', 'bạn là ai', 'who are you', 'help', 'giúp']):
 
             if is_vietnamese:
                 response = f"Chào bạn thân mến **{user_name}**! 🤗 Tôi là **Cố vấn & Tri kỷ Tài chính AI** của bạn đây. Hôm nay của bạn thế nào? \n\nTôi ở đây không chỉ để cùng bạn tối ưu hóa hầu bao mà còn muốn lắng nghe, chia sẻ và đem lại cho bạn cảm giác thoải mái nhất trong cuộc sống! Hãy kể cho tôi nghe mọi điều nhé. ☕✨\n\nBạn có thể hỏi tôi bất cứ điều gì hoặc dùng nhanh các lệnh ấm áp này:\n*   **Xem chi tiêu tháng này:** Gõ *'chi tiêu'* hoặc *'mình tiêu bao nhiêu rồi'* 📊\n*   **Kiểm tra thu nhập:** Gõ *'thu nhập'* 💰\n*   **Nghe lời khuyên tiết kiệm:** Gõ *'tiết kiệm'* hoặc *'tư vấn'* 💡\n*   **Xem hạn mức ngân sách:** Gõ *'ngân sách'* 🛡️"
             else:
                 response = f"Hello my dear friend **{user_name}**! 🤗 I am your **AI Financial Companion & Soulmate**. How are you feeling today?\n\nI am here not just to crunch numbers, but to listen, chat, and make you feel completely comfortable and supported. Tell me anything! ☕✨\n\nYou can talk about anything or ask me to check on your figures:\n*   **Analyze monthly spending:** Type *'spent'* or *'expenses'* 📊\n*   **Check income:** Type *'income'* or *'salary'* 💰\n*   **Get cozy savings advice:** Type *'save'* or *'saving advice'* 💡\n*   **Verify budgets:** Type *'budget'* or *'limit'* 🛡️"
 
-        elif any(kw in message_lower for kw in ['tiết kiệm', 'khuyên', 'tư vấn', 'lời khuyên', 'save', 'saving', 'advice', 'kế hoạch', 'plan', 'tiêu dùng', 'phân bổ']):
+        elif match_keywords(message_lower, ['tiết kiệm', 'khuyên', 'tư vấn', 'lời khuyên', 'save', 'saving', 'advice', 'kế hoạch', 'plan', 'tiêu dùng', 'phân bổ']):
 
             recs = ai_service.analyze_spending_patterns(user_id)
             recs_text = ""
@@ -676,29 +687,26 @@ Guidelines to deliver maximum comfort and elite companion experience:
                            f"{plan_text}" \
                            f"👉 *Note:* You can type **'budget'** to check if your category allocations are healthy and safe! 🤗"
 
-        elif any(kw in message_lower for kw in ['chi tiêu', 'đã tiêu', 'tiêu hao', 'tiêu bao nhiêu', 'spent', 'spending', 'expense']):
+        elif match_keywords(message_lower, ['bất thường', 'anomaly', 'anomalies', 'unusual', 'spikes']):
 
-            cash_flow = income - spent
+            anomalies = ai_service.detect_anomalies(user_id)
+            anom_text = ""
+            for a in anomalies[:5]:
+                anom_text += f"*   Ngày `{a['date'][:10]}`: Chi **{format_vnd_py(a['amount'])}** ở danh mục *{a['category']}* (Bất thường: {'Tăng vọt 📈' if a['is_high'] else 'Nhỏ lẻ'})\n"
+                
+            if not anomalies:
+                anom_text = "*Tuyệt vời quá! Mình không phát hiện giao dịch bất thường nào luôn. Chi tiêu của bạn vô cùng ngăn nắp và ổn định!*" if is_vietnamese else "*Superb! No unusual spikes detected. Your transactions are beautifully organized!*"
+                
             if is_vietnamese:
-                cash_flow_status = f"Dòng tiền thặng dư **+{format_vnd_py(cash_flow)}** (Tuyệt vời quá bạn ơi! Bạn đang làm rất tốt! 🎉)" if cash_flow >= 0 else f"Dòng tiền đang tạm thời thâm hụt nhẹ **-{format_vnd_py(abs(cash_flow))}** (Đừng lo lắng nhé bạn thân mến, tụi mình sẽ cùng tìm cách cân bằng lại mà! 🤗)"
-                response = f"### 📊 Báo Cáo Chi Tiêu Của Bạn Thân Yêu ({current_month}/{current_year})\n\n" \
-                           f"Tụi mình cùng nhìn lại một chút số liệu tháng này nha:\n\n" \
-                           f"*   **Tổng đã chi tiêu:** `{format_vnd_py(spent)}`\n" \
-                           f"*   **Tổng thu nhập đã nhận:** `{format_vnd_py(income)}`\n" \
-                           f"*   **Dòng tiền hiện tại:** {cash_flow_status}\n" \
-                           f"*   **Danh mục tiêu hao lớn nhất:** *{top_cat_name}* (`{format_vnd_py(top_cat_spent)}`)\n\n" \
-                           f"💡 *Gợi ý nhỏ:* Đừng quá khắt khe với bản thân nha. Bạn có thể gõ *'tiết kiệm'* để cùng mình lên một kế hoạch phân bổ nhẹ nhàng chuẩn 50/30/20 nhé! ✨"
+                response = f"### 🚨 Rà Soát Chi Tiêu Bất Thường Cùng AI\n\n" \
+                           f"Mình đã rà soát lại nhật ký để giúp bạn an tâm tuyệt đối nè:\n\n" \
+                           f"{anom_text}"
             else:
-                cash_flow_status = f"Surplus of **+${cash_flow:.2f}** (So proud of you! Keep it up! 🎉)" if cash_flow >= 0 else f"Deficit of **-${abs(cash_flow):.2f}** (Hey, don't worry! We will adjust things gently together! 🤗)"
-                response = f"### 📊 Monthly Spending Breakdown for {datetime.now().strftime('%B %Y')}\n\n" \
-                           f"Let's review how we are doing this month, my friend:\n\n" \
-                           f"*   **Total Spent:** `${spent:.2f}`\n" \
-                           f"*   **Total Income:** `${income:.2f}`\n" \
-                           f"*   **Net Cash Flow:** {cash_flow_status}\n" \
-                           f"*   **Top Spending Category:** *{top_cat_name}* (`${top_cat_spent:.2f}`)\n\n" \
-                           f"💡 *Cozy Note:* Be kind to yourself! Ask me for *'savings advice'* to see how we can smoothly balance things out! ✨"
- 
-        elif any(kw in message_lower for kw in ['ngân sách', 'hạn mức', 'budget', 'limit', 'limits']):
+                response = f"### 🚨 AI Spending Anomaly Check\n\n" \
+                           f"I ran a quick check across your logs to ensure everything is perfectly safe and sound:\n\n" \
+                           f"{anom_text}"
+
+        elif match_keywords(message_lower, ['ngân sách', 'hạn mức', 'budget', 'limit', 'limits']):
 
             budget_details = ""
             overrun_count = 0
@@ -734,8 +742,8 @@ Guidelines to deliver maximum comfort and elite companion experience:
                            f"*   **Total Protected Budget:** `${total_budget:.2f}`\n" \
                            f"*   **Status:** {alert_text}\n\n" \
                            f"**Budget Details:**\n{budget_details}"
- 
-        elif any(kw in message_lower for kw in ['danh mục cao nhất', 'chi nhiều nhất', 'top category', 'highest', 'cao nhất']):
+
+        elif match_keywords(message_lower, ['danh mục cao nhất', 'chi nhiều nhất', 'top category', 'highest', 'cao nhất']):
 
             if top_cat_spent > 0:
                 if is_vietnamese:
@@ -746,25 +754,28 @@ Guidelines to deliver maximum comfort and elite companion experience:
                     response = f"### 🏆 Top Spending Category\n\n" \
                                f"This month, your heart and wallet went most towards **{top_cat_name}** with a total of **${top_cat_spent:.2f}**.\n\n" \
                                f"💡 *Friendly Tip:* If this category brought you genuine joy and comfort, it's absolutely worth it! But if you're looking to save a bit more next month, we can gently set a tiny budget cap for **{top_cat_name}** together! ✨"
- 
-        elif any(kw in message_lower for kw in ['bất thường', 'anomaly', 'anomalies', 'unusual', 'spikes']):
 
-            anomalies = ai_service.detect_anomalies(user_id)
-            anom_text = ""
-            for a in anomalies[:5]:
-                anom_text += f"*   Ngày `{a['date'][:10]}`: Chi **{format_vnd_py(a['amount'])}** ở danh mục *{a['category']}* (Bất thường: {'Tăng vọt 📈' if a['is_high'] else 'Nhỏ lẻ'})\n"
-                
-            if not anomalies:
-                anom_text = "*Tuyệt vời quá! Mình không phát hiện giao dịch bất thường nào luôn. Chi tiêu của bạn vô cùng ngăn nắp và ổn định!*" if is_vietnamese else "*Superb! No unusual spikes detected. Your transactions are beautifully organized!*"
-                
+        elif match_keywords(message_lower, ['chi tiêu', 'đã tiêu', 'tiêu hao', 'tiêu bao nhiêu', 'spent', 'spending', 'expense']):
+
+            cash_flow = income - spent
             if is_vietnamese:
-                response = f"### 🚨 Rà Soát Chi Tiêu Bất Thường Cùng AI\n\n" \
-                           f"Mình đã rà soát lại nhật ký để giúp bạn an tâm tuyệt đối nè:\n\n" \
-                           f"{anom_text}"
+                cash_flow_status = f"Dòng tiền thặng dư **+{format_vnd_py(cash_flow)}** (Tuyệt vời quá bạn ơi! Bạn đang làm rất tốt! 🎉)" if cash_flow >= 0 else f"Dòng tiền đang tạm thời thâm hụt nhẹ **-{format_vnd_py(abs(cash_flow))}** (Đừng lo lắng nhé bạn thân mến, tụi mình sẽ cùng tìm cách cân bằng lại mà! 🤗)"
+                response = f"### 📊 Báo Cáo Chi Tiêu Của Bạn Thân Yêu ({current_month}/{current_year})\n\n" \
+                           f"Tụi mình cùng nhìn lại một chút số liệu tháng này nha:\n\n" \
+                           f"*   **Tổng đã chi tiêu:** `{format_vnd_py(spent)}`\n" \
+                           f"*   **Tổng thu nhập đã nhận:** `{format_vnd_py(income)}`\n" \
+                           f"*   **Dòng tiền hiện tại:** {cash_flow_status}\n" \
+                           f"*   **Danh mục tiêu hao lớn nhất:** *{top_cat_name}* (`{format_vnd_py(top_cat_spent)}`)\n\n" \
+                           f"💡 *Gợi ý nhỏ:* Đừng quá khắt khe với bản thân nha. Bạn có thể gõ *'tiết kiệm'* để cùng mình lên một kế hoạch phân bổ nhẹ nhàng chuẩn 50/30/20 nhé! ✨"
             else:
-                response = f"### 🚨 AI Spending Anomaly Check\n\n" \
-                           f"I ran a quick check across your logs to ensure everything is perfectly safe and sound:\n\n" \
-                           f"{anom_text}"
+                cash_flow_status = f"Surplus of **+${cash_flow:.2f}** (So proud of you! Keep it up! 🎉)" if cash_flow >= 0 else f"Deficit of **-${abs(cash_flow):.2f}** (Hey, don't worry! We will adjust things gently together! 🤗)"
+                response = f"### 📊 Monthly Spending Breakdown for {datetime.now().strftime('%B %Y')}\n\n" \
+                           f"Let's review how we are doing this month, my friend:\n\n" \
+                           f"*   **Total Spent:** `${spent:.2f}`\n" \
+                           f"*   **Total Income:** `${income:.2f}`\n" \
+                           f"*   **Net Cash Flow:** {cash_flow_status}\n" \
+                           f"*   **Top Spending Category:** *{top_cat_name}* (`${top_cat_spent:.2f}`)\n\n" \
+                           f"💡 *Cozy Note:* Be kind to yourself! Ask me for *'savings advice'* to see how we can smoothly balance things out! ✨"
  
         else:
 

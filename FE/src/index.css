@@ -12,6 +12,9 @@
   --border-glass: rgba(255, 255, 255, 0.07);
   --border-glass-focus: rgba(6, 182, 212, 0.4);
   
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  
   --cyan: #06b6d4;
   --cyan-glow: rgba(6, 182, 212, 0.3);
   --purple: #8b5cf6;
@@ -33,39 +36,50 @@
 }
 
 [data-theme="light"] {
-  --bg-main: #f1f5f9;
-  --bg-card: #ffffff;
-  --bg-glass: rgba(255, 255, 255, 0.8);
-  --bg-glass-hover: rgba(241, 245, 249, 0.9);
-  --border-glass: rgba(15, 23, 42, 0.08);
-  --border-glass-focus: rgba(6, 182, 212, 0.6);
+  --bg-main: #f5e6d8;
+  --bg-card: #fdfbf7;
+  --bg-glass: rgba(253, 251, 247, 0.85);
+  --bg-glass-hover: rgba(245, 230, 216, 0.9);
+  --border-glass: rgba(223, 122, 92, 0.15);
+  --border-glass-focus: rgba(223, 122, 92, 0.6);
   
-  --cyan-glow: rgba(6, 182, 212, 0.15);
-  --purple-glow: rgba(139, 92, 246, 0.15);
-  --emerald-glow: rgba(16, 185, 129, 0.1);
-  --amber-glow: rgba(245, 158, 11, 0.1);
-  --rose-glow: rgba(244, 63, 94, 0.1);
+  --text-main: #4a3728;
+  --text-muted: #7d6553;
+  
+  --cyan: #df7a5c;
+  --cyan-glow: rgba(223, 122, 92, 0.25);
+  --purple: #f4a261;
+  --purple-glow: rgba(244, 162, 97, 0.25);
+  --teal: #e76f51;
+  
+  --emerald: #5c8f75;
+  --emerald-glow: rgba(92, 143, 117, 0.15);
+  --amber: #e9c46a;
+  --amber-glow: rgba(233, 196, 106, 0.15);
+  --rose: #e76f51;
+  --rose-glow: rgba(231, 111, 81, 0.15);
 }
 
-/* Light Theme Text Color Overrides */
+/* Global Text Color Overrides based on system CSS variables */
+.text-white {
+  color: var(--text-main) !important;
+}
+.text-gray-300 {
+  color: var(--text-muted) !important;
+}
+.text-gray-400 {
+  color: var(--text-muted) !important;
+}
+.text-gray-500 {
+  color: var(--text-muted) !important;
+}
+
 [data-theme="light"] body {
-  color: #0f172a;
-}
-[data-theme="light"] .text-white {
-  color: #0f172a !important;
-}
-[data-theme="light"] .text-gray-300 {
-  color: #334155 !important;
-}
-[data-theme="light"] .text-gray-400 {
-  color: #475569 !important;
-}
-[data-theme="light"] .text-gray-500 {
-  color: #64748b !important;
+  color: var(--text-main);
 }
 [data-theme="light"] select option {
-  background-color: #ffffff !important;
-  color: #0f172a !important;
+  background-color: var(--bg-card) !important;
+  color: var(--text-main) !important;
 }
 
 /* Light Mode Inputs and Forms overrides */
@@ -120,46 +134,61 @@
 [data-theme="light"] .bg-rose-premium .text-white,
 [data-theme="light"] .bg-cyan-premium .text-white,
 [data-theme="light"] .bg-purple-premium .text-white,
-[data-theme="light"] .bg-gradient-to-br .text-white,
-[data-theme="light"] .text-emerald-premium,
-[data-theme="light"] .text-rose-premium,
-[data-theme="light"] .text-cyan-premium,
-[data-theme="light"] .text-purple-premium {
+[data-theme="light"] .bg-gradient-to-br .text-white {
   color: #ffffff !important;
 }
 
-/* Specific elements to keep color intact */
+/* Specific elements to keep color intact based on Light Clay Palette */
 [data-theme="light"] .text-cyan-premium {
-  color: #0891b2 !important;
+  color: #df7a5c !important;
 }
 [data-theme="light"] .text-purple-premium {
-  color: #7c3aed !important;
+  color: #f4a261 !important;
 }
 [data-theme="light"] .text-emerald-premium {
-  color: #059669 !important;
+  color: #5c8f75 !important;
 }
 [data-theme="light"] .text-rose-premium {
-  color: #e11d48 !important;
+  color: #e76f51 !important;
 }
+
 
 @layer base {
   body {
-    @apply bg-dark-main font-body;
+    @apply font-body;
     background-color: var(--bg-main);
+    color: var(--text-main);
   }
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading font-semibold tracking-tight;
+    color: var(--text-main);
   }
 }
 
-/* Premium Glassmorphic utilities */
+/* Biến đổi các class background tĩnh thành động theo theme */
+.bg-dark-glass {
+  background: var(--bg-glass) !important;
+  border-color: var(--border-glass) !important;
+}
+
+.bg-dark-card {
+  background: var(--bg-card) !important;
+}
+
+.border-dark-border {
+  border-color: var(--border-glass) !important;
+}
+
+/* Premium Glassmorphic utilities - Tông màu Claymorphism Đất Sét Mịn */
 .glass-panel {
   background: var(--bg-glass);
   border: 1px solid var(--border-glass);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 
+    0px 2px 8px rgba(186, 115, 80, 0.05),
+    0px 20px 40px -15px rgba(186, 115, 80, 0.12);
   transition: var(--transition-smooth);
 }
 
@@ -363,3 +392,229 @@
   background-color: #f1f5f9 !important;
   color: #0891b2 !important;
 }
+
+/* ==========================================================================
+   2.5D / 3D CSS UTILITIES (Neobrutalism & Isometric Glassmorphism)
+   ========================================================================== */
+
+/* Thiết lập không gian 3D Perspective */
+.perspective-3d {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+/* Thẻ bài 3D Claymorphism - Chỉ làm sáng nhẹ khi hover, không nghiêng nữa */
+.tilt-card-3d {
+  position: relative;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  background: var(--bg-glass) !important;
+  border: 1px solid var(--border-glass) !important;
+  border-radius: 20px;
+  box-shadow: 
+    0px 4px 10px rgba(186, 115, 80, 0.04),
+    0px 15px 30px -15px rgba(186, 115, 80, 0.08);
+}
+
+.tilt-card-3d:hover {
+  /* Làm sáng nhẹ nền và phát sáng viền nhẹ nhàng */
+  background-color: var(--bg-glass-hover) !important;
+  border-color: rgba(223, 122, 92, 0.4) !important;
+  box-shadow: 
+    0px 4px 15px rgba(223, 122, 92, 0.12),
+    0px 20px 35px -10px rgba(186, 115, 80, 0.15);
+}
+
+/* Class đặt ảnh 3D làm hình nền trang trí góc trống (vừa vặn, không bị che chữ) */
+.bg-watermark-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.watermark-image-3d {
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  width: 90px;
+  height: 90px;
+  opacity: 0.18;
+  pointer-events: none;
+  object-fit: contain;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 0;
+}
+
+.bg-watermark-container:hover .watermark-image-3d {
+  opacity: 0.35;
+  transform: scale(1.08) rotate(5deg);
+}
+
+/* Nút bấm 3D phong cách Neobrutalism tối giản */
+.neo-button-3d {
+  position: relative;
+  transition: all 0.15s cubic-bezier(0, 0, 0.2, 1);
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px 0px 0px rgba(223, 122, 92, 0.6);
+  border: 1px solid rgba(223, 122, 92, 0.8);
+}
+
+.neo-button-3d:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 1px 1px 0px 0px rgba(223, 122, 92, 0.8);
+}
+
+.neo-button-3d:active {
+  transform: translate(0px, 0px);
+  box-shadow: 0px 0px 0px 0px rgba(223, 122, 92, 0.8);
+}
+
+/* Nút bấm 3D màu Tím (Purple Accent) */
+.neo-button-3d-purple {
+  position: relative;
+  transition: all 0.15s cubic-bezier(0, 0, 0.2, 1);
+  transform: translate(-4px, -4px);
+  box-shadow: 4px 4px 0px 0px rgba(139, 92, 246, 0.6);
+  border: 1px solid rgba(139, 92, 246, 0.8);
+}
+
+.neo-button-3d-purple:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px 0px 0px rgba(139, 92, 246, 0.8);
+}
+
+.neo-button-3d-purple:active {
+  transform: translate(0px, 0px);
+  box-shadow: 0px 0px 0px 0px rgba(139, 92, 246, 0.8);
+}
+
+/* Vật thể 2D/3D lơ lửng (Floating Effect) */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(2deg);
+  }
+}
+
+.animate-float-3d {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-float-3d-delayed {
+  animation: float-slow 7.5s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+/* Hộp trang trí 2.5D Isometric (Dùng CSS Borders để vẽ mô hình khối 3D lập phương) */
+.cube-container {
+  width: 80px;
+  height: 80px;
+  perspective: 1000px;
+}
+
+.cube-3d {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(-22deg) rotateY(45deg);
+  animation: rotate-cube 20s infinite linear;
+}
+
+@keyframes rotate-cube {
+  0% { transform: rotateX(-22deg) rotateY(0deg); }
+  100% { transform: rotateX(-22deg) rotateY(360deg); }
+}
+
+.cube-face {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 1px solid rgba(6, 182, 212, 0.4);
+  background: rgba(6, 182, 212, 0.15);
+  backdrop-filter: blur(2px);
+}
+
+.cube-face-front  { transform: rotateY(0deg) translateZ(40px); }
+.cube-face-back   { transform: rotateY(180deg) translateZ(40px); }
+.cube-face-right  { transform: rotateY(90deg) translateZ(40px); }
+.cube-face-left   { transform: rotateY(-90deg) translateZ(40px); }
+.cube-face-top    { transform: rotateX(90deg) translateZ(40px); background: rgba(223, 122, 92, 0.25); }
+.cube-face-bottom { transform: rotateX(-90deg) translateZ(40px); }
+
+/* Lưới không gian 3D (3D Space Grid / Mesh Background) - Màu đất nung */
+.bg-mesh-3d {
+  background-color: var(--bg-main);
+  background-image: 
+    linear-gradient(rgba(223, 122, 92, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(223, 122, 92, 0.04) 1px, transparent 1px);
+  background-size: 45px 45px;
+  background-position: center;
+  position: relative;
+}
+
+.bg-mesh-3d::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 10%, var(--bg-main) 85%);
+  pointer-events: none;
+}
+
+/* Các luồng sáng 3D ảo diệu chuyển động ngầm ở nền - Sắc cam & Vàng ấm */
+.glow-orb-3d-1 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(223, 122, 92, 0.15) 0%, transparent 70%);
+  filter: blur(80px);
+  top: -15%;
+  left: 10%;
+  animation: orb-move 20s infinite alternate ease-in-out;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-orb-3d-2 {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(244, 162, 97, 0.12) 0%, transparent 70%);
+  filter: blur(100px);
+  bottom: -20%;
+  right: 10%;
+  animation: orb-move 25s infinite alternate-reverse ease-in-out;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes orb-move {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(80px, 50px) scale(1.15);
+  }
+  100% {
+    transform: translate(-40px, -60px) scale(0.9);
+  }
+}
+
+/* Lớp phủ mờ nhìn xuyên thấu đằng sau cho mọi modal */
+.modal-backdrop-premium {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.45) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+
+

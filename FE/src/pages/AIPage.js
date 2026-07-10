@@ -349,52 +349,53 @@ const AIPage = () => {
   };
 
   const suggestions = [
-    { label: "📊 Spending Analysis", query: "Phân tích chi tiêu tháng này" },
-    { label: "💰 Income Streams", query: "Thu nhập tháng này của tôi" },
-    { label: "💡 Savings Advice", query: "Tư vấn cách tiết kiệm tiền" },
-    { label: "🛡️ Budget Status", query: "Kiểm tra hạn mức ngân sách" },
-    { label: "🏆 Top Category", query: "Danh mục chi tiêu cao nhất" },
-    { label: "🚨 Anomaly Check", query: "Chi tiêu bất thường" }
+    { label: "📊 Phân tích chi tiêu", query: "Phân tích chi tiêu tháng này" },
+    { label: "💰 Nguồn thu nhập", query: "Thu nhập tháng này của tôi" },
+    { label: "💡 Tư vấn tiết kiệm", query: "Tư vấn cách tiết kiệm tiền" },
+    { label: "🛡️ Trạng thái ngân sách", query: "Kiểm tra hạn mức ngân sách" },
+    { label: "🏆 Danh mục lớn nhất", query: "Danh mục chi tiêu cao nhất" },
+    { label: "🚨 Giao dịch bất thường", query: "Chi tiêu bất thường" }
   ];
 
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center py-20 gap-3 font-body">
         <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-cyan-premium"></div>
-        <span className="text-xs text-gray-500 tracking-wide uppercase font-semibold">Tuning neural predictions...</span>
+        <span className="text-xs text-gray-500 tracking-wide uppercase font-semibold">Đang chạy dự báo tài chính...</span>
       </div>
     );
   }
 
   return (
-    <div className="space-y-8 animate-fade-in font-body">
+    <div className="space-y-8 animate-fade-in font-body perspective-3d">
       {/* Dynamic Cosmic Header */}
-      <div className="bg-dark-glass border border-dark-border p-6 rounded-2xl relative overflow-hidden group hover:border-white/10 transition-all duration-300 shadow-xl">
+      <div className="bg-dark-glass border border-dark-border p-6 rounded-2xl relative overflow-hidden group hover:border-white/10 transition-all duration-300 shadow-xl tilt-card-3d">
         <div className="absolute w-36 h-36 bg-cyan-premium blur-[45px] -top-12 -right-12 opacity-[0.08] rounded-full pointer-events-none"></div>
         <div className="absolute w-36 h-36 bg-purple-premium blur-[45px] -bottom-12 -left-12 opacity-[0.05] rounded-full pointer-events-none"></div>
-        
-        <div className="flex items-center gap-4.5 relative z-10">
+
+        <div className="flex items-center gap-4.5 relative z-10 preserve-3d-child">
           <div className="w-[50px] h-[50px] rounded-xl bg-gradient-to-br from-cyan-premium to-purple-premium flex items-center justify-center text-white text-xl shadow-lg shadow-cyan-premium/25 animate-pulse">
             <FaBrain className="text-2xl" />
           </div>
           <div>
-            <h2 className="text-xl font-extrabold text-white tracking-wide uppercase font-heading">AI Financial</h2>
-            <p className="text-xs text-gray-500 mt-0.5">Smart advisor and real-time automated cashflow forecasting</p>
+            <h2 className="text-xl font-extrabold text-white tracking-wide uppercase font-heading">Trí tuệ Tài chính AI</h2>
+            <p className="text-xs text-gray-500 mt-0.5">Cố văn thông minh và tự động dự báo dòng tiền theo thời gian thực</p>
           </div>
         </div>
       </div>
 
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 h-[560px] relative font-body">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 min-h-[680px] lg:h-[680px] relative font-body perspective-3d">
           
           {/* Quick Suggestions Panel */}
-          <div className="lg:col-span-1 bg-dark-glass border border-dark-border rounded-2xl p-5 flex flex-col justify-between shadow-xl relative overflow-hidden">
+          <div className="lg:col-span-1 bg-dark-glass border border-dark-border rounded-2xl p-5 flex flex-col justify-between shadow-xl relative overflow-hidden tilt-card-3d">
             <div className="absolute w-24 h-24 bg-cyan-premium blur-[30px] -bottom-10 -left-10 opacity-[0.05] rounded-full pointer-events-none"></div>
+            <div className="preserve-3d-child flex flex-col justify-between h-full">
             <div>
               <div className="flex items-center gap-2 mb-4 border-b border-dark-border/40 pb-3">
                 <FaLightbulb className="text-amber-premium text-sm animate-pulse" />
                 <span className="text-white text-xs font-bold uppercase tracking-wider font-heading">
-                  Quick Suggestions
+                  Gợi ý Nhanh
                 </span>
               </div>
               
@@ -414,7 +415,7 @@ const AIPage = () => {
             </div>
             
             <div className="mt-4 p-3 bg-purple-premium/5 border border-purple-premium/15 rounded-xl text-[10px] text-purple-300 leading-relaxed font-semibold">
-              🤖 CO-PILOT: Asks directly analyze your financial databases in real time to present recommendations.
+              🤖 TRỢ LÝ AI: Trực tiếp phân tích cơ sở dữ liệu tài chính của bạn theo thời gian thực để đưa ra các đề xuất phù hợp.
             </div>
 
             {/* Real-time Budget Summary */}
@@ -486,13 +487,14 @@ const AIPage = () => {
               )}
             </div>
           </div>
+        </div>
 
           {/* Main Chat Interface */}
-          <div className="lg:col-span-3 bg-dark-glass border border-dark-border rounded-2xl flex flex-col h-full overflow-hidden shadow-2xl relative">
+          <div className="lg:col-span-3 bg-dark-glass border border-dark-border rounded-2xl flex flex-col h-full overflow-hidden shadow-2xl relative tilt-card-3d">
             <div className="absolute w-36 h-36 bg-cyan-premium blur-[45px] -top-12 -right-12 opacity-[0.03] rounded-full pointer-events-none"></div>
-            
-            {/* Chat Body */}
-            <div className="flex-1 overflow-y-auto p-6 space-y-4 max-h-[460px] custom-scrollbar bg-black/10">
+            <div className="preserve-3d-child flex flex-col h-full overflow-hidden">
+              {/* Chat Body */}
+            <div className="flex-1 overflow-y-auto p-6 space-y-4 custom-scrollbar bg-black/10">
               {messages.map(msg => (
                 <div 
                   key={msg.id} 
@@ -622,7 +624,7 @@ const AIPage = () => {
                     handleSendMessage();
                   }
                 }}
-                placeholder="Ask financial advice or spending forecasts..."
+                placeholder="Hỏi cố vấn tài chính hoặc dự báo chi tiêu..."
                 disabled={sending}
                 className="flex-1 bg-[#0f172a]/85 border border-dark-border rounded-xl px-4 py-3.5 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-premium focus:shadow-cyan-glow text-xs font-semibold transition-all duration-300"
               />
@@ -636,7 +638,7 @@ const AIPage = () => {
                     ? 'bg-rose-500 text-white animate-pulse' 
                     : 'bg-white/[0.04] border border-dark-border text-gray-400 hover:text-white hover:bg-white/[0.08]'
                 }`}
-                title="Voice Command (vi-VN)"
+                title="Khẩu lệnh giọng nói (vi-VN)"
               >
                 {isRecording ? <FaMicrophoneSlash className="text-xs" /> : <FaMicrophone className="text-xs" />}
               </button>
@@ -644,7 +646,7 @@ const AIPage = () => {
               <button
                 type="submit"
                 disabled={sending || !inputVal.trim()}
-                className="p-3.5 bg-gradient-to-r from-cyan-premium to-purple-premium text-white rounded-xl transition-all duration-300 flex items-center justify-center disabled:opacity-40 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-premium/30 active:translate-y-0"
+                className="p-3.5 bg-gradient-to-r from-cyan-premium to-purple-premium text-white rounded-xl transition-all duration-300 flex items-center justify-center disabled:opacity-40 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-premium/30 active:translate-y-0 neo-button-3d-purple cursor-pointer"
               >
                 <FaPaperPlane className="text-xs" />
               </button>
@@ -652,6 +654,7 @@ const AIPage = () => {
 
           </div>
         </div>
+      </div>
     </div>
   );
 };

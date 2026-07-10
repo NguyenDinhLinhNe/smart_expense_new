@@ -162,7 +162,7 @@ const Dashboard = () => {
     labels: trendData.map(item => item.month),
     datasets: [
       {
-        label: 'Income',
+        label: 'Thu nhập',
         data: trendData.map(item => item.income),
         borderColor: '#10b981', // emerald-premium
         backgroundColor: 'rgba(16, 185, 129, 0.05)',
@@ -172,7 +172,7 @@ const Dashboard = () => {
         pointHoverRadius: 6,
       },
       {
-        label: 'Expense',
+        label: 'Chi tiêu',
         data: trendData.map(item => item.expense),
         borderColor: '#f43f5e', // rose-premium
         backgroundColor: 'rgba(244, 63, 94, 0.05)',
@@ -205,61 +205,61 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="space-y-8 animate-fade-in">
-      {/* 3 Columns KPI Grid with Glowing circles */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="space-y-8 animate-fade-in relative">
+      {/* 3 Columns KPI Grid với không gian Perspective 3D */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 perspective-3d">
         {/* KPI: Total Income */}
-        <div className="relative overflow-hidden bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl hover:-translate-y-1 hover:border-emerald-premium/40 hover:shadow-emerald-premium/5 transition-all duration-300 group">
+        <div className="relative overflow-hidden bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl hover:border-emerald-premium/40 transition-all duration-300 group tilt-card-3d">
           <div className="absolute w-36 h-36 bg-emerald-premium blur-[35px] -top-12 -right-12 opacity-[0.12] rounded-full pointer-events-none transition-opacity duration-300 group-hover:opacity-20"></div>
-          <div className="flex justify-between items-center relative z-10">
+          <div className="flex justify-between items-center relative z-10 preserve-3d-child">
             <div>
               <p className="text-xs font-bold text-gray-500 uppercase tracking-widest font-heading">
-                TOTAL INCOME
+                TỔNG THU NHẬP
               </p>
               <h3 className="text-3xl font-extrabold text-white mt-2 font-heading tracking-tight">
                 {formatVND(summary.total_income)}
               </h3>
-              <p className="text-[11px] text-gray-400 mt-1">Earnings for this period</p>
+              <p className="text-[11px] text-gray-400 mt-1">Các nguồn thu nhập trong tháng</p>
             </div>
-            <div className="p-3.5 bg-emerald-premium/15 text-emerald-premium rounded-xl shadow-inner">
+            <div className="p-3.5 bg-emerald-premium/15 text-emerald-premium rounded-xl shadow-inner animate-float-3d">
               <FaArrowUp className="text-xl" />
             </div>
           </div>
         </div>
 
         {/* KPI: Total Expense */}
-        <div className="relative overflow-hidden bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl hover:-translate-y-1 hover:border-rose-premium/40 hover:shadow-rose-premium/5 transition-all duration-300 group">
+        <div className="relative overflow-hidden bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl hover:border-rose-premium/40 transition-all duration-300 group tilt-card-3d">
           <div className="absolute w-36 h-36 bg-rose-premium blur-[35px] -top-12 -right-12 opacity-[0.12] rounded-full pointer-events-none transition-opacity duration-300 group-hover:opacity-20"></div>
-          <div className="flex justify-between items-center relative z-10">
+          <div className="flex justify-between items-center relative z-10 preserve-3d-child">
             <div>
               <p className="text-xs font-bold text-gray-500 uppercase tracking-widest font-heading">
-                TOTAL EXPENSES
+                TỔNG CHI TIÊU
               </p>
               <h3 className="text-3xl font-extrabold text-white mt-2 font-heading tracking-tight">
                 {formatVND(summary.total_expense)}
               </h3>
-              <p className="text-[11px] text-gray-400 mt-1">Spendings and bills paid</p>
+              <p className="text-[11px] text-gray-400 mt-1">Các chi phí và hóa đơn đã thanh toán</p>
             </div>
-            <div className="p-3.5 bg-rose-premium/15 text-rose-premium rounded-xl shadow-inner">
+            <div className="p-3.5 bg-rose-premium/15 text-rose-premium rounded-xl shadow-inner animate-float-3d-delayed">
               <FaArrowDown className="text-xl" />
             </div>
           </div>
         </div>
 
         {/* KPI: Net Balance */}
-        <div className="relative overflow-hidden bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl hover:-translate-y-1 hover:border-cyan-premium/40 hover:shadow-cyan-premium/5 transition-all duration-300 group">
+        <div className="relative overflow-hidden bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl hover:border-cyan-premium/40 transition-all duration-300 group tilt-card-3d">
           <div className="absolute w-36 h-36 bg-cyan-premium blur-[35px] -top-12 -right-12 opacity-[0.12] rounded-full pointer-events-none transition-opacity duration-300 group-hover:opacity-20"></div>
-          <div className="flex justify-between items-center relative z-10">
+          <div className="flex justify-between items-center relative z-10 preserve-3d-child">
             <div>
               <p className="text-xs font-bold text-gray-500 uppercase tracking-widest font-heading">
-                NET BALANCE
+                SỐ DƯ RÒNG
               </p>
               <h3 className="text-3xl font-extrabold text-white mt-2 font-heading tracking-tight">
                 {formatVND(summary.balance)}
               </h3>
-              <p className="text-[11px] text-gray-400 mt-1">Available net cash reserves</p>
+              <p className="text-[11px] text-gray-400 mt-1">Nguồn tiền khả dụng hiện có</p>
             </div>
-            <div className="p-3.5 bg-cyan-premium/15 text-cyan-premium rounded-xl shadow-inner">
+            <div className="p-3.5 bg-cyan-premium/15 text-cyan-premium rounded-xl shadow-inner animate-float-3d">
               <FaWallet className="text-xl" />
             </div>
           </div>
@@ -267,18 +267,18 @@ const Dashboard = () => {
       </div>
 
       {/* 2 Column Charts Panel */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 perspective-3d">
         {/* cashflow trend */}
-        <div className="bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl flex flex-col h-[380px] hover:border-white/[0.1] transition-colors">
-          <div className="flex justify-between items-center mb-6">
+        <div className="bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl flex flex-col h-[380px] hover:border-white/[0.1] transition-all duration-300 tilt-card-3d">
+          <div className="flex justify-between items-center mb-6 preserve-3d-child">
             <h3 className="text-base font-bold text-white tracking-wide font-heading">
-              CASHFLOW TREND
+              XU HƯỚNG DÒNG TIỀN
             </h3>
             <span className="text-[10px] text-gray-500 uppercase tracking-widest flex items-center gap-1.5 font-semibold">
-              <FaCalendarAlt /> Monthly analysis
+              <FaCalendarAlt /> Phân tích hàng tháng
             </span>
           </div>
-          <div className="flex-1 min-h-0">
+          <div className="flex-1 min-h-0 preserve-3d-child">
             <Line 
               data={lineChartData} 
               options={{ 
@@ -309,16 +309,16 @@ const Dashboard = () => {
         </div>
 
         {/* expense breakdown */}
-        <div className="bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl flex flex-col h-[380px] hover:border-white/[0.1] transition-colors">
-          <div className="flex justify-between items-center mb-6">
+        <div className="bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl flex flex-col h-[380px] hover:border-white/[0.1] transition-all duration-300 tilt-card-3d">
+          <div className="flex justify-between items-center mb-6 preserve-3d-child">
             <h3 className="text-base font-bold text-white tracking-wide font-heading">
-              EXPENSE BREAKDOWN
+              CƠ CẤU CHI TIÊU
             </h3>
             <span className="text-[10px] text-gray-500 uppercase tracking-widest flex items-center gap-1.5 font-semibold">
-              Categorized spendings
+              Chi tiêu theo danh mục
             </span>
           </div>
-          <div className="flex-1 min-h-0 flex items-center justify-center">
+          <div className="flex-1 min-h-0 flex items-center justify-center preserve-3d-child">
             <Doughnut 
               data={doughnutChartData} 
               options={{ 
@@ -340,27 +340,27 @@ const Dashboard = () => {
       </div>
 
     {/* Visual Savings Goals (Liquid Wave) */}
-    <div className="bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl hover:border-white/[0.1] transition-colors relative overflow-hidden">
-      <div className="flex justify-between items-center mb-6 relative z-10">
+    <div className="bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl hover:border-white/[0.1] transition-all duration-300 relative overflow-hidden perspective-3d tilt-card-3d">
+      <div className="flex justify-between items-center mb-6 relative z-10 preserve-3d-child">
         <div className="flex items-center gap-2.5">
-          <div className="p-1.5 bg-cyan-premium/15 text-cyan-premium rounded-lg animate-pulse">
+          <div className="p-1.5 bg-cyan-premium/15 text-cyan-premium rounded-lg animate-float-3d">
             <FaPiggyBank className="text-base" />
           </div>
           <h3 className="text-base font-bold text-white tracking-wide font-heading">
-            SAVINGS LIQUIDITY GOALS
+            MỤC TIÊU TIẾT KIỆM TÍCH LŨY
           </h3>
         </div>
         <button
           onClick={() => setShowGoalModal(true)}
-          className="py-1.5 px-4 bg-cyan-premium/15 hover:bg-cyan-premium/25 border border-cyan-premium/30 hover:border-cyan-premium/65 text-cyan-premium font-heading font-extrabold text-[10px] tracking-wider rounded-xl transition-all active:scale-95 flex items-center gap-1.5 cursor-pointer"
+          className="py-1.5 px-4 bg-cyan-premium hover:bg-cyan-600 text-white font-heading font-extrabold text-[10px] tracking-wider rounded-xl transition-all flex items-center gap-1.5 cursor-pointer neo-button-3d"
         >
-          <FaPlus /> <span>ADD NEW GOAL</span>
+          <FaPlus /> <span>THÊM MỤC TIÊU MỚI</span>
         </button>
       </div>
 
       {goals.length === 0 ? (
         <div className="text-center py-8 text-gray-500 text-xs uppercase tracking-wider font-semibold border border-dashed border-dark-border rounded-xl">
-          No savings goals established yet. Establish your target savings above!
+          Chưa thiết lập mục tiêu tiết kiệm nào. Hãy tạo mục tiêu tích lũy ở trên nhé!
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
@@ -375,11 +375,11 @@ const Dashboard = () => {
                   <h4 className="text-sm font-extrabold text-white tracking-wide truncate uppercase font-heading">{goal.name}</h4>
                   <div className="mt-3.5 space-y-1 font-mono">
                     <div className="flex justify-between text-[11px] text-gray-400">
-                      <span>Balance</span>
+                      <span>Số dư tích lũy</span>
                       <span className="text-white font-semibold">{formatVND(goal.current)} / {formatVND(goal.target)}</span>
                     </div>
                     <div className="flex justify-between text-[11px] text-gray-400">
-                      <span>Progress</span>
+                      <span>Tiến độ</span>
                       <span className="text-cyan-premium font-bold">{percent.toFixed(0)}%</span>
                     </div>
                   </div>
@@ -394,7 +394,7 @@ const Dashboard = () => {
                       }}
                       className="py-1 px-2.5 bg-emerald-premium/15 hover:bg-emerald-premium/25 border border-emerald-premium/25 text-emerald-premium text-[9px] font-bold rounded-lg transition-all cursor-pointer"
                     >
-                      DEPOSIT
+                      TÍCH LŨY THÊM
                     </button>
                     <button
                       onClick={() => {
@@ -404,12 +404,12 @@ const Dashboard = () => {
                       }}
                       className="py-1 px-2.5 bg-rose-premium/15 hover:bg-rose-premium/25 border border-rose-premium/25 text-rose-premium text-[9px] font-bold rounded-lg transition-all cursor-pointer"
                     >
-                      WITHDRAW
+                      RÚT SỬ DỤNG
                     </button>
                     <button
                       onClick={() => handleDeleteGoal(goal.id)}
                       className="p-1 text-gray-500 hover:text-rose-premium transition-colors hover:bg-rose-premium/10 rounded-lg ml-auto cursor-pointer"
-                      title="Delete Goal"
+                      title="Xóa mục tiêu"
                     >
                       <FaTrash size={10} />
                     </button>
@@ -441,7 +441,7 @@ const Dashboard = () => {
           
           <div className="flex justify-between items-center mb-6">
             <h3 className="text-sm font-extrabold text-white tracking-wide uppercase font-heading flex items-center gap-2">
-              <FaPiggyBank className="text-cyan-premium" /> Establish Goal
+              <FaPiggyBank className="text-cyan-premium" /> Thiết lập mục tiêu
             </h3>
             <button 
               type="button"
@@ -454,12 +454,12 @@ const Dashboard = () => {
 
           <div className="space-y-4">
             <div>
-              <label className="block text-gray-400 text-[10px] font-bold uppercase tracking-wider mb-2">Goal Name / Description</label>
+              <label className="block text-gray-400 text-[10px] font-bold uppercase tracking-wider mb-2">Tên mục tiêu / Mô tả</label>
               <input 
                 type="text" 
                 value={goalName}
                 onChange={(e) => setGoalName(e.target.value)}
-                placeholder="e.g. Kyoto Trip 🌸"
+                placeholder="Ví dụ: Du lịch Đà Lạt 🌸"
                 className="w-full px-4 py-2.5 bg-[#0f172a]/80 border border-dark-border focus:border-cyan-premium rounded-xl text-xs text-white outline-none focus:shadow-cyan-glow transition-all"
                 required
               />
@@ -467,23 +467,23 @@ const Dashboard = () => {
 
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-gray-400 text-[10px] font-bold uppercase tracking-wider mb-2">Target Fund ($)</label>
+                <label className="block text-gray-400 text-[10px] font-bold uppercase tracking-wider mb-2">Số tiền cần tích lũy (đ)</label>
                 <input 
                   type="number" 
                   value={goalTarget}
                   onChange={(e) => setGoalTarget(e.target.value)}
-                  placeholder="3000"
+                  placeholder="3000000"
                   className="w-full px-4 py-2.5 bg-[#0f172a]/80 border border-dark-border focus:border-cyan-premium rounded-xl text-xs text-white outline-none focus:shadow-cyan-glow transition-all font-mono"
                   required
                 />
               </div>
               <div>
-                <label className="block text-gray-400 text-[10px] font-bold uppercase tracking-wider mb-2">Initial Saved ($)</label>
+                <label className="block text-gray-400 text-[10px] font-bold uppercase tracking-wider mb-2">Đã tích lũy sẵn (đ)</label>
                 <input 
                   type="number" 
                   value={goalCurrent}
                   onChange={(e) => setGoalCurrent(e.target.value)}
-                  placeholder="500"
+                  placeholder="500000"
                   className="w-full px-4 py-2.5 bg-[#0f172a]/80 border border-dark-border focus:border-cyan-premium rounded-xl text-xs text-white outline-none focus:shadow-cyan-glow transition-all font-mono"
                 />
               </div>
@@ -493,7 +493,7 @@ const Dashboard = () => {
               type="submit"
               className="w-full py-3 bg-gradient-to-r from-cyan-premium to-purple-premium text-white font-heading font-extrabold text-xs tracking-wider rounded-xl shadow-md hover:shadow-lg transition-all mt-4 cursor-pointer"
             >
-              ESTABLISH GOAL
+              THIẾT LẬP MỤC TIÊU
             </button>
           </div>
         </form>
@@ -509,7 +509,7 @@ const Dashboard = () => {
           <div className="flex justify-between items-center mb-6">
             <h3 className="text-sm font-extrabold text-white tracking-wide uppercase font-heading flex items-center gap-2">
               <FaCoins className={transactionType === 'deposit' ? 'text-emerald-premium' : 'text-rose-premium'} />
-              {transactionType === 'deposit' ? 'Deposit Funds' : 'Withdraw Funds'}
+              {transactionType === 'deposit' ? 'Gửi tiền tích lũy' : 'Rút tiền sử dụng'}
             </h3>
             <button 
               type="button"
@@ -525,20 +525,20 @@ const Dashboard = () => {
 
           <div className="space-y-4">
             <div className="p-3 bg-white/[0.02] border border-dark-border/40 rounded-xl text-center">
-              <span className="text-[11px] text-gray-400">Active Goal</span>
+              <span className="text-[11px] text-gray-400">Mục tiêu hiện tại</span>
               <h4 className="text-sm font-bold text-white uppercase font-heading mt-1">{activeGoal.name}</h4>
               <p className="text-[10px] text-gray-500 font-mono mt-0.5">
-                Balance: {formatVND(activeGoal.current)} / {formatVND(activeGoal.target)} ({((activeGoal.current / activeGoal.target) * 100).toFixed(0)}%)
+                Số dư: {formatVND(activeGoal.current)} / {formatVND(activeGoal.target)} ({((activeGoal.current / activeGoal.target) * 100).toFixed(0)}%)
               </p>
             </div>
 
             <div>
-              <label className="block text-gray-400 text-[10px] font-bold uppercase tracking-wider mb-2">Amount to {transactionType}</label>
+              <label className="block text-gray-400 text-[10px] font-bold uppercase tracking-wider mb-2">Số tiền muốn {transactionType === 'deposit' ? 'gửi' : 'rút'}</label>
               <input 
                 type="number" 
                 value={transactionAmount}
                 onChange={(e) => setTransactionAmount(e.target.value)}
-                placeholder="e.g. 150"
+                placeholder="Ví dụ: 500000"
                 className="w-full px-4 py-2.5 bg-[#0f172a]/80 border border-dark-border focus:border-cyan-premium rounded-xl text-xs text-white outline-none focus:shadow-cyan-glow transition-all font-mono"
                 required
                 autoFocus
@@ -553,7 +553,7 @@ const Dashboard = () => {
                   : 'from-rose-premium to-orange-premium'
               }`}
             >
-              {transactionType === 'deposit' ? 'CONFIRM DEPOSIT' : 'CONFIRM WITHDRAWAL'}
+              {transactionType === 'deposit' ? 'XÁC NHẬN GỬI TIỀN' : 'XÁC NHẬN RÚT TIỀN'}
             </button>
           </div>
         </form>
@@ -563,23 +563,23 @@ const Dashboard = () => {
     {/* Recent Transactions list */}
     <div className="bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl hover:border-white/[0.1] transition-colors">
         <h3 className="text-base font-bold text-white tracking-wide mb-6 font-heading">
-          RECENT TRANSACTIONS
+          GIAO DỊCH GẦN ĐÂY
         </h3>
         <div className="table-responsive">
           <table className="w-full text-left border-collapse text-sm">
             <thead>
               <tr className="border-b border-dark-border text-gray-500">
-                <th className="py-4 px-4 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Date</th>
-                <th className="py-4 px-4 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Category</th>
-                <th className="py-4 px-4 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Note</th>
-                <th className="py-4 px-4 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading text-right">Amount</th>
+                <th className="py-4 px-4 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Ngày</th>
+                <th className="py-4 px-4 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Danh mục</th>
+                <th className="py-4 px-4 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Ghi chú</th>
+                <th className="py-4 px-4 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading text-right">Số tiền</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-dark-border/40">
               {recentTransactions.length === 0 ? (
                 <tr>
                   <td colSpan="4" className="text-center py-8 text-gray-500">
-                    No transactions logged yet. Add one in the Transactions menu.
+                    Chưa ghi nhận giao dịch nào. Hãy thêm giao dịch mới trong mục Giao dịch nhé.
                   </td>
                 </tr>
               ) : (

@@ -20,12 +20,12 @@ const Register = () => {
     setError('');
     
     if (password !== confirmPassword) {
-      setError('Passwords do not match');
+      setError('Mật khẩu nhập lại không khớp');
       return;
     }
     
     if (password.length < 6) {
-      setError('Password must be at least 6 characters');
+      setError('Mật khẩu phải chứa ít nhất 6 ký tự');
       return;
     }
     
@@ -52,9 +52,9 @@ const Register = () => {
             <FaWallet className="text-2xl drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]" />
           </div>
           <h2 className="text-2xl font-extrabold tracking-wider text-center uppercase bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent font-heading">
-            CREATE ACCOUNT
+            TẠO TÀI KHOẢN
           </h2>
-          <p className="text-gray-400 text-sm mt-1">Start tracking your expenses today</p>
+          <p className="text-gray-400 text-sm mt-1">Bắt đầu quản lý chi tiêu của bạn ngay hôm nay</p>
         </div>
 
         {error && (
@@ -66,7 +66,7 @@ const Register = () => {
         <form onSubmit={handleSubmit} className="space-y-5">
           <div className="group">
             <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-              Full Name
+              Họ và tên
             </label>
             <div className="relative flex items-center">
               <FaUser className="absolute left-4 text-gray-500 text-base transition-colors group-focus-within:text-cyan-premium" />
@@ -75,7 +75,7 @@ const Register = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 className="w-full pl-11 pr-4 py-3 bg-[#0f172a]/80 border border-dark-border rounded-xl text-white placeholder-gray-600 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
-                placeholder="John Doe"
+                placeholder="Ví dụ: Nguyễn Văn A"
                 required
               />
             </div>
@@ -83,7 +83,7 @@ const Register = () => {
 
           <div className="group">
             <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-              Email Address
+              Địa chỉ Email
             </label>
             <div className="relative flex items-center">
               <FaEnvelope className="absolute left-4 text-gray-500 text-base transition-colors group-focus-within:text-cyan-premium" />
@@ -100,7 +100,7 @@ const Register = () => {
 
           <div className="group">
             <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-              Password
+              Mật khẩu
             </label>
             <div className="relative flex items-center">
               <FaLock className="absolute left-4 text-gray-500 text-base transition-colors group-focus-within:text-cyan-premium" />
@@ -124,7 +124,7 @@ const Register = () => {
 
           <div className="group">
             <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-              Confirm Password
+              Xác nhận mật khẩu
             </label>
             <div className="relative flex items-center">
               <FaLock className="absolute left-4 text-gray-500 text-base transition-colors group-focus-within:text-cyan-premium" />
@@ -155,7 +155,7 @@ const Register = () => {
               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
             ) : (
               <>
-                <span>CREATE ACCOUNT</span>
+                <span>ĐĂNG KÝ TÀI KHOẢN</span>
                 <FaUserPlus className="text-sm" />
               </>
             )}
@@ -164,16 +164,16 @@ const Register = () => {
 
         <div className="mt-8 text-center border-t border-dark-border pt-6">
           <p className="text-gray-500 text-xs tracking-wide">
-            Already have an account?{' '}
+            Đã có tài khoản?{' '}
             <Link to="/login" className="text-cyan-premium hover:text-cyan-300 font-bold transition-colors">
-              SIGN IN
+              ĐĂNG NHẬP
             </Link>
           </p>
         </div>
       </div>
 
       <div className="absolute bottom-6 left-0 right-0 text-center pointer-events-none">
-        <p className="text-[10px] text-gray-600 tracking-widest uppercase">© 2026 Smart Expense Tracker Platform</p>
+        <p className="text-[10px] text-gray-600 tracking-widest uppercase">© 2026 Nền tảng Quản lý chi tiêu thông minh</p>
       </div>
     </div>
   );

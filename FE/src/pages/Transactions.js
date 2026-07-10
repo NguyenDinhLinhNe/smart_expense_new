@@ -642,27 +642,27 @@ const Transactions = () => {
   const iconSuggestions = ['🍔', '🚗', '🛍️', '🎬', '💡', '🏥', '📚', '💰', '💻', '📈', '☕', '🍕', '🎮', '📱', '✈️', '🏠'];
 
   return (
-    <div className="space-y-8 animate-fade-in font-body">
+    <div className="space-y-8 animate-fade-in font-body relative">
       {/* Header Panel */}
-      <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 bg-dark-glass border border-dark-border p-6 rounded-2xl relative overflow-hidden">
+      <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 bg-dark-glass border border-dark-border p-6 rounded-2xl relative overflow-hidden tilt-card-3d">
         <div className="absolute w-24 h-24 bg-cyan-premium blur-[30px] -bottom-10 -left-10 opacity-[0.08] rounded-full pointer-events-none"></div>
-        <div>
+        <div className="preserve-3d-child">
           <h2 className="text-xl font-extrabold text-white tracking-wide uppercase font-heading">
-            Transactions Ledger
+            Sổ Nhật Ký Giao Dịch
           </h2>
-          <p className="text-xs text-gray-500 mt-0.5">Filter, search, or add physical financial logs</p>
+          <p className="text-xs text-gray-500 mt-0.5">Lọc, tìm kiếm hoặc thêm trực tiếp các bản ghi tài chính</p>
         </div>
         
-        <div className="flex items-center gap-3 self-start sm:self-center">
+        <div className="flex items-center gap-3 self-start sm:self-center preserve-3d-child">
           <button
             onClick={() => setShowScanModal(true)}
-            className="py-2.5 px-5 bg-white/[0.03] hover:bg-white/[0.07] border border-dark-border hover:border-cyan-premium/50 text-cyan-premium font-heading font-extrabold text-xs tracking-wide transition-all flex items-center gap-2.5 rounded-xl cursor-pointer"
+            className="py-2.5 px-5 bg-white/[0.03] hover:bg-white/[0.07] border border-dark-border hover:border-cyan-premium/50 text-cyan-premium font-heading font-extrabold text-xs tracking-wide transition-all flex items-center gap-2.5 rounded-xl cursor-pointer neo-button-3d"
           >
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-premium"></span>
             </span>
-            <span>SCAN RECEIPT</span>
+            <span>QUÉT HÓA ĐƠN</span>
           </button>
 
           <button
@@ -670,32 +670,32 @@ const Transactions = () => {
               resetForm();
               setShowModal(true);
             }}
-            className="py-2.5 px-5 bg-gradient-to-r from-cyan-premium to-purple-premium text-white font-heading font-extrabold text-xs tracking-wide shadow-md shadow-cyan-premium/20 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-premium/40 active:translate-y-0 transition-all flex items-center gap-2 rounded-xl cursor-pointer"
+            className="py-2.5 px-5 bg-gradient-to-r from-cyan-premium to-purple-premium text-white font-heading font-extrabold text-xs tracking-wide shadow-md shadow-cyan-premium/20 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-premium/40 active:translate-y-0 transition-all flex items-center gap-2 rounded-xl cursor-pointer neo-button-3d-purple"
           >
-            <FaPlus /> <span>ADD TRANSACTION</span>
+            <FaPlus /> <span>THÊM GIAO DỊCH</span>
           </button>
         </div>
       </div>
 
       {/* Advanced Filter Toolbar */}
-      <div className="relative overflow-hidden bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl">
-        <div className="flex items-center gap-2 mb-5">
+      <div className="relative overflow-hidden bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl tilt-card-3d">
+        <div className="flex items-center gap-2 mb-5 preserve-3d-child">
           <div className="p-1.5 bg-cyan-premium/15 text-cyan-premium rounded-lg">
             <FaFilter className="text-sm" />
           </div>
           <span className="text-white text-xs font-bold uppercase tracking-wider font-heading">
-            Filter Ledger Cashflows
+            Bộ lọc nhật ký giao dịch
           </span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 preserve-3d-child">
           {/* Filter: Keyword Search */}
           <div className="relative">
             <input
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder="Search transactions..."
+              placeholder="Tìm kiếm giao dịch..."
               className="w-full pl-4 pr-10 py-3 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-gray-300 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
             />
             {searchTerm && (
@@ -714,9 +714,9 @@ const Transactions = () => {
               onChange={(e) => setFilters({ ...filters, type: e.target.value })}
               className="w-full appearance-none pl-4 pr-10 py-3 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-gray-300 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
             >
-              <option value="">All Cashflow Types</option>
-              <option value="income">Income Only</option>
-              <option value="expense">Expenses Only</option>
+              <option value="">Tất cả loại giao dịch</option>
+              <option value="income">Chỉ khoản thu nhập</option>
+              <option value="expense">Chỉ khoản chi tiêu</option>
             </select>
             <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-gray-500 text-xs">
               <FaChevronDown />
@@ -730,7 +730,7 @@ const Transactions = () => {
               onChange={(e) => setFilters({ ...filters, category_id: e.target.value })}
               className="w-full appearance-none pl-4 pr-10 py-3 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-gray-300 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
             >
-              <option value="">All Categories</option>
+              <option value="">Tất cả danh mục</option>
               {categories.map(cat => (
                 <option key={cat.id} value={cat.id}>
                   {cat.icon} {cat.name}{(!cat.user_id) ? ' 🔒' : ''}
@@ -749,7 +749,7 @@ const Transactions = () => {
               value={filters.start_date}
               onChange={(e) => setFilters({ ...filters, start_date: e.target.value })}
               className="w-full pl-4 pr-4 py-3 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-gray-300 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
-              placeholder="Start Date"
+              placeholder="Từ ngày"
             />
           </div>
           
@@ -760,24 +760,24 @@ const Transactions = () => {
               value={filters.end_date}
               onChange={(e) => setFilters({ ...filters, end_date: e.target.value })}
               className="w-full pl-4 pr-4 py-3 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-gray-300 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
-              placeholder="End Date"
+              placeholder="Đến ngày"
             />
           </div>
         </div>
       </div>
 
       {/* Ledger Table Container */}
-      <div className="bg-dark-glass border border-dark-border rounded-2xl overflow-hidden shadow-2xl relative">
+      <div className="bg-dark-glass border border-dark-border rounded-2xl overflow-hidden shadow-2xl relative tilt-card-3d">
         <div className="absolute w-36 h-36 bg-purple-premium blur-[45px] -top-12 -right-12 opacity-[0.05] rounded-full pointer-events-none"></div>
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto preserve-3d-child">
           <table className="w-full text-left border-collapse text-sm">
             <thead>
               <tr className="border-b border-dark-border text-gray-500">
-                <th className="py-4 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Date</th>
-                <th className="py-4 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Category</th>
-                <th className="py-4 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Note</th>
-                <th className="py-4 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading text-right">Amount</th>
-                <th className="py-4 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading text-center w-[120px]">Actions</th>
+                <th className="py-4 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Ngày</th>
+                <th className="py-4 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Danh mục</th>
+                <th className="py-4 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Ghi chú</th>
+                <th className="py-4 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading text-right">Số tiền</th>
+                <th className="py-4 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading text-center w-[120px]">Thao tác</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-dark-border/40">
@@ -786,14 +786,14 @@ const Transactions = () => {
                   <td colSpan="5" className="text-center py-12">
                     <div className="flex flex-col items-center justify-center gap-3">
                       <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-premium"></div>
-                      <span className="text-xs text-gray-500 tracking-wide uppercase font-semibold">Tuning databases...</span>
+                      <span className="text-xs text-gray-500 tracking-wide uppercase font-semibold">Đang tải dữ liệu...</span>
                     </div>
                   </td>
                 </tr>
               ) : displayTransactions.length === 0 ? (
                 <tr>
                   <td colSpan="5" className="text-center py-12 text-gray-500 text-xs uppercase tracking-widest font-medium">
-                    No transactions matched your search criteria.
+                    Không tìm thấy giao dịch nào khớp với bộ lọc của bạn.
                   </td>
                 </tr>
               ) : (
@@ -817,14 +817,14 @@ const Transactions = () => {
                         <button
                           onClick={() => handleEdit(transaction)}
                           className="text-cyan-premium hover:text-cyan-300 transition-colors p-1.5 hover:bg-cyan-premium/10 rounded-lg"
-                          title="Edit log"
+                          title="Sửa bản ghi"
                         >
                           <FaEdit className="text-sm" />
                         </button>
                         <button
                           onClick={() => handleDelete(transaction.id)}
                           className="text-rose-premium hover:text-rose-300 transition-colors p-1.5 hover:bg-rose-premium/10 rounded-lg"
-                          title="Delete log"
+                          title="Xóa bản ghi"
                         >
                           <FaTrash className="text-sm" />
                         </button>
@@ -840,13 +840,13 @@ const Transactions = () => {
 
       {/* Modal Add/Edit Transaction */}
       {showModal && (
-        <div className="fixed inset-0 bg-[#090d16]/80 backdrop-blur-md flex items-center justify-center z-50 p-4 animate-fade-in">
-          <div className="bg-[#101622]/95 border border-dark-border rounded-3xl max-w-md w-full p-8 shadow-2xl relative animate-modal-scale">
+        <div className="modal-backdrop-premium animate-fade-in">
+          <div className="bg-[#101622]/95 border border-dark-border rounded-3xl max-w-md w-full p-8 shadow-2xl relative animate-modal-scale max-h-[85vh] overflow-y-auto custom-scrollbar bg-dark-glass">
             <div className="absolute w-24 h-24 bg-cyan-premium blur-[30px] -top-10 -left-10 opacity-[0.08] rounded-full pointer-events-none"></div>
             
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-base font-extrabold text-white tracking-wide uppercase font-heading">
-                {editingTransaction ? 'Edit Log Entry' : 'Create New Log'}
+                {editingTransaction ? 'Cập Nhật Giao Dịch' : 'Thêm Giao Dịch Mới'}
               </h3>
               <button 
                 onClick={() => setShowModal(false)} 
@@ -857,32 +857,9 @@ const Transactions = () => {
             </div>
             
             <form onSubmit={handleSubmit} className="space-y-5">
-              {!editingTransaction && (
-                <div className="p-3.5 bg-white/[0.02] border border-dashed border-dark-border rounded-xl">
-                  <label className="block text-cyan-premium text-[10px] font-bold uppercase tracking-wider mb-2">
-                    Paste SMS / Bank Notification Text
-                  </label>
-                  <div className="flex gap-2">
-                    <input
-                      type="text"
-                      value={smsText}
-                      onChange={(e) => setSmsText(e.target.value)}
-                      placeholder="E.g., Momo: Ban da thanh toan 50k..."
-                      className="flex-1 px-3 py-2 bg-[#0f172a]/60 border border-dark-border rounded-lg text-xs text-white placeholder-gray-500 outline-none focus:border-cyan-premium/50"
-                    />
-                    <button
-                      type="button"
-                      onClick={handleParseSMS}
-                      className="px-3 py-2 bg-cyan-premium/20 hover:bg-cyan-premium/30 border border-cyan-premium/40 hover:border-cyan-premium/70 text-cyan-premium text-xs font-semibold rounded-lg transition-all active:scale-95 cursor-pointer"
-                    >
-                      Parse
-                    </button>
-                  </div>
-                </div>
-              )}
               <div>
                 <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                  Amount (VND)
+                  Số tiền (VNĐ)
                 </label>
                 <input
                   type="number"
@@ -897,7 +874,7 @@ const Transactions = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                    Type
+                    Loại giao dịch
                   </label>
                   <div className="relative">
                     <select
@@ -905,8 +882,8 @@ const Transactions = () => {
                       onChange={(e) => setFormData({ ...formData, type: e.target.value, category_id: '' })}
                       className="w-full appearance-none pl-4 pr-10 py-3 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-white outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
                     >
-                      <option value="expense">Expense</option>
-                      <option value="income">Income</option>
+                      <option value="expense">Chi tiêu</option>
+                      <option value="income">Thu nhập</option>
                     </select>
                     <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-gray-500 text-xs">
                       <FaChevronDown />
@@ -916,7 +893,7 @@ const Transactions = () => {
 
                 <div>
                   <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                    Date
+                    Ngày giao dịch
                   </label>
                   <input
                     type="date"
@@ -930,7 +907,7 @@ const Transactions = () => {
               
               <div>
                 <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                  Category
+                  Danh mục
                 </label>
                 <div className="flex gap-2.5">
                   <div className="relative flex-1">
@@ -940,7 +917,7 @@ const Transactions = () => {
                       className="w-full appearance-none pl-4 pr-10 py-3 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-white outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
                       required
                     >
-                      <option value="">Select Category</option>
+                      <option value="">Chọn danh mục</option>
                       {filteredCategories.map(cat => (
                         <option key={cat.id} value={cat.id}>
                           {cat.icon} {cat.name}{(!cat.user_id) ? ' 🔒' : ''}
@@ -959,7 +936,7 @@ const Transactions = () => {
                       setShowCategoryModal(true);
                     }}
                     className="px-4 bg-teal-premium/15 hover:bg-teal-premium/25 border border-teal-premium/30 hover:border-teal-premium/60 text-teal-premium rounded-xl transition-all active:scale-95 flex items-center justify-center"
-                    title="Add custom category"
+                    title="Thêm danh mục tùy chỉnh"
                   >
                     <FaPlusCircle className="text-base" />
                   </button>
@@ -968,14 +945,14 @@ const Transactions = () => {
               
               <div>
                 <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                  Note (Optional)
+                  Ghi chú (Tùy chọn)
                 </label>
                 <textarea
                   value={formData.note}
                   onChange={(e) => setFormData({ ...formData, note: e.target.value })}
                   className="w-full px-4 py-3 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-white placeholder-gray-600 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
                   rows="3"
-                  placeholder="Add descriptions..."
+                  placeholder="Thêm mô tả giao dịch..."
                 />
               </div>
               
@@ -985,13 +962,13 @@ const Transactions = () => {
                   onClick={() => setShowModal(false)}
                   className="flex-1 py-3 bg-white/[0.02] border border-dark-border rounded-xl text-xs text-gray-400 hover:text-white font-heading font-extrabold transition-all"
                 >
-                  CANCEL
+                  HỦY
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 py-3 bg-gradient-to-r from-cyan-premium to-purple-premium text-white font-heading font-extrabold text-xs tracking-wider rounded-xl transition-all shadow-md shadow-cyan-premium/10 hover:shadow-cyan-premium/30"
+                  className="flex-1 py-3 bg-gradient-to-r from-cyan-premium to-purple-premium text-white font-heading font-extrabold text-xs tracking-wider rounded-xl transition-all shadow-md shadow-cyan-premium/10 hover:shadow-cyan-premium/30 neo-button-3d-purple cursor-pointer"
                 >
-                  {editingTransaction ? 'UPDATE LOG' : 'CREATE LOG'}
+                  {editingTransaction ? 'CẬP NHẬT' : 'GHI SỔ'}
                 </button>
               </div>
             </form>
@@ -1001,13 +978,13 @@ const Transactions = () => {
 
       {/* Modal create Category */}
       {showCategoryModal && (
-        <div className="fixed inset-0 bg-[#090d16]/90 backdrop-blur-md flex items-center justify-center z-50 p-4 animate-fade-in">
-          <div className="bg-[#101622]/95 border border-dark-border rounded-3xl max-w-md w-full p-8 shadow-2xl relative animate-modal-scale">
+        <div className="modal-backdrop-premium animate-fade-in">
+          <div className="bg-[#101622]/95 border border-dark-border rounded-3xl max-w-md w-full p-8 shadow-2xl relative animate-modal-scale max-h-[85vh] overflow-y-auto custom-scrollbar bg-dark-glass">
             <div className="absolute w-24 h-24 bg-teal-premium blur-[30px] -top-10 -left-10 opacity-[0.08] rounded-full pointer-events-none"></div>
 
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-base font-extrabold text-white tracking-wide uppercase font-heading">
-                Create New Category
+                Tạo Danh Mục Mới
               </h3>
               <button 
                 onClick={() => {
@@ -1023,14 +1000,14 @@ const Transactions = () => {
             <form onSubmit={handleCreateCategory} className="space-y-5">
               <div>
                 <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                  Category Name
+                  Tên danh mục
                 </label>
                 <input
                   type="text"
                   value={newCategory.name}
                   onChange={(e) => setNewCategory({ ...newCategory, name: e.target.value })}
                   className="w-full px-4 py-3 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-white placeholder-gray-500 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
-                  placeholder="e.g., Coffee, Shopping, Gym..."
+                  placeholder="Ví dụ: Cà phê, Mua sắm, Gym..."
                   autoFocus
                   required
                 />
@@ -1038,7 +1015,7 @@ const Transactions = () => {
               
               <div>
                 <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                  Quick Select Icon
+                  Chọn nhanh biểu tượng (Icon)
                 </label>
                 <div className="flex flex-wrap gap-2.5 p-3 bg-white/[0.01] border border-dark-border rounded-2xl justify-center">
                   {iconSuggestions.map(icon => (
@@ -1060,14 +1037,14 @@ const Transactions = () => {
                   value={newCategory.icon}
                   onChange={(e) => setNewCategory({ ...newCategory, icon: e.target.value })}
                   className="w-full px-4 py-3 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-white placeholder-gray-600 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all mt-3 font-mono text-center text-lg"
-                  placeholder="Or enter custom emoji..."
+                  placeholder="Hoặc nhập emoji tự chọn..."
                   maxLength="2"
                 />
               </div>
               
               <div>
                 <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                  Cashflow Association
+                  Liên kết dòng tiền
                 </label>
                 <div className="relative">
                   <select
@@ -1075,8 +1052,8 @@ const Transactions = () => {
                     onChange={(e) => setNewCategory({ ...newCategory, type: e.target.value })}
                     className="w-full appearance-none pl-4 pr-10 py-3 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-white outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
                   >
-                    <option value="expense">Expense Category</option>
-                    <option value="income">Income Category</option>
+                    <option value="expense">Danh mục Chi tiêu</option>
+                    <option value="income">Danh mục Thu nhập</option>
                   </select>
                   <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-gray-500 text-xs">
                     <FaChevronDown />
@@ -1093,13 +1070,13 @@ const Transactions = () => {
                   }}
                   className="flex-1 py-3 bg-white/[0.02] border border-dark-border rounded-xl text-xs text-gray-400 hover:text-white font-heading font-extrabold transition-all"
                 >
-                  CANCEL
+                  HỦY
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 py-3 bg-gradient-to-r from-teal-premium to-cyan-premium text-white font-heading font-extrabold text-xs tracking-wider rounded-xl transition-all shadow-md shadow-teal-premium/10 hover:shadow-teal-premium/30"
+                  className="flex-1 py-3 bg-gradient-to-r from-teal-premium to-cyan-premium text-white font-heading font-extrabold text-xs tracking-wider rounded-xl transition-all shadow-md shadow-teal-premium/10 hover:shadow-teal-premium/30 neo-button-3d cursor-pointer"
                 >
-                  CREATE CATEGORY
+                  TẠO DANH MỤC
                 </button>
               </div>
             </form>
@@ -1109,8 +1086,8 @@ const Transactions = () => {
 
       {/* AI Receipt Laser Scanner Modal */}
       {showScanModal && (
-        <div className="fixed inset-0 bg-[#090d16]/80 backdrop-blur-md flex items-center justify-center z-50 p-4 animate-fade-in">
-          <div className="bg-[#101622]/95 border border-dark-border rounded-3xl max-w-md w-full p-8 shadow-2xl relative animate-modal-scale">
+        <div className="modal-backdrop-premium animate-fade-in">
+          <div className="bg-[#101622]/95 border border-dark-border rounded-3xl max-w-md w-full p-8 shadow-2xl relative animate-modal-scale max-h-[85vh] overflow-y-auto custom-scrollbar bg-dark-glass">
             <div className="absolute w-24 h-24 bg-cyan-premium blur-[30px] -top-10 -left-10 opacity-[0.08] rounded-full pointer-events-none"></div>
 
             <div className="flex justify-between items-center mb-6">
@@ -1119,7 +1096,7 @@ const Transactions = () => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-premium"></span>
                 </span>
-                AI Receipt OCR Scanner (Dual-Engine v2.1)
+                Máy quét hóa đơn AI OCR (Dual-Engine v2.1)
               </h3>
               <button 
                 onClick={() => {
@@ -1137,7 +1114,7 @@ const Transactions = () => {
             {!isScanning ? (
               <div className="space-y-6">
                 <div className="text-xs text-gray-400 text-center leading-relaxed">
-                  Upload an image of your physical receipt. Our smart AI agent will read, categorize, and pre-populate your ledger log instantly!
+                  Tải lên hình ảnh hóa đơn giấy của bạn. AI thông minh của chúng tôi sẽ tự động đọc, phân loại danh mục và điền thông tin giao dịch ngay lập tức!
                 </div>
 
                 {/* Drag and Drop Zone */}
@@ -1153,14 +1130,14 @@ const Transactions = () => {
                     onChange={handleFileChange}
                   />
                   <div className="text-3xl mb-3 group-hover:animate-bounce">🧾</div>
-                  <span className="block text-xs font-bold text-gray-300 uppercase tracking-wide">Select receipt image</span>
-                  <span className="block text-[10px] text-gray-500 mt-1 uppercase font-semibold">Click to upload your receipt image file</span>
+                  <span className="block text-xs font-bold text-gray-300 uppercase tracking-wide">Chọn ảnh hóa đơn</span>
+                  <span className="block text-[10px] text-gray-500 mt-1 uppercase font-semibold">Nhấn vào đây để tải tệp hóa đơn lên</span>
                 </div>
 
                 <div className="bg-white/[0.02] border border-dark-border/40 rounded-xl p-3.5 flex items-start gap-3">
                   <span className="text-cyan-premium text-xs mt-0.5">ℹ️</span>
                   <p className="text-[10px] text-gray-500 leading-normal font-medium">
-                    Select any receipt image (such as the generated receipt mockup) to experience the full visual laser sweep and AI attribute mapping.
+                    Bạn có thể chọn bất kỳ hình ảnh hóa đơn mua sắm nào để trải nghiệm hiệu ứng quét laser quét ảnh và tự động trích xuất thông tin.
                   </p>
                 </div>
               </div>
@@ -1169,7 +1146,7 @@ const Transactions = () => {
                 {/* Visual Laser Sweeping Scanner Container */}
                 <div className="relative w-48 h-48 mx-auto bg-[#0f172a] border border-dark-border rounded-2xl overflow-hidden shadow-inner flex items-center justify-center">
                   {scanImage ? (
-                    <img src={scanImage} alt="Receipt Preview" className="w-full h-full object-cover opacity-60" />
+                    <img src={scanImage} alt="Preview hóa đơn" className="w-full h-full object-cover opacity-60" />
                   ) : (
                     <div className="text-5xl opacity-40">🧾</div>
                   )}

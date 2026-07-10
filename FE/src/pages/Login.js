@@ -58,29 +58,57 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0e1a2f] to-[#090d16] flex items-center justify-center p-4 relative overflow-hidden font-body">
+    <div className="min-h-screen bg-gradient-to-br from-[#0e1a2f] to-[#090d16] flex items-center justify-center p-4 relative overflow-hidden font-body perspective-3d">
       {/* Sleek login background glow */}
       <div className="absolute w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(6,182,212,0.15)_0%,rgba(139,92,246,0.05)_50%,transparent_100%)] blur-[80px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0"></div>
 
-      {/* Login Card */}
-      <div className="relative z-10 w-full max-w-[440px] p-10 rounded-3xl bg-dark-glass border border-dark-border backdrop-blur-2xl shadow-2xl shadow-black/50 animate-fade-in">
-        <div className="text-center mb-8">
-          <div className="w-[70px] h-[70px] rounded-full bg-gradient-to-br from-cyan-premium to-purple-premium flex items-center justify-center mx-auto mb-4 shadow-lg shadow-cyan-premium/30 text-white text-3xl animate-pulse">
+      {/* Vật thể trang trí 3D số 1: Khối lập phương Neon Cyan xoay */}
+      <div className="absolute left-[10%] top-[20%] hidden md:block animate-float-3d pointer-events-none z-0">
+        <div className="cube-container">
+          <div className="cube-3d">
+            <div className="cube-face cube-face-front"></div>
+            <div className="cube-face cube-face-back"></div>
+            <div className="cube-face cube-face-right"></div>
+            <div className="cube-face cube-face-left"></div>
+            <div className="cube-face cube-face-top"></div>
+            <div className="cube-face cube-face-bottom"></div>
+          </div>
+        </div>
+      </div>
+
+      {/* Vật thể trang trí 3D số 2: Khối lập phương Tím lơ lửng ở góc dưới phải */}
+      <div className="absolute right-[12%] bottom-[20%] hidden md:block animate-float-3d-delayed pointer-events-none z-0">
+        <div className="cube-container" style={{ filter: 'hue-rotate(60deg)' }}>
+          <div className="cube-3d" style={{ animationDuration: '15s' }}>
+            <div className="cube-face cube-face-front"></div>
+            <div className="cube-face cube-face-back"></div>
+            <div className="cube-face cube-face-right"></div>
+            <div className="cube-face cube-face-left"></div>
+            <div className="cube-face cube-face-top"></div>
+            <div className="cube-face cube-face-bottom"></div>
+          </div>
+        </div>
+      </div>
+
+      {/* Login Card sử dụng hiệu ứng 3D Tilt */}
+      <div className="relative z-10 w-full max-w-[440px] p-10 rounded-3xl bg-dark-glass border border-dark-border backdrop-blur-2xl shadow-2xl tilt-card-3d animate-fade-in">
+        <div className="text-center mb-8 preserve-3d-child">
+          <div className="w-[70px] h-[70px] rounded-full bg-gradient-to-br from-cyan-premium to-purple-premium flex items-center justify-center mx-auto mb-4 shadow-lg shadow-cyan-premium/30 text-white text-3xl animate-float-3d">
             <FaWallet className="text-2xl drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]" />
           </div>
           <h2 className="text-2xl font-extrabold tracking-wider text-center uppercase bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent font-heading">
-            SMART EXPENSE
+            QUẢN LÝ CHI TIÊU
           </h2>
           <p className="text-gray-400 text-sm mt-1">
-            {isForgotPassword ? 'Reset your account security keys' : 'Manage your finances intelligently'}
+            {isForgotPassword ? 'Đặt lại chìa khóa bảo mật tài khoản' : 'Quản lý tài chính cá nhân một cách thông minh'}
           </p>
         </div>
 
         {!isForgotPassword ? (
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6 preserve-3d-child">
             <div className="group">
               <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                Email Address
+                Địa chỉ Email
               </label>
               <div className="relative flex items-center">
                 <FaEnvelope className="absolute left-4 text-gray-500 text-base transition-colors group-focus-within:text-cyan-premium" />
@@ -98,7 +126,7 @@ const Login = () => {
             <div className="group">
               <div className="flex justify-between items-center mb-2">
                 <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider">
-                  Password
+                  Mật khẩu
                 </label>
                 <button
                   type="button"
@@ -108,7 +136,7 @@ const Login = () => {
                   }}
                   className="text-cyan-premium hover:text-cyan-300 text-[10px] font-bold tracking-wide uppercase transition-colors"
                 >
-                  Forgot Password?
+                  Quên Mật Khẩu?
                 </button>
               </div>
               <div className="relative flex items-center">
@@ -134,23 +162,23 @@ const Login = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-4 px-6 border-none rounded-xl bg-gradient-to-r from-cyan-premium to-purple-premium text-white font-heading font-extrabold text-sm tracking-wide shadow-md shadow-cyan-premium/20 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-premium/40 active:translate-y-0 disabled:opacity-50 transition-all flex items-center justify-center gap-2"
+              className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-cyan-premium to-purple-premium text-white font-heading font-extrabold text-sm tracking-wide disabled:opacity-50 transition-all flex items-center justify-center gap-2 neo-button-3d cursor-pointer"
             >
               {loading ? (
                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
               ) : (
                 <>
-                  <span>SIGN IN</span>
-                  <FaSignInAlt className="text-sm" />
+                  <span>ĐĂNG NHẬP</span>
+                  <FaSignInAlt className="text-sm animate-float-3d" />
                 </>
               )}
             </button>
           </form>
         ) : (
-          <form onSubmit={handleResetPassword} className="space-y-6">
+          <form onSubmit={handleResetPassword} className="space-y-6 preserve-3d-child">
             <div className="group">
               <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                Registered Email
+                Email đã đăng ký
               </label>
               <div className="relative flex items-center">
                 <FaEnvelope className="absolute left-4 text-gray-500 text-base transition-colors group-focus-within:text-cyan-premium" />
@@ -167,7 +195,7 @@ const Login = () => {
 
             <div className="group">
               <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                New Password
+                Mật khẩu mới
               </label>
               <div className="relative flex items-center">
                 <FaLock className="absolute left-4 text-gray-500 text-base transition-colors group-focus-within:text-cyan-premium" />
@@ -176,7 +204,7 @@ const Login = () => {
                   value={newPassword}
                   onChange={(e) => setNewPassword(e.target.value)}
                   className="w-full pl-11 pr-4 py-3.5 bg-[#0f172a]/80 border border-dark-border rounded-xl text-white placeholder-gray-600 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
-                  placeholder="•••••••• (min 6 chars)"
+                  placeholder="•••••••• (tối thiểu 6 ký tự)"
                   required
                 />
               </div>
@@ -184,7 +212,7 @@ const Login = () => {
 
             <div className="group">
               <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                Confirm New Password
+                Xác nhận mật khẩu mới
               </label>
               <div className="relative flex items-center">
                 <FaLock className="absolute left-4 text-gray-500 text-base transition-colors group-focus-within:text-cyan-premium" />
@@ -203,12 +231,12 @@ const Login = () => {
               <button
                 type="submit"
                 disabled={resetLoading}
-                className="w-full py-4 px-6 border-none rounded-xl bg-gradient-to-r from-cyan-premium to-purple-premium text-white font-heading font-extrabold text-sm tracking-wide shadow-md shadow-cyan-premium/20 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-premium/40 active:translate-y-0 disabled:opacity-50 transition-all flex items-center justify-center gap-2"
+                className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-cyan-premium to-purple-premium text-white font-heading font-extrabold text-sm tracking-wide disabled:opacity-50 transition-all flex items-center justify-center gap-2 neo-button-3d cursor-pointer"
               >
                 {resetLoading ? (
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
                 ) : (
-                  <span>RESET PASSWORD</span>
+                  <span>ĐẶT LẠI MẬT KHẨU</span>
                 )}
               </button>
 
@@ -221,17 +249,17 @@ const Login = () => {
                 }}
                 className="w-full py-2.5 px-4 bg-white/[0.02] hover:bg-white/[0.05] border border-dark-border rounded-xl text-xs font-bold text-gray-400 hover:text-white hover:border-gray-500 transition-all active:scale-98 cursor-pointer"
               >
-                CANCEL & BACK
+                HỦY & QUAY LẠI
               </button>
             </div>
           </form>
         )}
 
-        <div className="mt-8 text-center border-t border-dark-border pt-6">
+        <div className="mt-8 text-center border-t border-dark-border pt-6 preserve-3d-child">
           <p className="text-gray-500 text-xs tracking-wide">
-            Don't have an account?{' '}
+            Chưa có tài khoản?{' '}
             <Link to="/register" className="text-cyan-premium hover:text-cyan-300 font-bold transition-colors">
-              CREATE ONE
+              ĐĂNG KÝ NGAY
             </Link>
           </p>
         </div>
@@ -239,7 +267,7 @@ const Login = () => {
       
       {/* Optional bottom branding */}
       <div className="absolute bottom-6 left-0 right-0 text-center pointer-events-none">
-        <p className="text-[10px] text-gray-600 tracking-widest uppercase">© 2026 Smart Expense Tracker Platform</p>
+        <p className="text-[10px] text-gray-600 tracking-widest uppercase">© 2026 Nền tảng Quản lý chi tiêu thông minh</p>
       </div>
     </div>
   );

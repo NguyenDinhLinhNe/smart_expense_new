@@ -109,17 +109,17 @@ const Recurring = () => {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 relative">
       {/* Top Header Panel */}
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 p-6 bg-gradient-to-r from-emerald-premium/5 to-cyan-premium/5 border border-dark-border rounded-3xl relative overflow-hidden backdrop-blur-md">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 p-6 bg-gradient-to-r from-emerald-premium/5 to-cyan-premium/5 border border-dark-border rounded-3xl relative overflow-hidden backdrop-blur-md tilt-card-3d">
         <div className="absolute top-0 right-0 w-48 h-48 bg-emerald-premium/10 blur-[60px] rounded-full pointer-events-none"></div>
-        <div>
+        <div className="preserve-3d-child">
           <h2 className="text-xl font-black text-white font-heading mb-1.5 flex items-center gap-2">
             <FaSync className="text-emerald-premium animate-spin-slow" />
-            RECURRING TRANSACTIONS
+            GIAO DỊCH ĐỊNH KỲ
           </h2>
           <p className="text-gray-400 text-xs tracking-wide">
-            Automate periodic bills, subscription services, or repeating paychecks.
+            Tự động hóa các hóa đơn định kỳ, dịch vụ đăng ký thuê bao hoặc lương định kỳ.
           </p>
         </div>
         
@@ -128,10 +128,10 @@ const Recurring = () => {
             resetForm();
             setShowModal(true);
           }}
-          className="flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-emerald-premium to-cyan-premium text-white font-bold rounded-2xl text-xs shadow-cyan-glow transition-all hover:scale-105 active:scale-95 cursor-pointer"
+          className="flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-emerald-premium to-cyan-premium text-white font-bold rounded-2xl text-xs shadow-cyan-glow transition-all hover:scale-105 active:scale-95 cursor-pointer neo-button-3d preserve-3d-child"
         >
           <FaPlus size={11} />
-          ADD RECURRING RULE
+          THÊM QUY TẮC ĐỊNH KỲ
         </button>
       </div>
 
@@ -143,19 +143,20 @@ const Recurring = () => {
       ) : recurrings.length === 0 ? (
         <div className="text-center py-16 bg-[#101622]/50 border border-dark-border rounded-3xl backdrop-blur-md">
           <FaSync size={40} className="mx-auto text-gray-600 mb-4 animate-pulse" />
-          <p className="text-gray-400 text-xs font-semibold">No active recurring rules found.</p>
-          <p className="text-gray-600 text-[10px] mt-1">Create one to start automated logging!</p>
+          <p className="text-gray-400 text-xs font-semibold">Chưa tìm thấy quy tắc định kỳ hoạt động nào.</p>
+          <p className="text-gray-600 text-[10px] mt-1">Hãy tạo quy tắc đầu tiên để hệ thống tự động ghi sổ nhé!</p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 perspective-3d">
           {recurrings.map(rule => (
             <div 
               key={rule.id} 
-              className={`p-6 border rounded-3xl bg-[#101622]/80 backdrop-blur-md relative overflow-hidden transition-all hover:-translate-y-1 ${
+              className={`p-6 border rounded-3xl bg-[#101622]/80 backdrop-blur-md relative overflow-hidden transition-all hover:-translate-y-1 tilt-card-3d ${
                 rule.is_active ? 'border-dark-border hover:border-emerald-premium/45' : 'border-dark-border opacity-60'
               }`}
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-premium/5 blur-2xl rounded-full pointer-events-none"></div>
+              <div className="preserve-3d-child">
               
               <div className="flex justify-between items-start mb-4">
                 <div className="flex items-center gap-3">
@@ -164,7 +165,10 @@ const Recurring = () => {
                   </div>
                   <div>
                     <h4 className="text-xs font-bold text-white uppercase tracking-wider">{rule.category_name}</h4>
-                    <span className="text-[10px] text-gray-500 uppercase tracking-widest font-semibold">{rule.frequency} (Day {rule.day_of_period})</span>
+                    <span className="text-[10px] text-gray-500 uppercase tracking-widest font-semibold">
+                      {rule.frequency === 'daily' ? 'Hàng ngày' : rule.frequency === 'weekly' ? 'Hàng tuần' : rule.frequency === 'monthly' ? 'Hàng tháng' : rule.frequency} 
+                      {rule.frequency !== 'daily' && ` (Ngày ${rule.day_of_period})`}
+                    </span>
                   </div>
                 </div>
 
@@ -192,21 +196,23 @@ const Recurring = () => {
 
               <div className="space-y-2 mt-4 pt-4 border-t border-dark-border/40">
                 <div className="flex justify-between items-baseline">
-                  <span className="text-[10px] text-gray-500 font-semibold uppercase tracking-wider">Amount</span>
+                  <span className="text-[10px] text-gray-500 font-semibold uppercase tracking-wider">Số tiền</span>
                   <span className={`text-sm font-black font-heading ${rule.type === 'income' ? 'text-emerald-premium' : 'text-rose-500'}`}>
                     {rule.type === 'income' ? '+' : '-'}{formatVND(rule.amount)}
                   </span>
                 </div>
                 {rule.description && (
                   <div className="flex justify-between text-[10px]">
-                    <span className="text-gray-500 font-semibold uppercase tracking-wider">Desc</span>
+                    <span className="text-gray-500 font-semibold uppercase tracking-wider">Mô tả</span>
                     <span className="text-gray-300 font-medium truncate max-w-[150px]">{rule.description}</span>
                   </div>
                 )}
                 <div className="flex justify-between text-[10px]">
-                  <span className="text-gray-500 font-semibold uppercase tracking-wider">Last Run</span>
-                  <span className="text-gray-400 font-mono font-semibold">{rule.last_executed ? new Date(rule.last_executed).toLocaleDateString('vi-VN') : 'Never'}</span>
+                  <span className="text-gray-500 font-semibold uppercase tracking-wider">Lần chạy cuối</span>
+                  <span className="text-gray-400 font-mono font-semibold">{rule.last_executed ? new Date(rule.last_executed).toLocaleDateString('vi-VN') : 'Chưa chạy'}</span>
                 </div>
+              </div>
+              
               </div>
             </div>
           ))}
@@ -215,13 +221,13 @@ const Recurring = () => {
 
       {/* Modal Add/Edit Rule */}
       {showModal && (
-        <div className="fixed inset-0 bg-[#090d16]/80 backdrop-blur-md flex items-center justify-center z-50 p-4 animate-fade-in">
-          <div className="bg-[#101622]/95 border border-dark-border rounded-3xl max-w-md w-full p-8 shadow-2xl relative animate-modal-scale">
+        <div className="modal-backdrop-premium animate-fade-in">
+          <div className="bg-[#101622]/95 border border-dark-border rounded-3xl max-w-md w-full p-8 shadow-2xl relative animate-modal-scale max-h-[85vh] overflow-y-auto custom-scrollbar bg-dark-glass">
             <div className="absolute w-24 h-24 bg-emerald-premium blur-[30px] -top-10 -left-10 opacity-[0.08] rounded-full pointer-events-none"></div>
             
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-base font-extrabold text-white tracking-wide uppercase font-heading">
-                {editingRecurring ? 'Edit Rule' : 'New Recurring Rule'}
+                {editingRecurring ? 'Sửa Quy Tắc' : 'Quy Tắc Định Kỳ Mới'}
               </h3>
               <button 
                 onClick={() => setShowModal(false)} 
@@ -234,7 +240,7 @@ const Recurring = () => {
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                  Amount (VND)
+                  Số tiền (VNĐ)
                 </label>
                 <input
                   type="number"
@@ -249,7 +255,7 @@ const Recurring = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                    Type
+                    Loại giao dịch
                   </label>
                   <div className="relative">
                     <select
@@ -257,8 +263,8 @@ const Recurring = () => {
                       onChange={(e) => setFormData({ ...formData, type: e.target.value, category_id: '' })}
                       className="w-full appearance-none pl-4 pr-10 py-3 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-white outline-none focus:border-emerald-premium focus:shadow-emerald-glow transition-all"
                     >
-                      <option value="expense">Expense</option>
-                      <option value="income">Income</option>
+                      <option value="expense">Chi tiêu</option>
+                      <option value="income">Thu nhập</option>
                     </select>
                     <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-gray-500 text-xs">
                       <FaChevronDown />
@@ -268,7 +274,7 @@ const Recurring = () => {
 
                 <div>
                   <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                    Category
+                    Danh mục
                   </label>
                   <div className="relative">
                     <select
@@ -277,7 +283,7 @@ const Recurring = () => {
                       className="w-full appearance-none pl-4 pr-10 py-3 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-white outline-none focus:border-emerald-premium focus:shadow-emerald-glow transition-all"
                       required
                     >
-                      <option value="">Select</option>
+                      <option value="">Chọn</option>
                       {categories.filter(c => c.type === formData.type).map(cat => (
                         <option key={cat.id} value={cat.id}>{cat.icon} {cat.name}</option>
                       ))}
@@ -292,7 +298,7 @@ const Recurring = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                    Frequency
+                    Tần suất
                   </label>
                   <div className="relative">
                     <select
@@ -300,9 +306,9 @@ const Recurring = () => {
                       onChange={(e) => setFormData({ ...formData, frequency: e.target.value, day_of_period: 1 })}
                       className="w-full appearance-none pl-4 pr-10 py-3 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-white outline-none focus:border-emerald-premium focus:shadow-emerald-glow transition-all"
                     >
-                      <option value="daily">Daily</option>
-                      <option value="weekly">Weekly</option>
-                      <option value="monthly">Monthly</option>
+                      <option value="daily">Hàng ngày</option>
+                      <option value="weekly">Hàng tuần</option>
+                      <option value="monthly">Hàng tháng</option>
                     </select>
                     <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-gray-500 text-xs">
                       <FaChevronDown />
@@ -312,13 +318,13 @@ const Recurring = () => {
 
                 <div>
                   <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                    {formData.frequency === 'weekly' ? 'Day of Week' : formData.frequency === 'monthly' ? 'Day of Month' : 'N/A'}
+                    {formData.frequency === 'weekly' ? 'Ngày trong tuần' : formData.frequency === 'monthly' ? 'Ngày trong tháng' : 'Không có'}
                   </label>
                   {formData.frequency === 'daily' ? (
                     <input
                       type="text"
                       disabled
-                      value="Every day"
+                      value="Mỗi ngày"
                       className="w-full px-4 py-3 bg-white/[0.02] border border-dark-border rounded-xl text-xs text-gray-500 cursor-not-allowed"
                     />
                   ) : formData.frequency === 'weekly' ? (
@@ -328,13 +334,13 @@ const Recurring = () => {
                         onChange={(e) => setFormData({ ...formData, day_of_period: parseInt(e.target.value) })}
                         className="w-full appearance-none pl-4 pr-10 py-3 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-white outline-none focus:border-emerald-premium focus:shadow-emerald-glow transition-all"
                       >
-                        <option value="0">Monday</option>
-                        <option value="1">Tuesday</option>
-                        <option value="2">Wednesday</option>
-                        <option value="3">Thursday</option>
-                        <option value="4">Friday</option>
-                        <option value="5">Saturday</option>
-                        <option value="6">Sunday</option>
+                        <option value="0">Thứ Hai</option>
+                        <option value="1">Thứ Ba</option>
+                        <option value="2">Thứ Tư</option>
+                        <option value="3">Thứ Năm</option>
+                        <option value="4">Thứ Sáu</option>
+                        <option value="5">Thứ Bảy</option>
+                        <option value="6">Chủ Nhật</option>
                       </select>
                       <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-gray-500 text-xs">
                         <FaChevronDown />
@@ -356,23 +362,23 @@ const Recurring = () => {
 
               <div>
                 <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                  Description
+                  Mô tả
                 </label>
                 <input
                   type="text"
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                   className="w-full px-4 py-3 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-white placeholder-gray-600 outline-none focus:border-emerald-premium focus:shadow-emerald-glow transition-all"
-                  placeholder="e.g. Monthly Rent, Netflix subscription"
+                  placeholder="Ví dụ: Tiền thuê nhà hàng tháng, đăng ký Netflix"
                 />
               </div>
 
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full py-4 bg-gradient-to-r from-emerald-premium to-cyan-premium hover:opacity-90 text-white font-extrabold rounded-2xl text-xs tracking-wider uppercase shadow-cyan-glow transition-all cursor-pointer"
+                  className="w-full py-4 bg-gradient-to-r from-emerald-premium to-cyan-premium hover:opacity-90 text-white font-extrabold rounded-2xl text-xs tracking-wider uppercase shadow-cyan-glow transition-all cursor-pointer neo-button-3d"
                 >
-                  {editingRecurring ? 'UPDATE RULE' : 'CREATE RULE'}
+                  {editingRecurring ? 'CẬP NHẬT QUY TẮC' : 'THIẾT LẬP QUY TẮC'}
                 </button>
               </div>
             </form>

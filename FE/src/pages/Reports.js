@@ -60,7 +60,8 @@ const Reports = () => {
   const handleExport = async (format) => {
     try {
       const response = await exportReport(format, { month: selectedMonth, year: selectedYear });
-      const url = window.URL.createObjectURL(new Blob([response.data]));
+      const blob = new Blob([response.data], { type: 'text/csv;charset=utf-8;' });
+      const url = window.URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
       link.setAttribute('download', `expense_report_${selectedMonth}_${selectedYear}.${format}`);
@@ -91,14 +92,14 @@ const Reports = () => {
     labels: allLabels,
     datasets: [
       {
-        label: 'Income',
+        label: 'Thu nhập',
         data: allLabels.map(label => reportData?.income_category_breakdown?.[label] || 0),
         backgroundColor: '#10b981',
         borderRadius: 8,
         borderWidth: 0
       },
       {
-        label: 'Expense',
+        label: 'Chi tiêu',
         data: allLabels.map(label => reportData?.category_breakdown?.[label] || 0),
         backgroundColor: '#f43f5e',
         borderRadius: 8,
@@ -108,19 +109,19 @@ const Reports = () => {
   };
 
   // Weekly View Calculations
-  const weeklyLabels = weeklyData && weeklyData.weekly_data ? weeklyData.weekly_data.map(w => `${w.label} (${w.start_str} - ${w.end_str})`) : [];
+  const weeklyLabels = weeklyData && weeklyData.weekly_data ? weeklyData.weekly_data.map(w => `${w.label.replace('Week', 'Tuần')} (${w.start_str} - ${w.end_str})`) : [];
   const weeklyChartData = {
     labels: weeklyLabels,
     datasets: [
       {
-        label: 'Income',
+        label: 'Thu nhập',
         data: weeklyData && weeklyData.weekly_data ? weeklyData.weekly_data.map(w => w.income) : [],
         backgroundColor: '#10b981',
         borderRadius: 8,
         borderWidth: 0
       },
       {
-        label: 'Expense',
+        label: 'Chi tiêu',
         data: weeklyData && weeklyData.weekly_data ? weeklyData.weekly_data.map(w => w.expense) : [],
         backgroundColor: '#f43f5e',
         borderRadius: 8,
@@ -225,28 +226,28 @@ const Reports = () => {
       <div className="text-center py-16 bg-dark-glass border border-dark-border rounded-2xl p-8 shadow-xl max-w-xl mx-auto font-body">
         <FaDatabase className="text-4xl text-cyan-premium mb-4 mx-auto animate-pulse" />
         <h3 className="text-base font-extrabold text-white tracking-wide uppercase font-heading">
-          No weekly records captured
+          Không có bản ghi tuần nào
         </h3>
         <p className="text-xs text-gray-500 mt-2 max-w-sm mx-auto">
-          Please verify that the backend services are running and you have transactions logged under the chosen parameters.
+          Vui lòng kiểm tra lại dịch vụ backend có hoạt động và bạn đã ghi nhận giao dịch trong thời gian đã chọn hay chưa.
         </p>
       </div>
     );
   }
 
   return (
-    <div className="space-y-8 animate-fade-in font-body">
+    <div className="space-y-8 animate-fade-in font-body perspective-3d">
       {/* Header Panel */}
-      <div className="flex flex-col xl:flex-row justify-between xl:items-center gap-4 bg-dark-glass border border-dark-border p-6 rounded-2xl relative overflow-hidden">
+      <div className="flex flex-col xl:flex-row justify-between xl:items-center gap-4 bg-dark-glass border border-dark-border p-6 rounded-2xl relative overflow-hidden tilt-card-3d">
         <div className="absolute w-24 h-24 bg-cyan-premium blur-[30px] -bottom-10 -left-10 opacity-[0.08] rounded-full pointer-events-none"></div>
-        <div>
+        <div className="preserve-3d-child">
           <h2 className="text-xl font-extrabold text-white tracking-wide uppercase font-heading">
-            Financial Reports
+            Báo Cáo Tài Chính
           </h2>
-          <p className="text-xs text-gray-500 mt-0.5">Interactive statistics, data breakdowns, and document sheets</p>
+          <p className="text-xs text-gray-500 mt-0.5">Thống kê tương tác, cơ cấu danh mục và xuất tệp tin dữ liệu</p>
         </div>
         
-        <div className="flex items-center flex-wrap gap-3.5 self-start xl:self-center">
+        <div className="flex items-center flex-wrap gap-3.5 self-start xl:self-center preserve-3d-child">
           {/* View Mode Toggle */}
           <div className="flex bg-[#0f172a]/80 p-1 border border-dark-border rounded-xl">
             <button
@@ -257,7 +258,7 @@ const Reports = () => {
                   : 'text-gray-400 hover:text-white'
               }`}
             >
-              MONTHLY
+              HÀNG THÁNG
             </button>
             <button
               onClick={() => setViewMode('weekly')}
@@ -267,7 +268,7 @@ const Reports = () => {
                   : 'text-gray-400 hover:text-white'
               }`}
             >
-              WEEKLY
+              HÀNG TUẦN
             </button>
           </div>
 
@@ -279,7 +280,7 @@ const Reports = () => {
               className="appearance-none pl-4 pr-9 py-2.5 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-gray-300 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
             >
               {Array.from({ length: 12 }, (_, i) => i + 1).map(month => (
-                <option key={month} value={month}>Month {month}</option>
+                <option key={month} value={month}>Tháng {month}</option>
               ))}
             </select>
             <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none text-gray-500 text-xs">
@@ -295,7 +296,7 @@ const Reports = () => {
               className="appearance-none pl-4 pr-9 py-2.5 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-gray-300 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
             >
               {[2023, 2024, 2025, 2026].map(year => (
-                <option key={year} value={year}>{year}</option>
+                <option key={year} value={year}>Năm {year}</option>
               ))}
             </select>
             <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none text-gray-500 text-xs">
@@ -305,147 +306,158 @@ const Reports = () => {
           
           <button
             onClick={() => handleExport('csv')}
-            className="py-2.5 px-5 bg-gradient-to-r from-emerald-premium to-teal-premium text-white font-heading font-extrabold text-xs tracking-wide shadow-md shadow-emerald-premium/20 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-emerald-premium/45 active:translate-y-0 transition-all flex items-center gap-2.5 rounded-xl font-heading"
+            className="py-2.5 px-5 bg-gradient-to-r from-emerald-premium to-teal-premium text-white font-heading font-extrabold text-xs tracking-wide shadow-md shadow-emerald-premium/20 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-emerald-premium/45 active:translate-y-0 transition-all flex items-center gap-2.5 rounded-xl font-heading neo-button-3d cursor-pointer"
           >
-            <FaDownload /> <span>EXPORT SHEET (CSV)</span>
+            <FaDownload /> <span>XUẤT FILE (CSV)</span>
           </button>
         </div>
       </div>
 
       {/* 3 Columns KPI Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 perspective-3d">
         {/* KPI: Total Income */}
-        <div className="relative overflow-hidden bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl hover:-translate-y-1 hover:border-emerald-premium/40 hover:shadow-emerald-premium/5 transition-all duration-300 group">
+        <div className="relative overflow-hidden bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl hover:-translate-y-1 hover:border-emerald-premium/40 hover:shadow-emerald-premium/5 transition-all duration-300 group tilt-card-3d">
           <div className="absolute w-36 h-36 bg-emerald-premium blur-[35px] -top-12 -right-12 opacity-[0.12] rounded-full pointer-events-none transition-opacity duration-300 group-hover:opacity-20"></div>
-          <p className="text-xs font-bold text-gray-500 uppercase tracking-widest font-heading">
-            TOTAL INCOME
-          </p>
-          <h3 className="text-3xl font-extrabold text-white mt-2 font-heading tracking-tight font-mono">
-            {formatVND(currentKPI.income)}
-          </h3>
-          <p className="text-[11px] text-gray-400 mt-1">Gross earnings for period</p>
+          <div className="preserve-3d-child">
+            <p className="text-xs font-bold text-gray-500 uppercase tracking-widest font-heading">
+              TỔNG THU NHẬP
+            </p>
+            <h3 className="text-3xl font-extrabold text-white mt-2 font-heading tracking-tight font-mono">
+              {formatVND(currentKPI.income)}
+            </h3>
+            <p className="text-[11px] text-gray-400 mt-1">Tổng tiền thu được trong kỳ</p>
+          </div>
         </div>
         
         {/* KPI: Total Expense */}
-        <div className="relative overflow-hidden bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl hover:-translate-y-1 hover:border-rose-premium/40 hover:shadow-rose-premium/5 transition-all duration-300 group">
+        <div className="relative overflow-hidden bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl hover:-translate-y-1 hover:border-rose-premium/40 hover:shadow-rose-premium/5 transition-all duration-300 group tilt-card-3d">
           <div className="absolute w-36 h-36 bg-rose-premium blur-[35px] -top-12 -right-12 opacity-[0.12] rounded-full pointer-events-none transition-opacity duration-300 group-hover:opacity-20"></div>
-          <p className="text-xs font-bold text-gray-500 uppercase tracking-widest font-heading">
-            TOTAL EXPENSES
-          </p>
-          <h3 className="text-3xl font-extrabold text-white mt-2 font-heading tracking-tight font-mono">
-            {formatVND(currentKPI.expense)}
-          </h3>
-          <p className="text-[11px] text-gray-400 mt-1">Paid bills and charges</p>
+          <div className="preserve-3d-child">
+            <p className="text-xs font-bold text-gray-500 uppercase tracking-widest font-heading">
+              TỔNG CHI TIÊU
+            </p>
+            <h3 className="text-3xl font-extrabold text-white mt-2 font-heading tracking-tight font-mono">
+              {formatVND(currentKPI.expense)}
+            </h3>
+            <p className="text-[11px] text-gray-400 mt-1">Các khoản đã thanh toán và chi phí</p>
+          </div>
         </div>
         
         {/* KPI: Net Savings */}
-        <div className="relative overflow-hidden bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl hover:-translate-y-1 hover:border-cyan-premium/40 hover:shadow-cyan-premium/5 transition-all duration-300 group">
+        <div className="relative overflow-hidden bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl hover:-translate-y-1 hover:border-cyan-premium/40 hover:shadow-cyan-premium/5 transition-all duration-300 group tilt-card-3d">
           <div className="absolute w-36 h-36 bg-cyan-premium blur-[35px] -top-12 -right-12 opacity-[0.12] rounded-full pointer-events-none transition-opacity duration-300 group-hover:opacity-20"></div>
-          <p className="text-xs font-bold text-gray-500 uppercase tracking-widest font-heading">
-            NET SAVINGS
-          </p>
-          <h3 className="text-3xl font-extrabold text-white mt-2 font-heading tracking-tight font-mono">
-            {formatVND(currentKPI.balance)}
-          </h3>
-          <p className="text-[11px] text-gray-400 mt-1">Net accumulated margins</p>
+          <div className="preserve-3d-child">
+            <p className="text-xs font-bold text-gray-500 uppercase tracking-widest font-heading">
+              TIẾT KIỆM TÍCH LŨY
+            </p>
+            <h3 className="text-3xl font-extrabold text-white mt-2 font-heading tracking-tight font-mono">
+              {formatVND(currentKPI.balance)}
+            </h3>
+            <p className="text-[11px] text-gray-400 mt-1">Số dư ròng thực tế tích lũy</p>
+          </div>
         </div>
       </div>
 
       {/* Charts Block */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 perspective-3d">
         {/* Chart View */}
-        <div className="bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl flex flex-col h-[380px] hover:border-white/[0.1] transition-colors">
-          <div className="flex justify-between items-center mb-6">
-            <h3 className="text-base font-bold text-white tracking-wide font-heading">
-              {viewMode === 'monthly' ? 'CATEGORY BREAKDOWN' : 'WEEKLY BREAKDOWN'}
-            </h3>
-            <span className="text-[10px] text-gray-500 uppercase tracking-widest flex items-center gap-1.5 font-semibold">
-              <FaCalendarAlt /> Breakdown comparative
-            </span>
-          </div>
-          <div className="flex-1 min-h-0">
-            <Bar data={viewMode === 'monthly' ? monthlyChartData : weeklyChartData} options={chartOptions} />
+        <div className="bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl flex flex-col h-[380px] hover:border-white/[0.1] transition-colors tilt-card-3d">
+          <div className="preserve-3d-child flex flex-col h-full">
+            <div className="flex justify-between items-center mb-6">
+              <h3 className="text-base font-bold text-white tracking-wide font-heading">
+                {viewMode === 'monthly' ? 'CƠ CẤU THEO DANH MỤC' : 'PHÂN TÍCH HÀNG TUẦN'}
+              </h3>
+              <span className="text-[10px] text-gray-500 uppercase tracking-widest flex items-center gap-1.5 font-semibold">
+                <FaCalendarAlt /> Biểu đồ so sánh
+              </span>
+            </div>
+            <div className="flex-1 min-h-0">
+              <Bar data={viewMode === 'monthly' ? monthlyChartData : weeklyChartData} options={chartOptions} />
+            </div>
           </div>
         </div>
         
         {/* Analysis Summary */}
-        <div className="bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl flex flex-col justify-between hover:border-white/[0.1] transition-colors">
-          <div>
-            <h3 className="text-base font-bold text-white tracking-wide mb-6 font-heading">
-              INDEX SUMMARY
-            </h3>
+        <div className="bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl flex flex-col justify-between hover:border-white/[0.1] transition-colors tilt-card-3d">
+          <div className="preserve-3d-child flex flex-col justify-between h-full">
+            <div>
+              <h3 className="text-base font-bold text-white tracking-wide mb-6 font-heading">
+                TÓM TẮT CHỈ SỐ
+              </h3>
+              
+              {viewMode === 'monthly' ? (
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center p-4 bg-white/[0.01] border border-dark-border rounded-xl hover:bg-white/[0.03] transition-colors">
+                    <span className="text-xs text-gray-400 font-semibold tracking-wider uppercase font-heading">Tổng số giao dịch</span>
+                    <span className="text-white font-bold font-mono text-sm">{reportData?.transaction_count || 0}</span>
+                  </div>
+                  
+                  <div className="flex justify-between items-center p-4 bg-white/[0.01] border border-dark-border rounded-xl hover:bg-white/[0.03] transition-colors">
+                    <span className="text-xs text-gray-400 font-semibold tracking-wider uppercase font-heading">Chi tiêu trung bình</span>
+                    <span className="text-white font-bold font-mono text-sm">
+                      {formatVND((reportData?.total_expense || 0) / (reportData?.transaction_count || 1))}
+                    </span>
+                  </div>
+                  
+                  <div className="flex justify-between items-center p-4 bg-white/[0.01] border border-dark-border rounded-xl hover:bg-white/[0.03] transition-colors">
+                    <span className="text-xs text-gray-400 font-semibold tracking-wider uppercase font-heading">Khoảng thời gian</span>
+                    <span className="text-white font-bold font-mono text-sm">Tháng {selectedMonth}/{selectedYear}</span>
+                  </div>
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center p-4 bg-white/[0.01] border border-dark-border rounded-xl hover:bg-white/[0.03] transition-colors">
+                    <span className="text-xs text-gray-400 font-semibold tracking-wider uppercase font-heading">Số tuần hoạt động</span>
+                    <span className="text-white font-bold font-mono text-sm">{weeklyData?.weekly_data?.length || 0} Tuần</span>
+                  </div>
+                  
+                  <div className="flex justify-between items-center p-4 bg-white/[0.01] border border-dark-border rounded-xl hover:bg-white/[0.03] transition-colors">
+                    <span className="text-xs text-gray-400 font-semibold tracking-wider uppercase font-heading">Chi tiêu trung bình tuần</span>
+                    <span className="text-white font-bold font-mono text-sm">
+                      {formatVND((weeklyData?.total_expense || 0) / (weeklyData?.weekly_data?.length || 1))}
+                    </span>
+                  </div>
+                  
+                  <div className="flex justify-between items-center p-4 bg-white/[0.01] border border-dark-border rounded-xl hover:bg-white/[0.03] transition-colors">
+                    <span className="text-xs text-gray-400 font-semibold tracking-wider uppercase font-heading">Phạm vi hàng tuần</span>
+                    <span className="text-white font-bold font-mono text-sm">Tháng {selectedMonth}/{selectedYear}</span>
+                  </div>
+                </div>
+              )}
+            </div>
             
-            {viewMode === 'monthly' ? (
-              <div className="space-y-4">
-                <div className="flex justify-between items-center p-4 bg-white/[0.01] border border-dark-border rounded-xl hover:bg-white/[0.03] transition-colors">
-                  <span className="text-xs text-gray-400 font-semibold tracking-wider uppercase font-heading">Total Transactions</span>
-                  <span className="text-white font-bold font-mono text-sm">{reportData?.transaction_count || 0}</span>
-                </div>
-                
-                <div className="flex justify-between items-center p-4 bg-white/[0.01] border border-dark-border rounded-xl hover:bg-white/[0.03] transition-colors">
-                  <span className="text-xs text-gray-400 font-semibold tracking-wider uppercase font-heading">Average Expenses</span>
-                  <span className="text-white font-bold font-mono text-sm">
-                    {formatVND((reportData?.total_expense || 0) / (reportData?.transaction_count || 1))}
-                  </span>
-                </div>
-                
-                <div className="flex justify-between items-center p-4 bg-white/[0.01] border border-dark-border rounded-xl hover:bg-white/[0.03] transition-colors">
-                  <span className="text-xs text-gray-400 font-semibold tracking-wider uppercase font-heading">Index Range</span>
-                  <span className="text-white font-bold font-mono text-sm">Month {selectedMonth}/{selectedYear}</span>
-                </div>
-              </div>
-            ) : (
-              <div className="space-y-4">
-                <div className="flex justify-between items-center p-4 bg-white/[0.01] border border-dark-border rounded-xl hover:bg-white/[0.03] transition-colors">
-                  <span className="text-xs text-gray-400 font-semibold tracking-wider uppercase font-heading">Total Active Weeks</span>
-                  <span className="text-white font-bold font-mono text-sm">{weeklyData?.weekly_data?.length || 0} Weeks</span>
-                </div>
-                
-                <div className="flex justify-between items-center p-4 bg-white/[0.01] border border-dark-border rounded-xl hover:bg-white/[0.03] transition-colors">
-                  <span className="text-xs text-gray-400 font-semibold tracking-wider uppercase font-heading">Average Weekly Expenses</span>
-                  <span className="text-white font-bold font-mono text-sm">
-                    {formatVND((weeklyData?.total_expense || 0) / (weeklyData?.weekly_data?.length || 1))}
-                  </span>
-                </div>
-                
-                <div className="flex justify-between items-center p-4 bg-white/[0.01] border border-dark-border rounded-xl hover:bg-white/[0.03] transition-colors">
-                  <span className="text-xs text-gray-400 font-semibold tracking-wider uppercase font-heading">Weekly Coverage</span>
-                  <span className="text-white font-bold font-mono text-sm">Month {selectedMonth}/{selectedYear}</span>
-                </div>
-              </div>
-            )}
-          </div>
-          
-          <div className="text-center p-3 text-[10px] text-gray-600 tracking-wider uppercase mt-6 border-t border-dark-border/40">
-            Smart Expense Tracker Indexes
+            <div className="text-center p-3 text-[10px] text-gray-600 tracking-wider uppercase mt-6 border-t border-dark-border/40">
+              Chỉ số quản lý tài chính thông minh
+            </div>
           </div>
         </div>
       </div>
 
       {/* Transaction Details & Weeks Accordion */}
       {viewMode === 'monthly' ? (
-        <div className="bg-dark-glass border border-dark-border rounded-2xl overflow-hidden shadow-2xl relative">
+        <div className="bg-dark-glass border border-dark-border rounded-2xl overflow-hidden shadow-2xl relative tilt-card-3d">
           <div className="absolute w-36 h-36 bg-purple-premium blur-[45px] -top-12 -right-12 opacity-[0.05] rounded-full pointer-events-none"></div>
-          <div className="p-6 border-b border-dark-border/40">
-            <h3 className="text-base font-bold text-white tracking-wide font-heading">
-              REPORT TRANSACTION DETAILS
-            </h3>
-          </div>
-          <div className="overflow-x-auto">
+          <div className="preserve-3d-child">
+            <div className="p-6 border-b border-dark-border/40">
+              <h3 className="text-base font-bold text-white tracking-wide font-heading">
+                CHI TIẾT GIAO DỊCH TRONG BÁO CÁO
+              </h3>
+            </div>
+            <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse text-sm">
               <thead>
                 <tr className="border-b border-dark-border text-gray-500">
-                  <th className="py-4 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Date</th>
-                  <th className="py-4 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Category</th>
-                  <th className="py-4 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Note</th>
-                  <th className="py-4 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading text-right">Amount</th>
+                  <th className="py-4 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Ngày</th>
+                  <th className="py-4 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Danh mục</th>
+                  <th className="py-4 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Ghi chú</th>
+                  <th className="py-4 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading text-right">Số tiền</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-dark-border/40">
                 {(!reportData?.transactions || reportData.transactions.length === 0) ? (
                   <tr>
                     <td colSpan="4" className="text-center py-12 text-gray-500 text-xs uppercase tracking-widest font-medium">
-                      No transactions captured in range.
+                      Không có giao dịch nào trong khoảng thời gian này.
                     </td>
                   </tr>
                 ) : (
@@ -471,24 +483,26 @@ const Reports = () => {
             </table>
           </div>
         </div>
+      </div>
       ) : (
         <div className="space-y-4">
           <div className="flex items-center gap-2 px-1">
             <FaList className="text-cyan-premium text-xs" />
             <h3 className="text-xs font-bold text-gray-400 tracking-wider uppercase font-heading">
-              Weekly Transaction Breakdowns
+              Báo cáo giao dịch theo tuần
             </h3>
           </div>
           
           {(!weeklyData || !weeklyData.weekly_data || weeklyData.weekly_data.length === 0) ? (
             <div className="text-center py-12 bg-dark-glass border border-dark-border rounded-2xl text-gray-500 text-xs uppercase tracking-widest font-medium">
-              No weekly data available.
+              Không có dữ liệu tuần nào.
             </div>
           ) : (
             weeklyData.weekly_data.map((week, idx) => {
               const isExpanded = expandedWeek === idx;
               return (
-                <div key={week.label} className="bg-dark-glass border border-dark-border rounded-2xl overflow-hidden transition-all duration-300">
+                <div key={week.label} className="bg-dark-glass border border-dark-border rounded-2xl overflow-hidden transition-all duration-300 tilt-card-3d">
+                  <div className="preserve-3d-child">
                   {/* Header / Trigger */}
                   <div
                     onClick={() => setExpandedWeek(isExpanded ? null : idx)}
@@ -500,20 +514,20 @@ const Reports = () => {
                       </span>
                       <div>
                         <h4 className="text-sm font-extrabold text-white tracking-wide uppercase font-heading">
-                          {week.label} <span className="text-[11px] text-gray-500 font-normal lowercase font-body">({week.start_str} - {week.end_str})</span>
+                          {week.label.replace('Week', 'Tuần')} <span className="text-[11px] text-gray-500 font-normal lowercase font-body">({week.start_str} - {week.end_str})</span>
                         </h4>
-                        <p className="text-[11px] text-gray-500 mt-0.5">{week.transactions.length} transactions logged</p>
+                        <p className="text-[11px] text-gray-500 mt-0.5">Đã ghi nhận {week.transactions.length} giao dịch</p>
                       </div>
                     </div>
                     
                     <div className="flex items-center gap-8">
                       <div className="hidden sm:flex gap-6 text-xs text-right">
                         <div>
-                          <span className="block text-[10px] text-gray-500 font-bold uppercase tracking-widest">INCOME</span>
+                          <span className="block text-[10px] text-gray-500 font-bold uppercase tracking-widest">THU NHẬP</span>
                           <span className="font-semibold text-emerald-premium font-mono">{formatVND(week.income)}</span>
                         </div>
                         <div>
-                          <span className="block text-[10px] text-gray-500 font-bold uppercase tracking-widest">EXPENSE</span>
+                          <span className="block text-[10px] text-gray-500 font-bold uppercase tracking-widest">CHI TIÊU</span>
                           <span className="font-semibold text-rose-premium font-mono">{formatVND(week.expense)}</span>
                         </div>
                       </div>
@@ -530,17 +544,17 @@ const Reports = () => {
                       <table className="w-full text-left border-collapse text-sm">
                         <thead>
                           <tr className="border-b border-dark-border/40 text-gray-500">
-                            <th className="py-3 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Date</th>
-                            <th className="py-3 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Category</th>
-                            <th className="py-3 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Note</th>
-                            <th className="py-3 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading text-right">Amount</th>
+                            <th className="py-3 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Ngày</th>
+                            <th className="py-3 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Danh mục</th>
+                            <th className="py-3 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading">Ghi chú</th>
+                            <th className="py-3 px-6 bg-white/[0.01] font-semibold text-xs tracking-wider uppercase font-heading text-right">Số tiền</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-dark-border/30">
                           {week.transactions.length === 0 ? (
                             <tr>
                               <td colSpan="4" className="text-center py-8 text-gray-500 text-xs uppercase tracking-widest">
-                                No transactions this week.
+                                Không có giao dịch nào trong tuần này.
                               </td>
                             </tr>
                           ) : (
@@ -566,6 +580,7 @@ const Reports = () => {
                       </table>
                     </div>
                   )}
+                  </div>
                 </div>
               );
             })

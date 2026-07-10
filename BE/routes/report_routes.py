@@ -172,8 +172,10 @@ def export_csv():
         writer.writerow(['Date', 'Type', 'Category', 'Amount', 'Note'])
         
         for t in transactions:
+            # Chỉ lấy 10 ký tự đầu của chuỗi ngày (YYYY-MM-DD) để tránh lỗi tràn ngày hoặc múi giờ dài trong Excel
+            clean_date = t.date[:10] if t.date else ''
             writer.writerow([
-                t.date,
+                clean_date,
                 t.type,
                 t.category.name if t.category else 'Uncategorized',
                 t.amount,
@@ -182,8 +184,12 @@ def export_csv():
         
         output.seek(0)
         
+        # Bổ sung UTF-8 BOM (\xEF\xBB\xBF) vào đầu file để Excel trên Windows hiển thị đúng phông chữ Tiếng Việt
+        bom_utf8 = b'\xef\xbb\xbf'
+        csv_data = bom_utf8 + output.getvalue().encode('utf-8')
+        
         return send_file(
-            io.BytesIO(output.getvalue().encode('utf-8')),
+            io.BytesIO(csv_data),
             mimetype='text/csv',
             as_attachment=True,
             download_name=f'expense_report_{datetime.now().strftime("%Y%m%d")}.csv'

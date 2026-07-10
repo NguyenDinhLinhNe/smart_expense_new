@@ -137,10 +137,10 @@ const AdminPanel = () => {
         <div className="relative z-10">
           <h1 className="text-2xl sm:text-3xl font-extrabold flex items-center gap-3.5 tracking-tight font-heading text-transparent bg-clip-text bg-gradient-to-r from-cyan-premium via-purple-premium to-teal-premium">
             <FaUserShield className="text-cyan-premium animate-pulse drop-shadow-[0_0_8px_rgba(6,182,212,0.4)]" />
-            System Administration
+            Quản Trị Hệ Thống
           </h1>
           <p className="text-gray-400 mt-1.5 text-xs sm:text-sm max-w-2xl leading-relaxed">
-            Manage system resources, configure default global categories, and audit system registered users directory.
+            Quản lý tài nguyên hệ thống, cấu hình danh mục mặc định toàn cục và giám sát danh sách thành viên đăng ký sử dụng.
           </p>
         </div>
         
@@ -153,7 +153,7 @@ const AdminPanel = () => {
             className="relative z-10 flex items-center gap-2.5 bg-gradient-to-r from-cyan-premium to-purple-premium text-white font-semibold py-3 px-6 rounded-xl shadow-lg shadow-cyan-premium/20 hover:shadow-cyan-premium/30 hover:scale-[1.03] active:scale-95 transition-all duration-200 border border-white/10 group"
           >
             <FaPlus className="text-xs group-hover:rotate-90 transition-transform duration-200" />
-            <span>Add Global Category</span>
+            <span>Thêm Danh Mục Hệ Thống</span>
           </button>
         )}
       </div>
@@ -165,7 +165,7 @@ const AdminPanel = () => {
           <div className="kpi-glow bg-cyan-premium/20"></div>
           <div className="relative z-10 flex justify-between items-start mb-4">
             <div>
-              <h3 className="text-gray-500 font-bold uppercase text-[10px] tracking-widest font-heading">Total Users</h3>
+              <h3 className="text-gray-500 font-bold uppercase text-[10px] tracking-widest font-heading">Tổng người dùng</h3>
               <p className="text-3xl font-black text-white mt-1 font-heading tracking-tight bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300 origin-left">
                 {loading ? '...' : totalUsers}
               </p>
@@ -174,7 +174,7 @@ const AdminPanel = () => {
               <FaUsers size={20} />
             </div>
           </div>
-          <div className="relative z-10 text-xs text-gray-500 font-medium">Registered system accounts</div>
+          <div className="relative z-10 text-xs text-gray-500 font-medium">Tài khoản hệ thống đăng ký</div>
         </div>
 
         {/* Administrators */}
@@ -182,7 +182,7 @@ const AdminPanel = () => {
           <div className="kpi-glow bg-purple-premium/20"></div>
           <div className="relative z-10 flex justify-between items-start mb-4">
             <div>
-              <h3 className="text-gray-500 font-bold uppercase text-[10px] tracking-widest font-heading">Administrators</h3>
+              <h3 className="text-gray-500 font-bold uppercase text-[10px] tracking-widest font-heading">Quản trị viên</h3>
               <p className="text-3xl font-black text-white mt-1 font-heading tracking-tight bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300 origin-left">
                 {loading ? '...' : adminCount}
               </p>
@@ -191,7 +191,7 @@ const AdminPanel = () => {
               <FaUserShield size={20} />
             </div>
           </div>
-          <div className="relative z-10 text-xs text-gray-500 font-medium">Privileged access roles</div>
+          <div className="relative z-10 text-xs text-gray-500 font-medium">Tài khoản có quyền quản trị</div>
         </div>
 
         {/* Standard Users */}
@@ -199,7 +199,7 @@ const AdminPanel = () => {
           <div className="kpi-glow bg-emerald-premium/20"></div>
           <div className="relative z-10 flex justify-between items-start mb-4">
             <div>
-              <h3 className="text-gray-500 font-bold uppercase text-[10px] tracking-widest font-heading">Standard Users</h3>
+              <h3 className="text-gray-500 font-bold uppercase text-[10px] tracking-widest font-heading">Người dùng thường</h3>
               <p className="text-3xl font-black text-white mt-1 font-heading tracking-tight bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300 origin-left">
                 {loading ? '...' : userCount}
               </p>
@@ -208,7 +208,7 @@ const AdminPanel = () => {
               <FaUsers size={20} />
             </div>
           </div>
-          <div className="relative z-10 text-xs text-gray-500 font-medium">Standard customer tier</div>
+          <div className="relative z-10 text-xs text-gray-500 font-medium">Thành viên thông thường</div>
         </div>
 
         {/* Global Categories */}
@@ -216,7 +216,7 @@ const AdminPanel = () => {
           <div className="kpi-glow bg-amber-premium/20"></div>
           <div className="relative z-10 flex justify-between items-start mb-4">
             <div>
-              <h3 className="text-gray-500 font-bold uppercase text-[10px] tracking-widest font-heading">Global Categories</h3>
+              <h3 className="text-gray-500 font-bold uppercase text-[10px] tracking-widest font-heading">Danh mục chung</h3>
               <p className="text-3xl font-black text-white mt-1 font-heading tracking-tight bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300 origin-left">
                 {loading ? '...' : totalGlobalCategories}
               </p>
@@ -225,7 +225,7 @@ const AdminPanel = () => {
               <FaTags size={20} />
             </div>
           </div>
-          <div className="relative z-10 text-xs text-gray-500 font-medium">Default expense options</div>
+          <div className="relative z-10 text-xs text-gray-500 font-medium">Danh mục chi tiêu mặc định</div>
         </div>
       </div>
 
@@ -240,7 +240,7 @@ const AdminPanel = () => {
           }`}
         >
           <FaTags size={12} />
-          <span>Global Categories</span>
+          <span>Danh Mục Chung</span>
         </button>
         <button
           onClick={() => setActiveTab('users')}
@@ -251,7 +251,7 @@ const AdminPanel = () => {
           }`}
         >
           <FaUsers size={13} />
-          <span>User Directory</span>
+          <span>Thư Mục Người Dùng</span>
         </button>
       </div>
 
@@ -260,7 +260,7 @@ const AdminPanel = () => {
         <div className="glass-panel p-20 flex justify-center items-center border border-white/[0.06] bg-[#101622]/40 backdrop-blur-lg rounded-2xl shadow-xl">
           <div className="relative flex flex-col items-center">
             <div className="w-12 h-12 rounded-full border-2 border-cyan-premium/20 border-t-cyan-premium animate-spin"></div>
-            <span className="text-xs text-gray-500 font-semibold uppercase tracking-widest mt-4">Syncing server database...</span>
+            <span className="text-xs text-gray-500 font-semibold uppercase tracking-widest mt-4">Đang đồng bộ cơ sở dữ liệu...</span>
           </div>
         </div>
       ) : (
@@ -274,28 +274,28 @@ const AdminPanel = () => {
                 </div>
                 <div>
                   <h2 className="text-lg font-extrabold text-white tracking-tight font-heading">
-                    Manage Default Categories
+                    Quản Lý Danh Mục Mặc Định
                   </h2>
-                  <p className="text-xs text-gray-500 font-medium">Add, update, or remove default template categories loaded for every new user</p>
+                  <p className="text-xs text-gray-500 font-medium">Thêm, cập nhật hoặc xóa các danh mục mặc định được tự động tải cho mọi người dùng mới</p>
                 </div>
               </div>
               
               {categories.length === 0 ? (
                 <div className="text-center py-20 text-gray-500 border border-dashed border-white/[0.06] rounded-xl bg-black/10">
                   <FaTags size={36} className="mx-auto mb-4 text-gray-600 opacity-60 animate-bounce" />
-                  <p className="font-semibold text-gray-400">No global categories found</p>
-                  <p className="text-xs text-gray-500 mt-1 max-w-sm mx-auto">Create a template category by clicking the Add Global Category button above</p>
+                  <p className="font-semibold text-gray-400">Không tìm thấy danh mục hệ thống nào</p>
+                  <p className="text-xs text-gray-500 mt-1 max-w-sm mx-auto">Hãy tạo một danh mục mẫu bằng cách nhấn nút Thêm Danh Mục Hệ Thống ở trên</p>
                 </div>
               ) : (
                 <div className="overflow-x-auto rounded-xl border border-white/[0.04] bg-black/10">
                   <table className="w-full text-left border-collapse">
                     <thead>
                       <tr className="bg-white/[0.02] border-b border-white/[0.06] text-gray-400 font-bold text-[10px] tracking-wider uppercase">
-                        <th className="py-4 px-5 w-20">Icon</th>
-                        <th className="py-4 px-5">Category Name</th>
-                        <th className="py-4 px-5">Color Code</th>
-                        <th className="py-4 px-5">Transaction Type</th>
-                        <th className="py-4 px-5 text-right w-32">Actions</th>
+                        <th className="py-4 px-5 w-20">Biểu tượng</th>
+                        <th className="py-4 px-5">Tên danh mục</th>
+                        <th className="py-4 px-5">Mã màu đại diện</th>
+                        <th className="py-4 px-5">Loại dòng tiền</th>
+                        <th className="py-4 px-5 text-right w-32">Thao tác</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-white/[0.04]">
@@ -323,7 +323,7 @@ const AdminPanel = () => {
                                 : 'bg-emerald-premium/10 text-emerald-premium border-emerald-premium/20 shadow-[0_0_12px_rgba(16,185,129,0.06)]'
                             }`}>
                               <span className={`w-1.5 h-1.5 rounded-full ${cat.type === 'expense' ? 'bg-rose-premium' : 'bg-emerald-premium'}`} />
-                              <span className="capitalize">{cat.type}</span>
+                              <span>{cat.type === 'expense' ? 'Chi tiêu' : 'Thu nhập'}</span>
                             </span>
                           </td>
                           <td className="py-4 px-5 text-right">
@@ -331,14 +331,14 @@ const AdminPanel = () => {
                               <button
                                 onClick={() => handleEditCategoryClick(cat)}
                                 className="p-2 text-cyan-premium hover:text-white bg-cyan-premium/10 hover:bg-cyan-premium hover:scale-105 rounded-lg border border-cyan-premium/20 transition-all shadow-md shadow-cyan-premium/5"
-                                title="Edit Category"
+                                title="Sửa danh mục"
                               >
                                 <FaEdit size={14} />
                               </button>
                               <button
                                 onClick={() => handleDeleteCategory(cat.id)}
                                 className="p-2 text-rose-premium hover:text-white bg-rose-premium/10 hover:bg-rose-premium hover:scale-105 rounded-lg border border-rose-premium/20 transition-all shadow-md shadow-rose-premium/5"
-                                title="Delete Category"
+                                title="Xóa danh mục"
                               >
                                 <FaTrash size={14} />
                               </button>
@@ -360,9 +360,9 @@ const AdminPanel = () => {
                 </div>
                 <div>
                   <h2 className="text-lg font-extrabold text-white tracking-tight font-heading">
-                    System User Directory
+                    Danh Sách Người Dùng Hệ Thống
                   </h2>
-                  <p className="text-xs text-gray-500 font-medium">Verify credentials, roles, and administrative records of all signed up members</p>
+                  <p className="text-xs text-gray-500 font-medium">Xác thực thông tin tài khoản, vai trò và ngày đăng ký thành viên</p>
                 </div>
               </div>
 
@@ -370,10 +370,10 @@ const AdminPanel = () => {
                 <table className="w-full text-left border-collapse">
                   <thead>
                     <tr className="bg-white/[0.02] border-b border-white/[0.06] text-gray-400 font-bold text-[10px] tracking-wider uppercase">
-                      <th className="py-4 px-5">User Profile</th>
-                      <th className="py-4 px-5">Email Address</th>
-                      <th className="py-4 px-5">Access Rank</th>
-                      <th className="py-4 px-5">Registration Date</th>
+                      <th className="py-4 px-5">Thông tin tài khoản</th>
+                      <th className="py-4 px-5">Địa chỉ Email</th>
+                      <th className="py-4 px-5">Vai trò hệ thống</th>
+                      <th className="py-4 px-5">Ngày đăng ký</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-white/[0.04]">
@@ -392,11 +392,11 @@ const AdminPanel = () => {
                               ? 'bg-purple-premium/20 text-purple-premium border-purple-premium/30 shadow-[0_0_12px_rgba(139,92,246,0.15)]' 
                               : 'bg-white/[0.04] text-gray-400 border-white/[0.06]'
                           }`}>
-                            {u.role}
+                            {u.role === 'admin' ? 'Quản trị viên' : 'Thành viên'}
                           </span>
                         </td>
                         <td className="py-4 px-5 text-gray-400 font-medium">
-                          {new Date(u.created_at).toLocaleDateString('en-US', {
+                          {new Date(u.created_at).toLocaleDateString('vi-VN', {
                             year: 'numeric',
                             month: 'long',
                             day: 'numeric'
@@ -422,7 +422,7 @@ const AdminPanel = () => {
             {/* Modal Header */}
             <div className="relative z-10 flex justify-between items-center px-6 py-5 bg-[#0b0f19]/80 border-b border-white/[0.08]">
               <h3 className="text-lg font-extrabold text-white tracking-tight font-heading">
-                {editingCategory ? '✏️ Edit Global Category' : '✨ Add Global Category'}
+                {editingCategory ? '✏️ Sửa Danh Mục Hệ Thống' : '✨ Thêm Danh Mục Hệ Thống'}
               </h3>
               <button 
                 onClick={() => {
@@ -438,10 +438,10 @@ const AdminPanel = () => {
             {/* Modal Form */}
             <form onSubmit={handleCategorySubmit} className="relative z-10 p-6 space-y-5">
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2 font-heading">Category Name</label>
+                <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2 font-heading">Tên danh mục</label>
                 <input
                   type="text"
-                  placeholder="e.g. Travel, Shopping, Bills..."
+                  placeholder="Ví dụ: Du lịch, Mua sắm, Hóa đơn..."
                   className="w-full bg-[#0b0f19]/90 border border-white/[0.08] focus:border-cyan-premium rounded-xl px-4 py-3 text-white placeholder-gray-500 outline-none transition-all focus:ring-1 focus:ring-cyan-premium/30 font-medium"
                   value={categoryForm.name}
                   onChange={(e) => setCategoryForm({ ...categoryForm, name: e.target.value })}
@@ -450,18 +450,18 @@ const AdminPanel = () => {
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2 font-heading">Transaction Type</label>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2 font-heading">Loại dòng tiền</label>
                   <select
                     className="w-full bg-[#0b0f19]/95 border border-white/[0.08] focus:border-cyan-premium rounded-xl px-4 py-3 text-white outline-none transition-all focus:ring-1 focus:ring-cyan-premium/30 font-semibold"
                     value={categoryForm.type}
                     onChange={(e) => setCategoryForm({ ...categoryForm, type: e.target.value })}
                   >
-                    <option className="bg-[#101622] text-white" value="expense">Expense</option>
-                    <option className="bg-[#101622] text-white" value="income">Income</option>
+                    <option className="bg-[#101622] text-white" value="expense">Chi tiêu</option>
+                    <option className="bg-[#101622] text-white" value="income">Thu nhập</option>
                   </select>
                 </div>
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2 font-heading">Current Icon</label>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2 font-heading">Biểu tượng hiện tại</label>
                   <div className="w-full bg-[#0b0f19]/60 border border-white/[0.06] rounded-xl py-2 px-4 text-3xl text-center shadow-inner shadow-black/25">
                     {categoryForm.icon}
                   </div>
@@ -470,7 +470,7 @@ const AdminPanel = () => {
 
               {/* Emoji Picker */}
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2 font-heading">Select Icon (Emoji)</label>
+                <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2 font-heading">Chọn biểu tượng (Emoji)</label>
                 <div className="grid grid-cols-8 gap-2 bg-[#0b0f19]/60 p-3 rounded-xl max-h-32 overflow-y-auto border border-white/[0.06] custom-scroll">
                   {PRESET_EMOJIS.map((emoji) => (
                     <button
@@ -489,7 +489,7 @@ const AdminPanel = () => {
 
               {/* Color Picker */}
               <div className="space-y-3">
-                <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 font-heading">Representative Color</label>
+                <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 font-heading">Màu sắc đại diện</label>
                 <div className="flex gap-3 items-center">
                   <input
                     type="color"
@@ -529,13 +529,13 @@ const AdminPanel = () => {
                   }}
                   className="bg-white/[0.05] hover:bg-white/[0.09] border border-white/[0.06] text-white font-bold py-2.5 px-5 rounded-xl transition-all text-xs tracking-wider uppercase active:scale-95"
                 >
-                  Cancel
+                  HỦY
                 </button>
                 <button
                   type="submit"
                   className="bg-gradient-to-r from-cyan-premium to-purple-premium text-white font-bold py-2.5 px-6 rounded-xl transition-all text-xs tracking-wider uppercase active:scale-95 shadow-lg shadow-cyan-premium/20 hover:shadow-cyan-premium/30 border border-white/10"
                 >
-                  {editingCategory ? 'Save Changes' : 'Create Category'}
+                  {editingCategory ? 'LƯU THAY ĐỔI' : 'TẠO DANH MỤC'}
                 </button>
               </div>
             </form>

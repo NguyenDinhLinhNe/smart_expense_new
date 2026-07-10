@@ -283,37 +283,37 @@ const Layout = () => {
   };
 
   const menuItems = [
-    { path: '/dashboard', icon: FaTachometerAlt, label: 'Dashboard', desc: 'Main control center' },
-    { path: '/transactions', icon: FaMoneyBillWave, label: 'Transactions', desc: 'Income & expenses' },
-    { path: '/recurring', icon: FaSync, label: 'Recurring', desc: 'Auto-recurring rules' },
-    { path: '/budgets', icon: FaPiggyBank, label: 'Budgets', desc: 'Category allowances' },
-    { path: '/reports', icon: FaChartLine, label: 'Reports', desc: 'Financial analysis' },
-    { path: '/ai', icon: FaRobot, label: 'AI Insights', desc: 'Smart advisor' },
+    { path: '/dashboard', icon: FaTachometerAlt, label: 'Bảng điều khiển', desc: 'Trung tâm kiểm soát chính' },
+    { path: '/transactions', icon: FaMoneyBillWave, label: 'Giao dịch', desc: 'Quản lý thu nhập & chi tiêu' },
+    { path: '/recurring', icon: FaSync, label: 'Định kỳ', desc: 'Tự động hóa giao dịch' },
+    { path: '/budgets', icon: FaPiggyBank, label: 'Ngân sách', desc: 'Hạn mức chi tiêu danh mục' },
+    { path: '/reports', icon: FaChartLine, label: 'Báo cáo', desc: 'Phân tích số liệu tài chính' },
+    { path: '/ai', icon: FaRobot, label: 'Trợ lý AI', desc: 'Cố vấn tài chính thông minh' },
   ];
 
   if (user?.role === 'admin') {
-    menuItems.unshift({ path: '/admin', icon: FaUserShield, label: 'Admin Panel', desc: 'System management' });
+    menuItems.unshift({ path: '/admin', icon: FaUserShield, label: 'Quản trị', desc: 'Quản lý hệ thống' });
   }
 
   // Determine page title based on route
   const getPageDetails = () => {
     switch (location.pathname) {
       case '/dashboard':
-        return { title: 'Dashboard Control', desc: 'Welcome back to your Smart Expense Tracker control panel' };
+        return { title: 'Bảng điều khiển', desc: 'Chào mừng bạn quay trở lại với trung tâm quản lý chi tiêu thông minh' };
       case '/transactions':
-        return { title: 'Transactions Ledger', desc: 'Manage and monitor all your income and expenses' };
+        return { title: 'Nhật ký giao dịch', desc: 'Quản lý và giám sát tất cả các khoản thu nhập và chi tiêu của bạn' };
       case '/recurring':
-        return { title: 'Recurring Rules', desc: 'Automate periodic billing and income items' };
+        return { title: 'Giao dịch định kỳ', desc: 'Tự động hóa các khoản chi phí và nguồn thu nhập định kỳ hàng tháng' };
       case '/budgets':
-        return { title: 'Budgets Planning', desc: 'Set monthly limits to build healthier financial habits' };
+        return { title: 'Kế hoạch ngân sách', desc: 'Thiết lập hạn mức tháng để xây dựng thói quen tài chính tốt hơn' };
       case '/reports':
-        return { title: 'Reports & Statistics', desc: 'Interactive analysis of your cashflows and breakdowns' };
+        return { title: 'Báo cáo & Thống kê', desc: 'Phân tích tương tác về dòng tiền và phân bổ chi tiêu của bạn' };
       case '/ai':
-        return { title: 'AI Financial Insights', desc: 'Get professional financial advice powered by Machine Learning' };
+        return { title: 'Cố vấn Tài chính AI', desc: 'Nhận lời khuyên tài chính chuyên nghiệp được hỗ trợ bởi Trí tuệ Nhân tạo' };
       case '/admin':
-        return { title: 'System Administration', desc: 'Manage categories, check users, and monitor resources' };
+        return { title: 'Quản trị hệ thống', desc: 'Quản lý danh mục, kiểm tra người dùng và giám sát tài nguyên hệ thống' };
       default:
-        return { title: 'Expense Tracker', desc: 'Manage your finances intelligently' };
+        return { title: 'Quản lý Chi tiêu', desc: 'Quản lý tài chính cá nhân của bạn một cách thông minh' };
     }
   };
 
@@ -331,7 +331,11 @@ const Layout = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-dark-main text-white font-body overflow-hidden">
+    <div className="flex flex-col h-screen bg-mesh-3d text-white font-body overflow-hidden relative">
+      {/* Background 3D Glow Orbs */}
+      <div className="glow-orb-3d-1"></div>
+      <div className="glow-orb-3d-2"></div>
+
       {/* Horizontal Header (Top Navigation) */}
       <header className="h-20 bg-dark-card border-b border-dark-border px-6 flex items-center justify-between z-50 sticky top-0 flex-shrink-0 w-full">
         {/* Brand Section */}

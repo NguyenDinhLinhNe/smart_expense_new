@@ -163,33 +163,33 @@ const Budgets = () => {
   const activeWeekInfo = weeks.find(w => w.week === selectedWeek);
 
   return (
-    <div className="space-y-8 animate-fade-in font-body">
+    <div className="space-y-8 animate-fade-in font-body relative">
       {/* Header Panel */}
-      <div className="flex flex-col xl:flex-row justify-between xl:items-center gap-4 bg-dark-glass border border-dark-border p-6 rounded-2xl relative overflow-hidden">
+      <div className="flex flex-col xl:flex-row justify-between xl:items-center gap-4 bg-dark-glass border border-dark-border p-6 rounded-2xl relative overflow-hidden perspective-3d tilt-card-3d">
         <div className="absolute w-24 h-24 bg-cyan-premium blur-[30px] -bottom-10 -left-10 opacity-[0.08] rounded-full pointer-events-none"></div>
-        <div>
+        <div className="preserve-3d-child">
           <h2 className="text-xl font-extrabold text-white tracking-wide uppercase font-heading">
-            Weekly Budgets
+            Quản Lý Ngân Sách Tuần
           </h2>
-          <p className="text-xs text-gray-500 mt-0.5">Control weekly limits to enforce healthy savings goals</p>
+          <p className="text-xs text-gray-500 mt-0.5">Kiểm soát giới hạn chi tiêu hàng tuần để duy trì các mục tiêu tích lũy lành mạnh</p>
         </div>
         
-        <div className="flex items-center flex-wrap gap-3.5 self-start xl:self-center">
+        <div className="flex items-center flex-wrap gap-3.5 self-start xl:self-center preserve-3d-child">
           {/* Week selector */}
           {weeks.length > 0 && (
             <div className="relative">
               <select
-                value={selectedWeek}
-                onChange={(e) => setSelectedWeek(parseInt(e.target.value))}
-                className="appearance-none pl-4 pr-9 py-2.5 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-gray-300 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
+                value={selectedWeek || ''}
+                onChange={(e) => setSelectedWeek(e.target.value ? parseInt(e.target.value) : null)}
+                className="appearance-none pl-4 pr-10 py-2.5 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-white outline-none focus:border-cyan-premium transition-all cursor-pointer"
               >
                 {weeks.map(w => (
                   <option key={w.week} value={w.week}>
-                    Week {w.week} ({w.start_str} - {w.end_str})
+                    Tuần {w.week} ({w.start_str} - {w.end_str})
                   </option>
                 ))}
               </select>
-              <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none text-gray-500 text-xs">
+              <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-gray-500 text-xs">
                 <FaChevronDown />
               </div>
             </div>
@@ -199,17 +199,14 @@ const Budgets = () => {
           <div className="relative">
             <select
               value={selectedMonth}
-              onChange={(e) => {
-                setSelectedMonth(parseInt(e.target.value));
-                setSelectedWeek(null);
-              }}
-              className="appearance-none pl-4 pr-9 py-2.5 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-gray-300 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
+              onChange={(e) => setSelectedMonth(parseInt(e.target.value))}
+              className="appearance-none pl-4 pr-10 py-2.5 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-white outline-none focus:border-cyan-premium transition-all cursor-pointer"
             >
-              {Array.from({ length: 12 }, (_, i) => i + 1).map(month => (
-                <option key={month} value={month}>Month {month}</option>
+              {Array.from({ length: 12 }, (_, i) => i + 1).map(m => (
+                <option key={m} value={m}>Tháng {m}</option>
               ))}
             </select>
-            <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none text-gray-500 text-xs">
+            <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-gray-500 text-xs">
               <FaChevronDown />
             </div>
           </div>
@@ -218,17 +215,14 @@ const Budgets = () => {
           <div className="relative">
             <select
               value={selectedYear}
-              onChange={(e) => {
-                setSelectedYear(parseInt(e.target.value));
-                setSelectedWeek(null);
-              }}
-              className="appearance-none pl-4 pr-9 py-2.5 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-gray-300 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
+              onChange={(e) => setSelectedYear(parseInt(e.target.value))}
+              className="appearance-none pl-4 pr-10 py-2.5 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-white outline-none focus:border-cyan-premium transition-all cursor-pointer"
             >
-              {[2023, 2024, 2025, 2026].map(year => (
-                <option key={year} value={year}>{year}</option>
+              {[selectedYear - 1, selectedYear, selectedYear + 1].map(y => (
+                <option key={y} value={y}>Năm {y}</option>
               ))}
             </select>
-            <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none text-gray-500 text-xs">
+            <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-gray-500 text-xs">
               <FaChevronDown />
             </div>
           </div>
@@ -238,17 +232,17 @@ const Budgets = () => {
               resetForm();
               setShowModal(true);
             }}
-            className="py-2.5 px-5 bg-gradient-to-r from-cyan-premium to-purple-premium text-white font-heading font-extrabold text-xs tracking-wide shadow-md shadow-cyan-premium/20 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-premium/40 active:translate-y-0 transition-all flex items-center gap-2 rounded-xl"
+            className="py-2.5 px-4 bg-cyan-premium hover:bg-cyan-600 text-white font-heading font-extrabold text-[10px] tracking-wider rounded-xl transition-all flex items-center gap-1.5 cursor-pointer neo-button-3d"
           >
-            <FaPlus /> <span>ADD WEEKLY BUDGET</span>
+            <FaPlus /> <span>THÊM NGÂN SÁCH TUẦN</span>
           </button>
         </div>
       </div>
 
       {activeWeekInfo && (
-        <div className="flex items-center gap-2 px-1 text-xs text-gray-400">
+        <div className="p-3 bg-cyan-premium/5 border border-cyan-premium/20 rounded-xl text-[10px] font-bold text-cyan-premium uppercase tracking-widest flex items-center gap-2 max-w-max animate-float-3d">
           <FaCalendarAlt className="text-cyan-premium" />
-          <span>Active Period: Week {activeWeekInfo.week} ({activeWeekInfo.start_str} - {activeWeekInfo.end_str})</span>
+          <span>Thời gian áp dụng: Tuần {activeWeekInfo.week} ({activeWeekInfo.start_str} - {activeWeekInfo.end_str})</span>
         </div>
       )}
 
@@ -256,49 +250,49 @@ const Budgets = () => {
       {loading ? (
         <div className="flex flex-col items-center justify-center py-16 gap-3">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-premium"></div>
-          <span className="text-xs text-gray-500 tracking-wide uppercase font-semibold">Tuning allowances...</span>
+          <span className="text-xs text-gray-500 tracking-wide uppercase font-semibold">Đang chuẩn bị dữ liệu...</span>
         </div>
       ) : budgets.length === 0 ? (
         <div className="bg-dark-glass border border-dark-border rounded-2xl p-12 text-center text-gray-500 text-xs uppercase tracking-widest font-medium">
-          No weekly budgets found for this period. Click "Add Weekly Budget" to establish parameters.
+          Chưa thiết lập ngân sách tuần nào cho khoảng thời gian này. Hãy nhấn "Thêm ngân sách tuần" để thiết lập nhé.
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 perspective-3d">
           {budgets.map(budget => (
             <div 
               key={budget.id} 
               id={`budget-card-${budget.category_name.toLowerCase()}`}
-              className="relative overflow-hidden bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl hover:-translate-y-1 hover:border-white/10 transition-[box-shadow,transform,border-color] duration-500 group"
+              className="relative overflow-hidden bg-dark-glass border border-dark-border rounded-2xl p-6 shadow-xl hover:border-white/10 transition-all duration-300 group tilt-card-3d"
             >
               <div className="absolute w-32 h-32 bg-cyan-premium blur-[35px] -top-12 -right-12 opacity-[0.05] rounded-full pointer-events-none group-hover:opacity-10 transition-opacity"></div>
               
-              <div className="flex justify-between items-start mb-4 relative z-10">
+              <div className="flex justify-between items-start mb-4 relative z-10 preserve-3d-child">
                 <div>
                   <h3 className="text-base font-extrabold text-white tracking-wide uppercase font-heading">{budget.category_name}</h3>
-                  <p className="text-gray-500 text-[10px] uppercase font-bold tracking-wider mt-0.5">ALLOWANCE GROUP</p>
+                  <p className="text-gray-500 text-[10px] uppercase font-bold tracking-wider mt-0.5">NHÓM HẠN MỨC</p>
                 </div>
                 
                 <div className="flex gap-2.5">
                   <button 
                     onClick={() => handleEdit(budget)} 
-                    className="text-cyan-premium hover:text-cyan-300 transition-colors p-1.5 hover:bg-cyan-premium/10 rounded-lg"
-                    title="Edit budget limit"
+                    className="text-cyan-premium hover:text-cyan-300 transition-colors p-1.5 hover:bg-cyan-premium/10 rounded-lg cursor-pointer"
+                    title="Sửa ngân sách"
                   >
-                    <FaEdit className="text-sm" />
+                    <FaEdit className="text-sm animate-float-3d" />
                   </button>
                   <button 
                     onClick={() => handleDelete(budget.id)} 
-                    className="text-rose-premium hover:text-rose-300 transition-colors p-1.5 hover:bg-rose-premium/10 rounded-lg"
-                    title="Delete budget limit"
+                    className="text-rose-premium hover:text-rose-300 transition-colors p-1.5 hover:bg-rose-premium/10 rounded-lg cursor-pointer"
+                    title="Xóa ngân sách"
                   >
-                    <FaTrash className="text-sm" />
+                    <FaTrash className="text-sm animate-float-3d-delayed" />
                   </button>
                 </div>
               </div>
               
-              <div className="mb-4 relative z-10">
+              <div className="mb-4 relative z-10 preserve-3d-child">
                 <div className="flex justify-between text-xs mb-2">
-                  <span className="text-gray-400">Total Spent</span>
+                  <span className="text-gray-400">Đã chi tiêu</span>
                   <span className="text-white font-semibold font-mono">{formatVND(budget.spent)} / {formatVND(budget.amount)}</span>
                 </div>
                 
@@ -310,15 +304,15 @@ const Budgets = () => {
                 </div>
               </div>
               
-              <div className="flex justify-between text-xs relative z-10 border-t border-dark-border/40 pt-3">
-                <span className="text-gray-400">Balance Status</span>
+              <div className="flex justify-between text-xs relative z-10 border-t border-dark-border/40 pt-3 preserve-3d-child">
+                <span className="text-gray-400">Trạng thái số dư</span>
                 <span className={`font-bold font-mono tracking-tight ${budget.remaining >= 0 ? 'text-emerald-premium' : 'text-rose-premium'}`}>
-                  {budget.remaining < 0 ? '-' : ''}{formatVND(Math.abs(budget.remaining))} {budget.remaining < 0 ? 'overspent' : 'remaining'}
+                  {budget.remaining < 0 ? 'Vượt hạn mức ' : 'Còn lại '}{formatVND(Math.abs(budget.remaining))}
                 </span>
               </div>
               
               {budget.percentage >= 80 && (
-                <div className={`mt-4 p-3 rounded-xl flex items-center gap-2.5 text-xs font-semibold relative z-10 ${
+                <div className={`mt-4 p-3 rounded-xl flex items-center gap-2.5 text-xs font-semibold relative z-10 preserve-3d-child ${
                   budget.percentage >= 100 
                     ? 'bg-rose-premium/10 border border-rose-premium/20 text-rose-300 animate-pulse' 
                     : 'bg-amber-premium/10 border border-amber-premium/20 text-amber-300'
@@ -326,8 +320,8 @@ const Budgets = () => {
                   <FaExclamationTriangle className="flex-shrink-0" />
                   <span>
                     {budget.percentage >= 100 
-                      ? 'EXCEEDED: Stop spending immediately!' 
-                      : 'WARNING: Rapidly approaching allocation ceiling!'}
+                      ? 'VƯỢT HẠN MỨC: Hãy dừng chi tiêu ngay lập tức!' 
+                      : 'CẢNH BÁO: Sắp chạm trần ngân sách cho phép!'}
                   </span>
                 </div>
               )}
@@ -344,11 +338,11 @@ const Budgets = () => {
 
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-base font-extrabold text-white tracking-wide uppercase font-heading">
-                {editingBudget ? 'Edit Weekly Allowance' : 'Set Weekly Allowance Limit'}
+                {editingBudget ? 'Sửa Hạn Mức Ngân Sách' : 'Thiết Lập Hạn Mức Ngân Sách'}
               </h3>
               <button 
                 onClick={() => setShowModal(false)} 
-                className="p-1.5 bg-white/[0.03] border border-dark-border rounded-lg text-gray-400 hover:text-white transition-colors"
+                className="p-1.5 bg-white/[0.03] border border-dark-border rounded-lg text-gray-400 hover:text-white transition-colors cursor-pointer"
               >
                 <FaTimes size={12} />
               </button>
@@ -357,7 +351,7 @@ const Budgets = () => {
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                  Category
+                  Danh mục
                 </label>
                 <div className="relative">
                   <select
@@ -367,7 +361,7 @@ const Budgets = () => {
                     required
                     disabled={editingBudget}
                   >
-                    <option value="">Select Category</option>
+                    <option value="">Chọn danh mục</option>
                     {categories.map(cat => (
                       <option key={cat.id} value={cat.id}>
                         {cat.icon} {cat.name}{(!cat.user_id) ? ' 🔒' : ''}
@@ -382,7 +376,7 @@ const Budgets = () => {
               
               <div>
                 <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                  Budget Amount (VND)
+                  Số tiền hạn mức (VNĐ)
                 </label>
                 <input
                   type="number"
@@ -396,9 +390,9 @@ const Budgets = () => {
 
               {/* Show selected week info inside the form */}
               <div className="p-3 bg-white/[0.02] border border-dark-border/40 rounded-xl text-xs text-gray-400">
-                <span>Saving to Period: </span>
+                <span>Thiết lập cho khoảng thời gian: </span>
                 <span className="font-semibold text-white">
-                  Week {formData.week} {activeWeekInfo ? `(${activeWeekInfo.start_str} - ${activeWeekInfo.end_str})` : ''}
+                  Tuần {formData.week} {activeWeekInfo ? `(${activeWeekInfo.start_str} - ${activeWeekInfo.end_str})` : ''}
                 </span>
               </div>
               
@@ -406,15 +400,15 @@ const Budgets = () => {
                 <button
                   type="button"
                   onClick={() => setShowModal(false)}
-                  className="flex-1 py-3 bg-white/[0.02] border border-dark-border rounded-xl text-xs text-gray-400 hover:text-white font-heading font-extrabold transition-all"
+                  className="flex-1 py-3 bg-white/[0.02] border border-dark-border rounded-xl text-xs text-gray-400 hover:text-white font-heading font-extrabold transition-all cursor-pointer"
                 >
-                  CANCEL
+                  HỦY
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 py-3 bg-gradient-to-r from-cyan-premium to-purple-premium text-white font-heading font-extrabold text-xs tracking-wider rounded-xl transition-all shadow-md shadow-cyan-premium/10 hover:shadow-cyan-premium/30"
+                  className="flex-1 py-3 bg-gradient-to-r from-cyan-premium to-purple-premium text-white font-heading font-extrabold text-xs tracking-wider rounded-xl transition-all neo-button-3d cursor-pointer"
                 >
-                  {editingBudget ? 'UPDATE ALLOWANCE' : 'ESTABLISH ALLOWANCE'}
+                  {editingBudget ? 'CẬP NHẬT HẠN MỨC' : 'THIẾT LẬP HẠN MỨC'}
                 </button>
               </div>
             </form>
