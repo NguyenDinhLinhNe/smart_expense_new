@@ -15,7 +15,7 @@ def init_database():
         admin = User(
             name="Admin User",
             email="admin@example.com",
-            password=generate_password_hash("SecureExpense2026#"),
+            password=generate_password_hash("admin123"),
             role='admin'
         )
         db.session.add(admin)
