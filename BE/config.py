@@ -7,8 +7,8 @@ load_dotenv()
 class Config:
     SECRET_KEY = os.getenv('SECRET_KEY', 'dev-secret-key')
     
-    # Database - dùng SQLite
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///expense_tracker.db'
+    # Database - dùng SQLite làm fallback, ưu tiên biến môi trường
+    SQLALCHEMY_DATABASE_URI = os.getenv('SQLALCHEMY_DATABASE_URI', 'sqlite:///expense_tracker.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     
     # JWT Config - THÊM CÁC DÒNG NÀY

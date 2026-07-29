@@ -15,6 +15,25 @@ CORS(app, origins=Config.CORS_ORIGINS)
 jwt = JWTManager(app)
 db.init_app(app)
 
+# Ensure database tables and columns exist (runs during Gunicorn startup)
+with app.app_context():
+    db.create_all()
+    try:
+        with db.engine.connect() as conn:
+            # Add columns if they do not exist (will fail silently if they already exist)
+            try:
+                conn.execute(db.text('ALTER TABLE users ADD COLUMN otp_code VARCHAR(6)'))
+            except Exception:
+                pass
+            try:
+                conn.execute(db.text('ALTER TABLE users ADD COLUMN otp_expiry DATETIME'))
+            except Exception:
+                pass
+            conn.commit()
+        print("[OK] Database tables and OTP columns verified/created!")
+    except Exception as e:
+        print(f"[Warning] Failed to dynamically alter table: {e}")
+
 # Import routes
 from routes.auth_routes import auth_bp
 from routes.transaction_routes import transaction_bp
@@ -63,23 +82,5 @@ def serve(path):
         return send_from_directory(app.static_folder, 'index.html')
 
 if __name__ == '__main__':
-    with app.app_context():
-        db.create_all()
-        try:
-            with db.engine.connect() as conn:
-                # Add columns if they do not exist (will fail silently if they already exist)
-                try:
-                    conn.execute(db.text('ALTER TABLE users ADD COLUMN otp_code VARCHAR(6)'))
-                except Exception:
-                    pass
-                try:
-                    conn.execute(db.text('ALTER TABLE users ADD COLUMN otp_expiry DATETIME'))
-                except Exception:
-                    pass
-                conn.commit()
-            print("[OK] Database tables and OTP columns verified/created!")
-        except Exception as e:
-            print(f"[Warning] Failed to dynamically alter table: {e}")
-    
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port, debug=False)
