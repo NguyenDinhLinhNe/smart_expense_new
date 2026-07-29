@@ -14,8 +14,7 @@ __pycache__/
 .Python
 BE/instance/
 
-# Production build output
-FE/build/
+
 
 # IDEs and OS files
 .idea/
