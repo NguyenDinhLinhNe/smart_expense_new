@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
-import { FaEnvelope, FaLock, FaSignInAlt, FaWallet, FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaEnvelope, FaLock, FaSignInAlt, FaWallet, FaEye, FaEyeSlash, FaKey } from 'react-icons/fa';
 import toast from 'react-hot-toast';
-import { resetPassword } from '../services/api';
+import { forgotPassword, resetPasswordWithOtp } from '../services/api';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -16,6 +16,8 @@ const Login = () => {
   // Forgot password flow states
   const [isForgotPassword, setIsForgotPassword] = useState(false);
   const [resetEmail, setResetEmail] = useState('');
+  const [otp, setOtp] = useState('');
+  const [otpSent, setOtpSent] = useState(false);
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [resetLoading, setResetLoading] = useState(false);
@@ -31,27 +33,47 @@ const Login = () => {
     setLoading(false);
   };
 
-  const handleResetPassword = async (e) => {
+  const handleSendOtp = async (e) => {
     e.preventDefault();
-    if (newPassword !== confirmPassword) {
-      toast.error('New passwords do not match');
-      return;
-    }
-    if (newPassword.length < 6) {
-      toast.error('Password must be at least 6 characters');
+    if (!resetEmail.endsWith('@gmail.com')) {
+      toast.error('Vui lòng sử dụng địa chỉ Gmail (@gmail.com)');
       return;
     }
     setResetLoading(true);
     try {
-      const response = await resetPassword(resetEmail, newPassword);
-      toast.success(response.data.message || 'Password reset successfully!');
+      const response = await forgotPassword(resetEmail);
+      toast.success(response.data.message || 'Mã OTP đã được gửi!');
+      setOtpSent(true);
+    } catch (error) {
+      toast.error(error.response?.data?.error || 'Không thể gửi mã OTP');
+    } finally {
+      setResetLoading(false);
+    }
+  };
+
+  const handleResetPassword = async (e) => {
+    e.preventDefault();
+    if (newPassword !== confirmPassword) {
+      toast.error('Mật khẩu xác nhận không khớp');
+      return;
+    }
+    if (newPassword.length < 6) {
+      toast.error('Mật khẩu phải dài tối thiểu 6 ký tự');
+      return;
+    }
+    setResetLoading(true);
+    try {
+      const response = await resetPasswordWithOtp(resetEmail, otp, newPassword);
+      toast.success(response.data.message || 'Đặt lại mật khẩu thành công!');
       setIsForgotPassword(false);
+      setOtpSent(false);
       setEmail(resetEmail); // auto-populate email in login form
       setResetEmail('');
+      setOtp('');
       setNewPassword('');
       setConfirmPassword('');
     } catch (error) {
-      toast.error(error.response?.data?.error || 'Password reset failed');
+      toast.error(error.response?.data?.error || 'Xác nhận OTP hoặc đặt lại mật khẩu thất bại');
     } finally {
       setResetLoading(false);
     }
@@ -175,10 +197,10 @@ const Login = () => {
             </button>
           </form>
         ) : (
-          <form onSubmit={handleResetPassword} className="space-y-6 preserve-3d-child">
+          <form onSubmit={!otpSent ? handleSendOtp : handleResetPassword} className="space-y-6 preserve-3d-child">
             <div className="group">
               <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                Email đã đăng ký
+                Gmail đã đăng ký
               </label>
               <div className="relative flex items-center">
                 <FaEnvelope className="absolute left-4 text-gray-500 text-base transition-colors group-focus-within:text-cyan-premium" />
@@ -186,46 +208,73 @@ const Login = () => {
                   type="email"
                   value={resetEmail}
                   onChange={(e) => setResetEmail(e.target.value)}
-                  className="w-full pl-11 pr-4 py-3.5 bg-[#0f172a]/80 border border-dark-border rounded-xl text-white placeholder-gray-600 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
-                  placeholder="email@example.com"
+                  disabled={otpSent}
+                  className="w-full pl-11 pr-4 py-3.5 bg-[#0f172a]/80 border border-dark-border rounded-xl text-white placeholder-gray-600 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all disabled:opacity-50"
+                  placeholder="vi_du@gmail.com"
                   required
                 />
               </div>
             </div>
 
-            <div className="group">
-              <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                Mật khẩu mới
-              </label>
-              <div className="relative flex items-center">
-                <FaLock className="absolute left-4 text-gray-500 text-base transition-colors group-focus-within:text-cyan-premium" />
-                <input
-                  type="password"
-                  value={newPassword}
-                  onChange={(e) => setNewPassword(e.target.value)}
-                  className="w-full pl-11 pr-4 py-3.5 bg-[#0f172a]/80 border border-dark-border rounded-xl text-white placeholder-gray-600 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
-                  placeholder="•••••••• (tối thiểu 6 ký tự)"
-                  required
-                />
-              </div>
-            </div>
+            {otpSent && (
+              <>
+                <div className="p-3.5 rounded-xl bg-cyan-premium/10 border border-cyan-premium/30 text-xs text-cyan-200">
+                  Một mã OTP gồm 6 chữ số đã được gửi tới Gmail của bạn. Vui lòng kiểm tra hộp thư.
+                </div>
 
-            <div className="group">
-              <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                Xác nhận mật khẩu mới
-              </label>
-              <div className="relative flex items-center">
-                <FaLock className="absolute left-4 text-gray-500 text-base transition-colors group-focus-within:text-cyan-premium" />
-                <input
-                  type="password"
-                  value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="w-full pl-11 pr-4 py-3.5 bg-[#0f172a]/80 border border-dark-border rounded-xl text-white placeholder-gray-600 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
-                  placeholder="••••••••"
-                  required
-                />
-              </div>
-            </div>
+                <div className="group animate-fade-in">
+                  <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
+                    Mã xác thực OTP
+                  </label>
+                  <div className="relative flex items-center">
+                    <FaKey className="absolute left-4 text-gray-500 text-base transition-colors group-focus-within:text-cyan-premium" />
+                    <input
+                      type="text"
+                      value={otp}
+                      onChange={(e) => setOtp(e.target.value)}
+                      maxLength={6}
+                      className="w-full pl-11 pr-4 py-3.5 bg-[#0f172a]/80 border border-dark-border rounded-xl text-white placeholder-gray-600 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
+                      placeholder="Nhập 6 chữ số OTP"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="group animate-fade-in">
+                  <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
+                    Mật khẩu mới
+                  </label>
+                  <div className="relative flex items-center">
+                    <FaLock className="absolute left-4 text-gray-500 text-base transition-colors group-focus-within:text-cyan-premium" />
+                    <input
+                      type="password"
+                      value={newPassword}
+                      onChange={(e) => setNewPassword(e.target.value)}
+                      className="w-full pl-11 pr-4 py-3.5 bg-[#0f172a]/80 border border-dark-border rounded-xl text-white placeholder-gray-600 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
+                      placeholder="•••••••• (tối thiểu 6 ký tự)"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="group animate-fade-in">
+                  <label className="block text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">
+                    Xác nhận mật khẩu mới
+                  </label>
+                  <div className="relative flex items-center">
+                    <FaLock className="absolute left-4 text-gray-500 text-base transition-colors group-focus-within:text-cyan-premium" />
+                    <input
+                      type="password"
+                      value={confirmPassword}
+                      onChange={(e) => setConfirmPassword(e.target.value)}
+                      className="w-full pl-11 pr-4 py-3.5 bg-[#0f172a]/80 border border-dark-border rounded-xl text-white placeholder-gray-600 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
+                      placeholder="••••••••"
+                      required
+                    />
+                  </div>
+                </div>
+              </>
+            )}
 
             <div className="flex flex-col gap-3">
               <button
@@ -236,7 +285,7 @@ const Login = () => {
                 {resetLoading ? (
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
                 ) : (
-                  <span>ĐẶT LẠI MẬT KHẨU</span>
+                  <span>{!otpSent ? 'GỬI MÃ OTP' : 'XÁC NHẬN ĐẶT LẠI MẬT KHẨU'}</span>
                 )}
               </button>
 
@@ -244,6 +293,8 @@ const Login = () => {
                 type="button"
                 onClick={() => {
                   setIsForgotPassword(false);
+                  setOtpSent(false);
+                  setOtp('');
                   setNewPassword('');
                   setConfirmPassword('');
                 }}

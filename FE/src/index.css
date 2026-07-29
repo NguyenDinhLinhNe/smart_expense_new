@@ -7,26 +7,33 @@
 :root {
   --bg-main: #090d16;
   --bg-card: #101622;
-  --bg-glass: rgba(16, 22, 34, 0.65);
-  --bg-glass-hover: rgba(26, 34, 52, 0.8);
-  --border-glass: rgba(255, 255, 255, 0.07);
-  --border-glass-focus: rgba(6, 182, 212, 0.4);
+  --bg-glass: rgba(16, 22, 34, 0.7);
+  --bg-glass-hover: rgba(26, 34, 52, 0.85);
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --border-glass-focus: rgba(6, 182, 212, 0.5);
   
-  --text-main: #f1f5f9;
+  --text-main: #f8fafc;
   --text-muted: #94a3b8;
   
   --cyan: #06b6d4;
-  --cyan-glow: rgba(6, 182, 212, 0.3);
+  --cyan-glow: rgba(6, 182, 212, 0.35);
   --purple: #8b5cf6;
-  --purple-glow: rgba(139, 92, 246, 0.3);
+  --purple-glow: rgba(139, 92, 246, 0.35);
   --teal: #14b8a6;
   
   --emerald: #10b981;
-  --emerald-glow: rgba(16, 185, 129, 0.15);
+  --emerald-glow: rgba(16, 185, 129, 0.2);
   --amber: #f59e0b;
-  --amber-glow: rgba(245, 158, 11, 0.15);
+  --amber-glow: rgba(245, 158, 11, 0.2);
   --rose: #f43f5e;
-  --rose-glow: rgba(244, 63, 94, 0.15);
+  --rose-glow: rgba(244, 63, 94, 0.2);
+  
+  /* Dynamic Aurora Colors cho Dark Mode */
+  --aurora-base: radial-gradient(circle at 50% 50%, #0d1322, #070a12);
+  --aurora-1: rgba(6, 182, 212, 0.45);
+  --aurora-2: rgba(139, 92, 246, 0.4);
+  --aurora-3: rgba(16, 185, 129, 0.35);
+  --aurora-4: rgba(244, 63, 94, 0.3);
   
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -36,28 +43,35 @@
 }
 
 [data-theme="light"] {
-  --bg-main: #f5e6d8;
-  --bg-card: #fdfbf7;
-  --bg-glass: rgba(253, 251, 247, 0.85);
-  --bg-glass-hover: rgba(245, 230, 216, 0.9);
-  --border-glass: rgba(223, 122, 92, 0.15);
-  --border-glass-focus: rgba(223, 122, 92, 0.6);
+  --bg-main: #f1f5f9; /* Soft Slate-100 */
+  --bg-card: #ffffff; /* Clean White */
+  --bg-glass: rgba(255, 255, 255, 0.82);
+  --bg-glass-hover: rgba(248, 250, 252, 0.95);
+  --border-glass: rgba(15, 23, 42, 0.08);
+  --border-glass-focus: rgba(6, 182, 212, 0.6);
   
-  --text-main: #4a3728;
-  --text-muted: #7d6553;
+  --text-main: #0f172a; /* Slate-900 */
+  --text-muted: #475569; /* Slate-600 */
   
-  --cyan: #df7a5c;
-  --cyan-glow: rgba(223, 122, 92, 0.25);
-  --purple: #f4a261;
-  --purple-glow: rgba(244, 162, 97, 0.25);
-  --teal: #e76f51;
+  --cyan: #0284c7;
+  --cyan-glow: rgba(2, 132, 199, 0.2);
+  --purple: #7c3aed;
+  --purple-glow: rgba(124, 58, 237, 0.2);
+  --teal: #0d9488;
   
-  --emerald: #5c8f75;
-  --emerald-glow: rgba(92, 143, 117, 0.15);
-  --amber: #e9c46a;
-  --amber-glow: rgba(233, 196, 106, 0.15);
-  --rose: #e76f51;
-  --rose-glow: rgba(231, 111, 81, 0.15);
+  --emerald: #059669;
+  --emerald-glow: rgba(5, 150, 105, 0.15);
+  --amber: #d97706;
+  --amber-glow: rgba(217, 119, 6, 0.15);
+  --rose: #e11d48;
+  --rose-glow: rgba(225, 29, 72, 0.15);
+  
+  /* Dynamic Soft Pastel Aurora Colors cho Light Mode */
+  --aurora-base: radial-gradient(circle at 50% 50%, #f8fafc, #e2e8f0);
+  --aurora-1: rgba(56, 189, 248, 0.35); /* Sky Blue */
+  --aurora-2: rgba(192, 132, 252, 0.3); /* Soft Purple */
+  --aurora-3: rgba(52, 211, 153, 0.3); /* Mint Green */
+  --aurora-4: rgba(251, 113, 133, 0.25); /* Soft Rose */
 }
 
 /* Global Text Color Overrides based on system CSS variables */
@@ -152,6 +166,38 @@
   color: #e76f51 !important;
 }
 
+/* Automatic Theme Sync Overrides cho tất cả Card, Tab, Panel và Border */
+[data-theme="light"] .bg-dark-card {
+  background-color: var(--bg-card) !important;
+  color: var(--text-main) !important;
+  border-color: var(--border-glass) !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05) !important;
+}
+
+[data-theme="light"] .bg-dark-glass {
+  background-color: var(--bg-glass) !important;
+  color: var(--text-main) !important;
+  border-color: var(--border-glass) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.04) !important;
+}
+
+[data-theme="light"] .border-dark-border {
+  border-color: var(--border-glass) !important;
+}
+
+[data-theme="light"] .bg-dark-main,
+[data-theme="light"] .bg-mesh-3d {
+  background: transparent !important;
+}
+
+[data-theme="light"] header.bg-dark-card {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-bottom-color: rgba(15, 23, 42, 0.08) !important;
+}
 
 @layer base {
   body {
@@ -614,6 +660,106 @@
   align-items: center;
   justify-content: center;
   padding: 16px;
+}
+
+/* Living Aurora Fluid Background cho TOÀN BỘ GIAO DIỆN */
+.living-mesh-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  background: var(--aurora-base);
+}
+
+.living-orb-1 {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, var(--aurora-1) 0%, transparent 70%);
+  filter: blur(110px);
+  border-radius: 50%;
+  animation: floatOrb1 16s ease-in-out infinite alternate;
+}
+
+.living-orb-2 {
+  position: absolute;
+  bottom: -15%;
+  right: -10%;
+  width: 750px;
+  height: 750px;
+  background: radial-gradient(circle, var(--aurora-2) 0%, transparent 70%);
+  filter: blur(120px);
+  border-radius: 50%;
+  animation: floatOrb2 20s ease-in-out infinite alternate;
+}
+
+.living-orb-3 {
+  position: absolute;
+  top: 35%;
+  right: 20%;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, var(--aurora-3) 0%, transparent 70%);
+  filter: blur(100px);
+  border-radius: 50%;
+  animation: floatOrb3 14s ease-in-out infinite alternate;
+}
+
+.living-orb-4 {
+  position: absolute;
+  bottom: 20%;
+  left: 25%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--aurora-4) 0%, transparent 70%);
+  filter: blur(115px);
+  border-radius: 50%;
+  animation: floatOrb4 18s ease-in-out infinite alternate;
+}
+
+/* Các hạt ánh sáng lơ lửng sinh động */
+.sparkle-container {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.25) 1px, transparent 1px),
+    radial-gradient(rgba(6, 182, 212, 0.3) 1px, transparent 1px);
+  background-size: 80px 80px, 130px 130px;
+  background-position: 0 0, 40px 40px;
+  animation: sparkleMove 40s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes floatOrb1 {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  50% { transform: translate(160px, 110px) rotate(180deg) scale(1.25); }
+  100% { transform: translate(-100px, 80px) rotate(360deg) scale(0.85); }
+}
+
+@keyframes floatOrb2 {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  50% { transform: translate(-140px, -120px) rotate(-180deg) scale(1.3); }
+  100% { transform: translate(90px, -60px) rotate(-360deg) scale(0.9); }
+}
+
+@keyframes floatOrb3 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-110px, 130px) scale(1.2); }
+  100% { transform: translate(120px, -90px) scale(0.8); }
+}
+
+@keyframes floatOrb4 {
+  0% { transform: translate(0, 0) scale(0.9); }
+  50% { transform: translate(130px, -100px) scale(1.25); }
+  100% { transform: translate(-90px, 110px) scale(1); }
+}
+
+@keyframes sparkleMove {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-1000px); }
 }
 
 

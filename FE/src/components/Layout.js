@@ -24,8 +24,9 @@ import {
   FaMicrophoneSlash
 } from 'react-icons/fa';
 import toast from 'react-hot-toast';
-import { askAIChat, createTransaction, getCategories, createBudget } from '../services/api';
+import { askAIChat, createTransaction, getCategories, createBudget, changePassword } from '../services/api';
 import { formatVND } from '../services/utils';
+import SEO from './SEO';
 
 const Layout = () => {
   const { user, logout } = useAuth();
@@ -33,6 +34,53 @@ const Layout = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  // States cho đổi mật khẩu
+  const [showPasswordModal, setShowPasswordModal] = useState(false);
+  const [passwordForm, setPasswordForm] = useState({ old_password: '', new_password: '', confirm_password: '' });
+  const [changing, setChanging] = useState(false);
+
+  const [showUserDropdown, setShowUserDropdown] = useState(false);
+  const dropdownRef = useRef(null);
+
+  // Hook tự động đóng dropdown khi click ra ngoài
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setShowUserDropdown(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const handleChangePassword = async (e) => {
+    e.preventDefault();
+    if (passwordForm.new_password !== passwordForm.confirm_password) {
+      toast.error("Mật khẩu mới nhập lại không khớp!");
+      return;
+    }
+    if (passwordForm.new_password.length < 6) {
+      toast.error("Mật khẩu mới phải có ít nhất 6 ký tự!");
+      return;
+    }
+    setChanging(true);
+    try {
+      const res = await changePassword({
+        old_password: passwordForm.old_password,
+        new_password: passwordForm.new_password
+      });
+      toast.success(res.data.message || "Đổi mật khẩu thành công!");
+      setShowPasswordModal(false);
+      setPasswordForm({ old_password: '', new_password: '', confirm_password: '' });
+    } catch (err) {
+      toast.error(err.response?.data?.error || "Đổi mật khẩu thất bại!");
+    } finally {
+      setChanging(false);
+    }
+  };
   const [time, setTime] = useState(new Date());
 
   const [isRecording, setIsRecording] = useState(false);
@@ -332,14 +380,30 @@ const Layout = () => {
 
   return (
     <div className="flex flex-col h-screen bg-mesh-3d text-white font-body overflow-hidden relative">
-      {/* Background 3D Glow Orbs */}
-      <div className="glow-orb-3d-1"></div>
-      <div className="glow-orb-3d-2"></div>
+      <SEO title={`${pageDetails.title} - Smart Expense Tracker`} description={pageDetails.desc} />
+      
+      {/* Living Aurora Animated Background Mesh & Sparkles */}
+      <div className="living-mesh-bg">
+        <div className="sparkle-container"></div>
+        <div className="living-orb-1"></div>
+        <div className="living-orb-2"></div>
+        <div className="living-orb-3"></div>
+        <div className="living-orb-4"></div>
+      </div>
 
       {/* Horizontal Header (Top Navigation) */}
       <header className="h-20 bg-dark-card border-b border-dark-border px-6 flex items-center justify-between z-50 sticky top-0 flex-shrink-0 w-full">
         {/* Brand Section */}
-        <div className="flex items-center gap-3.5 cursor-pointer" onClick={() => navigate('/dashboard')}>
+        <div 
+          className="flex items-center gap-3.5 cursor-pointer" 
+          onClick={() => {
+            if (window.location.pathname === '/dashboard') {
+              window.location.reload();
+            } else {
+              navigate('/dashboard');
+            }
+          }}
+        >
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-premium to-teal-premium flex items-center justify-center text-white text-lg shadow-lg shadow-cyan-premium/25 transition-transform hover:scale-105">
             <FaWallet className="text-lg" />
           </div>
@@ -506,12 +570,33 @@ const Layout = () => {
             <span className="font-mono tracking-wide">{formatClock(time)}</span>
           </div>
 
-          {/* Compact User Tag */}
-          <div className="flex items-center gap-2 bg-white/[0.02] border border-dark-border px-3 py-1.5 rounded-full hidden sm:flex">
-            <div className="w-5.5 h-5.5 rounded-full bg-slate-900 border border-dark-border flex items-center justify-center text-cyan-premium text-[10px]">
-              <FaUserTie size={10} />
+          {/* Compact User Tag & Dropdown Menu */}
+          <div className="relative" ref={dropdownRef}>
+            <div 
+              onClick={() => setShowUserDropdown(!showUserDropdown)}
+              className="flex items-center gap-2 bg-white/[0.02] border border-dark-border px-3 py-1.5 rounded-full hidden sm:flex cursor-pointer hover:bg-white/10 active:scale-95 transition-all"
+              title="Tài khoản của tôi"
+            >
+              <div className="w-5.5 h-5.5 rounded-full bg-slate-900 border border-dark-border flex items-center justify-center text-cyan-premium text-[10px]">
+                <FaUserTie size={10} />
+              </div>
+              <span className="text-xs font-semibold text-gray-300 truncate max-w-[85px]">{user?.name || 'User'}</span>
             </div>
-            <span className="text-xs font-semibold text-gray-300 truncate max-w-[85px]">{user?.name || 'User'}</span>
+
+            {/* Dropdown Menu List */}
+            {showUserDropdown && (
+              <div className="absolute right-0 mt-2.5 w-40 bg-dark-glass border border-dark-border rounded-2xl p-2 shadow-2xl z-50 animate-fade-in backdrop-blur-lg">
+                <button
+                  onClick={() => {
+                    setShowUserDropdown(false);
+                    setShowPasswordModal(true);
+                  }}
+                  className="w-full flex items-center gap-2.5 px-3 py-2 text-xs font-semibold rounded-xl text-left hover:bg-cyan-premium/10 text-gray-300 hover:text-white transition-all cursor-pointer"
+                >
+                  <span>🔑</span> Đổi mật khẩu
+                </button>
+              </div>
+            )}
           </div>
 
           {/* Global Voice Assistant Button */}
@@ -705,7 +790,7 @@ const Layout = () => {
       )}
 
       {/* Main Workspace (View Container) */}
-      <div className="flex-1 overflow-y-auto bg-dark-main flex flex-col">
+      <div className="flex-1 overflow-y-auto bg-dark-main/60 backdrop-blur-sm flex flex-col relative z-10">
         <main className="flex-1 p-6 lg:p-8">
           <div className="max-w-7xl mx-auto flex flex-col gap-6">
             {/* Contextual Header inside content area */}
@@ -725,6 +810,94 @@ const Layout = () => {
           </div>
         </main>
       </div>
+
+      {/* Modal Đổi Mật Khẩu Tài Khoản */}
+      {showPasswordModal && (
+        <div className="modal-backdrop-premium animate-fade-in">
+          <div className="bg-[#101622]/95 border border-dark-border rounded-3xl max-w-sm w-full p-8 shadow-2xl relative animate-modal-scale bg-dark-glass">
+            <div className="absolute w-20 h-20 bg-cyan-premium/20 blur-[30px] -top-10 -left-10 opacity-[0.08] rounded-full pointer-events-none"></div>
+            
+            <div className="flex justify-between items-center mb-6">
+              <h3 className="text-base font-extrabold text-white tracking-wide uppercase font-heading">
+                Đổi Mật Khẩu
+              </h3>
+              <button 
+                onClick={() => {
+                  setShowPasswordModal(false);
+                  setPasswordForm({ old_password: '', new_password: '', confirm_password: '' });
+                }} 
+                className="p-1.5 bg-white/[0.03] border border-dark-border rounded-lg text-gray-400 hover:text-white transition-colors cursor-pointer"
+              >
+                <FaTimes size={12} />
+              </button>
+            </div>
+            
+            <form onSubmit={handleChangePassword} className="space-y-4">
+              <div>
+                <label className="block text-gray-400 text-[10px] font-bold uppercase tracking-wider mb-2">
+                  Mật khẩu hiện tại
+                </label>
+                <input
+                  type="password"
+                  value={passwordForm.old_password}
+                  onChange={(e) => setPasswordForm({ ...passwordForm, old_password: e.target.value })}
+                  placeholder="••••••••"
+                  className="w-full px-4 py-3 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-white placeholder-gray-600 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-gray-400 text-[10px] font-bold uppercase tracking-wider mb-2">
+                  Mật khẩu mới
+                </label>
+                <input
+                  type="password"
+                  value={passwordForm.new_password}
+                  onChange={(e) => setPasswordForm({ ...passwordForm, new_password: e.target.value })}
+                  placeholder="Mới (tối thiểu 6 ký tự)"
+                  className="w-full px-4 py-3 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-white placeholder-gray-600 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-gray-400 text-[10px] font-bold uppercase tracking-wider mb-2">
+                  Nhập lại mật khẩu mới
+                </label>
+                <input
+                  type="password"
+                  value={passwordForm.confirm_password}
+                  onChange={(e) => setPasswordForm({ ...passwordForm, confirm_password: e.target.value })}
+                  placeholder="Xác nhận lại mật khẩu mới"
+                  className="w-full px-4 py-3 bg-[#0f172a]/80 border border-dark-border rounded-xl text-xs text-white placeholder-gray-600 outline-none focus:border-cyan-premium focus:shadow-cyan-glow transition-all"
+                  required
+                />
+              </div>
+
+              <div className="flex gap-3 pt-4">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowPasswordModal(false);
+                    setPasswordForm({ old_password: '', new_password: '', confirm_password: '' });
+                  }}
+                  className="flex-1 py-3 bg-white/[0.02] border border-dark-border rounded-xl text-xs text-gray-400 hover:text-white font-heading font-extrabold transition-all"
+                >
+                  HỦY
+                </button>
+                <button
+                  type="submit"
+                  disabled={changing}
+                  className="flex-1 py-3 bg-gradient-to-r from-cyan-premium to-purple-premium text-white font-heading font-extrabold text-xs tracking-wider rounded-xl transition-all shadow-md shadow-cyan-premium/10 hover:shadow-cyan-premium/30 neo-button-3d-purple cursor-pointer disabled:opacity-40"
+                >
+                  {changing ? "ĐANG LƯU..." : "CẬP NHẬT"}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
 
     </div>
   );

@@ -1,0 +1,2252 @@
+[
+  {
+    "instruction": "Lương tháng này về 1,200,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Nhận lương tháng) trị giá **1,200,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Nhận lương tháng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Sắm đồ dùng gia đình hết 150k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Mua sắm** (Sắm đồ dùng gia đình) với số tiền **150,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"expense\", \"category_name\": \"Shopping\", \"note\": \"Sắm đồ dùng gia đình\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Thu nhập từ Thu nhập từ viết lách được 20,000 đồng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thu nhập từ viết lách) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thu nhập từ viết lách\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 20,000 tiền chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 350k tiền Nhận lương tháng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Nhận lương tháng) trị giá **350,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Nhận lương tháng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 50,000 tiền Tiền thưởng dự án",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Tiền thưởng dự án) trị giá **50,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Tiền thưởng dự án\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 20000 cho Tiền thuê nhà",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Tiền thuê nhà) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Tiền thuê nhà\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 1,200,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **1,200,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 5000000 cho Bảo dưỡng xe máy",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Bảo dưỡng xe máy) với số tiền **5,000,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Bảo dưỡng xe máy\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu chi tiêu hết 1,200,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Healthcare\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Thu nhập từ chi tiêu được 1,200,000 đồng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **1,200,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 50k tiền chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **50,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 1200000 từ Nhận lương tháng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Nhận lương tháng) trị giá **1,200,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Nhận lương tháng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 350000 cho chi tiêu",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **350,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"expense\", \"category_name\": \"Healthcare\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 150,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thiết kế logo freelancer) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thiết kế logo freelancer\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 1,200,000đ cho chi tiêu",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Healthcare\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 20000 từ chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 5,000,000 tiền Tiền thưởng dự án",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Tiền thưởng dự án) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Tiền thưởng dự án\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 150,000đ cho Đi siêu thị BigC",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Mua sắm** (Đi siêu thị BigC) với số tiền **150,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"expense\", \"category_name\": \"Shopping\", \"note\": \"Đi siêu thị BigC\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Thu nhập từ chi tiêu được 1,200,000 đồng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **1,200,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 1200000 vnd làm Đổ xăng xe máy",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Đổ xăng xe máy) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Đổ xăng xe máy\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 350,000 tiền Lương cứng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **350,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Sắm đồ dùng gia đình hết 50k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Mua sắm** (Sắm đồ dùng gia đình) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Shopping\", \"note\": \"Sắm đồ dùng gia đình\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 150k tiền Nhận lương tháng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Nhận lương tháng) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Nhận lương tháng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Mua game Steam hết 350,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Mua game Steam) với số tiền **350,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Mua game Steam\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 50,000 tiền Dạy kèm tiếng Anh",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Dạy kèm tiếng Anh) trị giá **50,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Dạy kèm tiếng Anh\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 50000 từ chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **50,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 1200k tiền Thiết kế logo freelancer",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thiết kế logo freelancer) trị giá **1,200,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thiết kế logo freelancer\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 1,200,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **1,200,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 350000 cho Tiền nước tháng này",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Tiền nước tháng này) với số tiền **350,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Tiền nước tháng này\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 350,000 tiền Thiết kế logo freelancer",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thiết kế logo freelancer) trị giá **350,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thiết kế logo freelancer\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 50,000đ cho chi tiêu",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Healthcare\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 50,000 tiền chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **50,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Thu nhập từ Thiết kế logo freelancer được 50,000 đồng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thiết kế logo freelancer) trị giá **50,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thiết kế logo freelancer\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 150,000đ cho Đi siêu thị BigC",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Mua sắm** (Đi siêu thị BigC) với số tiền **150,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"expense\", \"category_name\": \"Shopping\", \"note\": \"Đi siêu thị BigC\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống chi tiêu hết 5000k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **5,000,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"expense\", \"category_name\": \"Healthcare\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Thanh toán vé xe buýt hết 150,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Thanh toán vé xe buýt) với số tiền **150,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Thanh toán vé xe buýt\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 1,200,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Tiền thưởng dự án) trị giá **1,200,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Tiền thưởng dự án\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 350000 cho Sắm đồ dùng gia đình",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Mua sắm** (Sắm đồ dùng gia đình) với số tiền **350,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"expense\", \"category_name\": \"Shopping\", \"note\": \"Sắm đồ dùng gia đình\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Tiền thuê nhà hết 5000k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Tiền thuê nhà) với số tiền **5,000,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Tiền thuê nhà\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Ăn trưa văn phòng hết 1,200,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Ăn uống** (Ăn trưa văn phòng) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Eating\", \"note\": \"Ăn trưa văn phòng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 20k tiền chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Tiền thuê nhà hết 50,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Tiền thuê nhà) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Tiền thuê nhà\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Thu nhập từ Tiền thưởng dự án được 20,000 đồng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Tiền thưởng dự án) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Tiền thưởng dự án\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 350,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **350,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Tiền thuê nhà hết 1200k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Tiền thuê nhà) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Tiền thuê nhà\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 150,000 tiền chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 1200000 cho Mua điện thoại mới",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Mua sắm** (Mua điện thoại mới) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Shopping\", \"note\": \"Mua điện thoại mới\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 350,000đ cho chi tiêu",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **350,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"expense\", \"category_name\": \"Healthcare\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 20000 từ chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 350000 cho Mua game Steam",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Mua game Steam) với số tiền **350,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Mua game Steam\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 5,000,000đ cho Đổ xăng xe máy",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Đổ xăng xe máy) với số tiền **5,000,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Đổ xăng xe máy\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 20000 cho Đổ xăng xe máy",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Đổ xăng xe máy) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Đổ xăng xe máy\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 150,000 tiền chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 50k tiền Tiền thưởng dự án",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Tiền thưởng dự án) trị giá **50,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Tiền thưởng dự án\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Thu nhập từ chi tiêu được 1,200,000 đồng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **1,200,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 350,000 tiền Lương cứng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **350,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Tiền thuê nhà hết 5,000,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Tiền thuê nhà) với số tiền **5,000,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Tiền thuê nhà\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 1200000 vnd làm chi tiêu",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Healthcare\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 20,000 tiền Nhận lương tháng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Nhận lương tháng) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Nhận lương tháng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 5,000,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thiết kế logo freelancer) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thiết kế logo freelancer\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 20,000 tiền Dạy kèm tiếng Anh",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Dạy kèm tiếng Anh) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Dạy kèm tiếng Anh\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 20000 cho Mua game Steam",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Mua game Steam) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Mua game Steam\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 350,000đ cho Mua quần áo mới",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Mua sắm** (Mua quần áo mới) với số tiền **350,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"expense\", \"category_name\": \"Shopping\", \"note\": \"Mua quần áo mới\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 150000 từ chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 20000 cho Cà phê Starbucks",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Ăn uống** (Cà phê Starbucks) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Eating\", \"note\": \"Cà phê Starbucks\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 150000 cho chi tiêu",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **150,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"expense\", \"category_name\": \"Healthcare\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 5000000 từ chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu chi tiêu hết 150,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **150,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"expense\", \"category_name\": \"Healthcare\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 20000 cho chi tiêu",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Healthcare\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 5,000,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Dạy kèm tiếng Anh) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Dạy kèm tiếng Anh\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 1200k tiền chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **1,200,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 150000 vnd làm Tiền nước tháng này",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Tiền nước tháng này) với số tiền **150,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Tiền nước tháng này\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 150,000 tiền Thu nhập từ viết lách",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thu nhập từ viết lách) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thu nhập từ viết lách\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Ăn trưa văn phòng hết 5,000,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Ăn uống** (Ăn trưa văn phòng) với số tiền **5,000,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"expense\", \"category_name\": \"Eating\", \"note\": \"Ăn trưa văn phòng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 20k tiền chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Ăn trưa văn phòng hết 350,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Ăn uống** (Ăn trưa văn phòng) với số tiền **350,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"expense\", \"category_name\": \"Eating\", \"note\": \"Ăn trưa văn phòng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 20,000đ cho Đăng ký Netflix",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Đăng ký Netflix) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Đăng ký Netflix\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 20000 từ chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 1,200,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thu nhập từ viết lách) trị giá **1,200,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thu nhập từ viết lách\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 5000k tiền Dạy kèm tiếng Anh",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Dạy kèm tiếng Anh) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Dạy kèm tiếng Anh\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Thu nhập từ chi tiêu được 20,000 đồng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 350k tiền Thu nhập từ viết lách",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thu nhập từ viết lách) trị giá **350,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thu nhập từ viết lách\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 350,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **350,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 5000000 từ chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 20000 từ chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 1200000 vnd làm chi tiêu",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Healthcare\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 50,000 tiền Lương cứng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **50,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 1200000 từ Thu nhập từ viết lách",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thu nhập từ viết lách) trị giá **1,200,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thu nhập từ viết lách\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 1200000 vnd làm Đi siêu thị BigC",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Mua sắm** (Đi siêu thị BigC) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Shopping\", \"note\": \"Đi siêu thị BigC\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Thu nhập từ chi tiêu được 20,000 đồng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 150,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Nhận lương tháng) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Nhận lương tháng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Ăn trưa văn phòng hết 20,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Ăn uống** (Ăn trưa văn phòng) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Eating\", \"note\": \"Ăn trưa văn phòng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 1,200,000 tiền chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **1,200,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 1200000 vnd làm chi tiêu",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Healthcare\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 350000 cho chi tiêu",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **350,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"expense\", \"category_name\": \"Healthcare\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 20000 từ chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 20,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 50,000đ cho Cà phê Starbucks",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Ăn uống** (Cà phê Starbucks) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Eating\", \"note\": \"Cà phê Starbucks\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 50000 cho Đi hát Karaoke",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Đi hát Karaoke) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Đi hát Karaoke\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 1200000 cho chi tiêu",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Healthcare\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 20000 từ Lương cứng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 150,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thu nhập từ viết lách) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thu nhập từ viết lách\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 350,000đ cho Đi GrabCar",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Đi GrabCar) với số tiền **350,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Đi GrabCar\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Thu nhập từ Nhận lương tháng được 5,000,000 đồng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Nhận lương tháng) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Nhận lương tháng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 50,000 tiền Dạy kèm tiếng Anh",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Dạy kèm tiếng Anh) trị giá **50,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Dạy kèm tiếng Anh\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 1,200,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **1,200,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Thu nhập từ Thiết kế logo freelancer được 5,000,000 đồng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thiết kế logo freelancer) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thiết kế logo freelancer\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Mua điện thoại mới hết 5000k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Mua sắm** (Mua điện thoại mới) với số tiền **5,000,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"expense\", \"category_name\": \"Shopping\", \"note\": \"Mua điện thoại mới\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Cà phê Starbucks hết 5,000,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Ăn uống** (Cà phê Starbucks) với số tiền **5,000,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"expense\", \"category_name\": \"Eating\", \"note\": \"Cà phê Starbucks\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Đổ xăng xe máy hết 150,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Đổ xăng xe máy) với số tiền **150,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Đổ xăng xe máy\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Thu nhập từ chi tiêu được 20,000 đồng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 350000 cho Tiền nước tháng này",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Tiền nước tháng này) với số tiền **350,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Tiền nước tháng này\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 350,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **350,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 5,000,000đ cho Bánh mì ăn sáng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Ăn uống** (Bánh mì ăn sáng) với số tiền **5,000,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"expense\", \"category_name\": \"Eating\", \"note\": \"Bánh mì ăn sáng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Tiền gửi xe hết 50,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Tiền gửi xe) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Tiền gửi xe\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 20k tiền chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 20000 cho Tiền nước tháng này",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Tiền nước tháng này) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Tiền nước tháng này\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Đi GrabCar hết 50k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Đi GrabCar) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Đi GrabCar\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Tiền thuê nhà hết 1200k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Tiền thuê nhà) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Tiền thuê nhà\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Thu nhập từ chi tiêu được 150,000 đồng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Tiền gửi xe hết 5,000,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Tiền gửi xe) với số tiền **5,000,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Tiền gửi xe\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Thu nhập từ Dạy kèm tiếng Anh được 5,000,000 đồng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Dạy kèm tiếng Anh) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Dạy kèm tiếng Anh\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 350000 từ chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **350,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 50000 vnd làm Sắm đồ dùng gia đình",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Mua sắm** (Sắm đồ dùng gia đình) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Shopping\", \"note\": \"Sắm đồ dùng gia đình\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Cà phê Starbucks hết 350,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Ăn uống** (Cà phê Starbucks) với số tiền **350,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"expense\", \"category_name\": \"Eating\", \"note\": \"Cà phê Starbucks\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Thu nhập từ chi tiêu được 20,000 đồng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 1200000 vnd làm Thanh toán vé xe buýt",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Thanh toán vé xe buýt) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Thanh toán vé xe buýt\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 5000000 cho Xem phim rạp CGV",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Xem phim rạp CGV) với số tiền **5,000,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Xem phim rạp CGV\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 150000 vnd làm Đăng ký Netflix",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Đăng ký Netflix) với số tiền **150,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Đăng ký Netflix\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 150,000 tiền chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Mua điện thoại mới hết 50k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Mua sắm** (Mua điện thoại mới) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Shopping\", \"note\": \"Mua điện thoại mới\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 5,000,000 tiền chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 150k tiền chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Bánh mì ăn sáng hết 20k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Ăn uống** (Bánh mì ăn sáng) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Eating\", \"note\": \"Bánh mì ăn sáng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Xem phim rạp CGV hết 50k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Xem phim rạp CGV) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Xem phim rạp CGV\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Ăn trưa văn phòng hết 150k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Ăn uống** (Ăn trưa văn phòng) với số tiền **150,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"expense\", \"category_name\": \"Eating\", \"note\": \"Ăn trưa văn phòng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 5000000 cho chi tiêu",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **5,000,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"expense\", \"category_name\": \"Healthcare\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 1200000 từ Nhận lương tháng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Nhận lương tháng) trị giá **1,200,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Nhận lương tháng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 20000 vnd làm Tiền thuê nhà",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Tiền thuê nhà) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Tiền thuê nhà\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 20,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 350k tiền Thu nhập từ viết lách",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thu nhập từ viết lách) trị giá **350,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thu nhập từ viết lách\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Đi siêu thị BigC hết 1200k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Mua sắm** (Đi siêu thị BigC) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Shopping\", \"note\": \"Đi siêu thị BigC\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 5000000 cho chi tiêu",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **5,000,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"expense\", \"category_name\": \"Healthcare\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 150k tiền chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 50000 vnd làm Cà phê Starbucks",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Ăn uống** (Cà phê Starbucks) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Eating\", \"note\": \"Cà phê Starbucks\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 1,200,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **1,200,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 1,200,000 tiền chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **1,200,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 20000 từ chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 5000000 từ Nhận lương tháng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Nhận lương tháng) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Nhận lương tháng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 50,000 tiền Nhận lương tháng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Nhận lương tháng) trị giá **50,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Nhận lương tháng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Đi siêu thị BigC hết 20k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Mua sắm** (Đi siêu thị BigC) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Shopping\", \"note\": \"Đi siêu thị BigC\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 50,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **50,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 20000 vnd làm Thanh toán vé xe buýt",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Thanh toán vé xe buýt) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Thanh toán vé xe buýt\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 20k tiền chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 20,000 tiền Nhận lương tháng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Nhận lương tháng) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Nhận lương tháng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 1,200,000đ cho Cà phê Starbucks",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Ăn uống** (Cà phê Starbucks) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Eating\", \"note\": \"Cà phê Starbucks\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 20000 vnd làm Tiền nước tháng này",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Tiền nước tháng này) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Tiền nước tháng này\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Cước Internet hết 350k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Cước Internet) với số tiền **350,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Cước Internet\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 150000 từ Nhận lương tháng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Nhận lương tháng) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Nhận lương tháng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 350,000 tiền chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **350,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 350,000 tiền Dạy kèm tiếng Anh",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Dạy kèm tiếng Anh) trị giá **350,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Dạy kèm tiếng Anh\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Cước Internet hết 20,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Cước Internet) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Cước Internet\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Thu nhập từ Lương cứng được 20,000 đồng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 50000 vnd làm Đăng ký Netflix",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Đăng ký Netflix) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Đăng ký Netflix\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Mua quần áo mới hết 5000k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Mua sắm** (Mua quần áo mới) với số tiền **5,000,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"expense\", \"category_name\": \"Shopping\", \"note\": \"Mua quần áo mới\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 150k tiền Tiền thưởng dự án",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Tiền thưởng dự án) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Tiền thưởng dự án\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 50,000đ cho Đi hát Karaoke",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Đi hát Karaoke) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Đi hát Karaoke\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 150000 vnd làm Tiền nước tháng này",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Tiền nước tháng này) với số tiền **150,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Tiền nước tháng này\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 50000 cho Sắm đồ dùng gia đình",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Mua sắm** (Sắm đồ dùng gia đình) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Shopping\", \"note\": \"Sắm đồ dùng gia đình\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 20000 vnd làm Bánh mì ăn sáng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Ăn uống** (Bánh mì ăn sáng) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Eating\", \"note\": \"Bánh mì ăn sáng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu chi tiêu hết 1,200,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Healthcare\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Bánh mì ăn sáng hết 1200k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Ăn uống** (Bánh mì ăn sáng) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Eating\", \"note\": \"Bánh mì ăn sáng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Thu nhập từ Lương cứng được 50,000 đồng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **50,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Đi hát Karaoke hết 50k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Đi hát Karaoke) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Đi hát Karaoke\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 20000 từ chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 150,000đ cho Đổ xăng xe máy",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Đổ xăng xe máy) với số tiền **150,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Đổ xăng xe máy\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 350000 từ Thiết kế logo freelancer",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thiết kế logo freelancer) trị giá **350,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thiết kế logo freelancer\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu chi tiêu hết 20,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Healthcare\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 5,000,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Thu nhập từ chi tiêu được 5,000,000 đồng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 20000 từ Nhận lương tháng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Nhận lương tháng) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Nhận lương tháng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 5,000,000đ cho Mua game Steam",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Mua game Steam) với số tiền **5,000,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Mua game Steam\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 50,000đ cho Cà phê Starbucks",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Ăn uống** (Cà phê Starbucks) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Eating\", \"note\": \"Cà phê Starbucks\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 50,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **50,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống chi tiêu hết 20k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Healthcare\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Thu nhập từ chi tiêu được 150,000 đồng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Đi GrabCar hết 20k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Đi GrabCar) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Đi GrabCar\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 5000000 từ Dạy kèm tiếng Anh",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Dạy kèm tiếng Anh) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Dạy kèm tiếng Anh\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Thu nhập từ Lương cứng được 5,000,000 đồng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 150000 cho Bảo dưỡng xe máy",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Bảo dưỡng xe máy) với số tiền **150,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Bảo dưỡng xe máy\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 350k tiền Tiền thưởng dự án",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Tiền thưởng dự án) trị giá **350,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Tiền thưởng dự án\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 20000 vnd làm Đăng ký Netflix",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Đăng ký Netflix) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Đăng ký Netflix\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 20000 vnd làm Mua điện thoại mới",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Mua sắm** (Mua điện thoại mới) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Shopping\", \"note\": \"Mua điện thoại mới\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 350k tiền Thiết kế logo freelancer",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thiết kế logo freelancer) trị giá **350,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thiết kế logo freelancer\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 150000 cho Đóng tiền điện",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Đóng tiền điện) với số tiền **150,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Đóng tiền điện\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Ăn tối cùng gia đình hết 150,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Ăn uống** (Ăn tối cùng gia đình) với số tiền **150,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"expense\", \"category_name\": \"Eating\", \"note\": \"Ăn tối cùng gia đình\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 350,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **350,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 50000 vnd làm Xem phim rạp CGV",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Xem phim rạp CGV) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Xem phim rạp CGV\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 5,000,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Xem phim rạp CGV hết 1,200,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Xem phim rạp CGV) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Xem phim rạp CGV\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 20k tiền Dạy kèm tiếng Anh",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Dạy kèm tiếng Anh) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Dạy kèm tiếng Anh\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 350,000 tiền Lương cứng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **350,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 150,000 tiền Lương cứng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Thu nhập từ chi tiêu được 150,000 đồng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 150,000 tiền Thiết kế logo freelancer",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thiết kế logo freelancer) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thiết kế logo freelancer\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 150,000đ cho Xem phim rạp CGV",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Xem phim rạp CGV) với số tiền **150,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Xem phim rạp CGV\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 20,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thu nhập từ viết lách) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thu nhập từ viết lách\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 150k tiền Nhận lương tháng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Nhận lương tháng) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Nhận lương tháng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Tiền thuê nhà hết 50,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Tiền thuê nhà) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Tiền thuê nhà\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Tiền gửi xe hết 150k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Tiền gửi xe) với số tiền **150,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Tiền gửi xe\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Mua trà sữa hết 1,200,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Ăn uống** (Mua trà sữa) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Eating\", \"note\": \"Mua trà sữa\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 150k tiền chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Tiền gửi xe hết 50k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Tiền gửi xe) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Tiền gửi xe\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 350,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thiết kế logo freelancer) trị giá **350,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thiết kế logo freelancer\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Cước Internet hết 5000k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Cước Internet) với số tiền **5,000,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Cước Internet\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 150,000 tiền chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 1200000 vnd làm Đi GrabCar",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Đi GrabCar) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Đi GrabCar\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Xem phim rạp CGV hết 350,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Xem phim rạp CGV) với số tiền **350,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Xem phim rạp CGV\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Thu nhập từ Thu nhập từ viết lách được 50,000 đồng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thu nhập từ viết lách) trị giá **50,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thu nhập từ viết lách\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 150k tiền Thiết kế logo freelancer",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thiết kế logo freelancer) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thiết kế logo freelancer\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 50,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Nhận lương tháng) trị giá **50,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Nhận lương tháng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 5000k tiền chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 1,200,000 tiền Dạy kèm tiếng Anh",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Dạy kèm tiếng Anh) trị giá **1,200,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Dạy kèm tiếng Anh\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 20k tiền Tiền thưởng dự án",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Tiền thưởng dự án) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Tiền thưởng dự án\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 350,000 tiền Thiết kế logo freelancer",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thiết kế logo freelancer) trị giá **350,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thiết kế logo freelancer\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 150k tiền Thiết kế logo freelancer",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thiết kế logo freelancer) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thiết kế logo freelancer\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Thanh toán vé xe buýt hết 50,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Thanh toán vé xe buýt) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Thanh toán vé xe buýt\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 50,000đ cho Mua quần áo mới",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Mua sắm** (Mua quần áo mới) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Shopping\", \"note\": \"Mua quần áo mới\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 350,000đ cho Tiền thuê nhà",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Tiền thuê nhà) với số tiền **350,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Tiền thuê nhà\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 5,000,000 tiền Dạy kèm tiếng Anh",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Dạy kèm tiếng Anh) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Dạy kèm tiếng Anh\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 150,000đ cho Mua game Steam",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Mua game Steam) với số tiền **150,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Mua game Steam\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 1200000 cho Mua trà sữa",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Ăn uống** (Mua trà sữa) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Eating\", \"note\": \"Mua trà sữa\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 1200000 từ Dạy kèm tiếng Anh",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Dạy kèm tiếng Anh) trị giá **1,200,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Dạy kèm tiếng Anh\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 20,000 tiền Nhận lương tháng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Nhận lương tháng) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Nhận lương tháng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Đóng tiền điện hết 20,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Đóng tiền điện) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Đóng tiền điện\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 150,000đ cho Đổ xăng xe máy",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Đổ xăng xe máy) với số tiền **150,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Đổ xăng xe máy\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 5,000,000 tiền Nhận lương tháng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Nhận lương tháng) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Nhận lương tháng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 5000k tiền chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Mua điện thoại mới hết 350k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Mua sắm** (Mua điện thoại mới) với số tiền **350,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"expense\", \"category_name\": \"Shopping\", \"note\": \"Mua điện thoại mới\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 20,000đ cho Mua điện thoại mới",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Mua sắm** (Mua điện thoại mới) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Shopping\", \"note\": \"Mua điện thoại mới\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 50,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **50,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 1200000 cho Đi hát Karaoke",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Đi hát Karaoke) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Đi hát Karaoke\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 50,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **50,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 350,000đ cho chi tiêu",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **350,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"expense\", \"category_name\": \"Healthcare\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 20000 từ Lương cứng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Thu nhập từ Thu nhập từ viết lách được 350,000 đồng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thu nhập từ viết lách) trị giá **350,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thu nhập từ viết lách\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 1200k tiền Lương cứng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **1,200,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 20,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Nhận lương tháng) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Nhận lương tháng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 50k tiền Lương cứng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **50,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 50,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thiết kế logo freelancer) trị giá **50,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thiết kế logo freelancer\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 5000000 từ Lương cứng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 5,000,000 tiền Tiền thưởng dự án",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Tiền thưởng dự án) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Tiền thưởng dự án\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Ăn trưa văn phòng hết 350k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Ăn uống** (Ăn trưa văn phòng) với số tiền **350,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"expense\", \"category_name\": \"Eating\", \"note\": \"Ăn trưa văn phòng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 350000 vnd làm Tiền nước tháng này",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Tiền nước tháng này) với số tiền **350,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Tiền nước tháng này\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 150,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Dạy kèm tiếng Anh) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Dạy kèm tiếng Anh\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 5000k tiền Thu nhập từ viết lách",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thu nhập từ viết lách) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thu nhập từ viết lách\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 5,000,000 tiền chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 5000000 từ Lương cứng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 20,000đ cho chi tiêu",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Healthcare\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 1,200,000đ cho Tiền thuê nhà",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Tiền thuê nhà) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Tiền thuê nhà\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 50,000đ cho Mua điện thoại mới",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Mua sắm** (Mua điện thoại mới) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Shopping\", \"note\": \"Mua điện thoại mới\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 50,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **50,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu chi tiêu hết 50,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Healthcare\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới thanh toán 5000000 cho Bảo dưỡng xe máy",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Bảo dưỡng xe máy) với số tiền **5,000,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Bảo dưỡng xe máy\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 20,000đ cho Đi hát Karaoke",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Đi hát Karaoke) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Đi hát Karaoke\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 150,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Đi GrabCar hết 350k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Đi GrabCar) với số tiền **350,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Đi GrabCar\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Tiền gửi xe hết 150,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Tiền gửi xe) với số tiền **150,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Tiền gửi xe\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 50,000 tiền Dạy kèm tiếng Anh",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Dạy kèm tiếng Anh) trị giá **50,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Dạy kèm tiếng Anh\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 5,000,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Tiền thưởng dự án) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Tiền thưởng dự án\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Mua điện thoại mới hết 150,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Mua sắm** (Mua điện thoại mới) với số tiền **150,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"expense\", \"category_name\": \"Shopping\", \"note\": \"Mua điện thoại mới\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Xem phim rạp CGV hết 1,200,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Xem phim rạp CGV) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Xem phim rạp CGV\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu chi tiêu hết 20,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Healthcare\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Tiền nước tháng này hết 50k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Tiền nước tháng này) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Tiền nước tháng này\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 150,000đ cho Mua game Steam",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Mua game Steam) với số tiền **150,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Mua game Steam\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Cước Internet hết 20,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Cước Internet) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Cước Internet\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 50000 vnd làm Đóng tiền điện",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Đóng tiền điện) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Đóng tiền điện\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Đi hát Karaoke hết 5000k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Đi hát Karaoke) với số tiền **5,000,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Đi hát Karaoke\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 20000 vnd làm Thanh toán vé xe buýt",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Thanh toán vé xe buýt) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Thanh toán vé xe buýt\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 20,000đ cho Tiền nước tháng này",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Tiền nước tháng này) với số tiền **20,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Tiền nước tháng này\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 20000 từ chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 350,000 tiền Lương cứng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **350,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 50,000đ cho Đóng tiền điện",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Đóng tiền điện) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Đóng tiền điện\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Thu nhập từ chi tiêu được 350,000 đồng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **350,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 150,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 20000 từ Thiết kế logo freelancer",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Thiết kế logo freelancer) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Thiết kế logo freelancer\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa nhận được 150,000 tiền Lương cứng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 350,000đ cho Đóng tiền điện",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Đóng tiền điện) với số tiền **350,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Đóng tiền điện\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 20k tiền Lương cứng",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Lương cứng) trị giá **20,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 20000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Lương cứng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 5000000 từ chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **5,000,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Mới có 50000 từ chi tiêu",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **50,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"income\", \"category_name\": \"Investment\", \"note\": \"chi tiêu\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Vừa tiêu 350000 vnd làm Bánh mì ăn sáng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Ăn uống** (Bánh mì ăn sáng) với số tiền **350,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"expense\", \"category_name\": \"Eating\", \"note\": \"Bánh mì ăn sáng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 150,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Nhận lương tháng) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Nhận lương tháng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Mua game Steam hết 50k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Giải trí** (Mua game Steam) với số tiền **50,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"expense\", \"category_name\": \"Entertainment\", \"note\": \"Mua game Steam\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ăn uống Đóng tiền điện hết 1200k",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Hóa đơn** (Đóng tiền điện) với số tiền **1,200,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 1200000, \"type\": \"expense\", \"category_name\": \"Bills\", \"note\": \"Đóng tiền điện\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Nhận 50k tiền Tiền thưởng dự án",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Lương** (Tiền thưởng dự án) trị giá **50,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 50000, \"type\": \"income\", \"category_name\": \"Salary\", \"note\": \"Tiền thưởng dự án\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Hôm nay mình tiêu 350,000đ cho Đổ xăng xe máy",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Di chuyển** (Đổ xăng xe máy) với số tiền **350,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 350000, \"type\": \"expense\", \"category_name\": \"Transport\", \"note\": \"Đổ xăng xe máy\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Lương tháng này về 150,000đ",
+    "input": "",
+    "output": "Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Làm thêm** (Dạy kèm tiếng Anh) trị giá **150,000đ** vào tài khoản của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 150000, \"type\": \"income\", \"category_name\": \"Freelance\", \"note\": \"Dạy kèm tiếng Anh\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Ghi lại chi tiêu Bánh mì ăn sáng hết 5,000,000 đồng",
+    "input": "",
+    "output": "Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Ăn uống** (Bánh mì ăn sáng) với số tiền **5,000,000đ** vào sổ ghi chép của bạn.\n\n[TRANSACTION_ACTION]\n{\"amount\": 5000000, \"type\": \"expense\", \"category_name\": \"Eating\", \"note\": \"Bánh mì ăn sáng\"}\n[/TRANSACTION_ACTION]"
+  },
+  {
+    "instruction": "Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Trợ lý ơi, Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Cho mình hỏi: Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Làm sao để tiết kiệm tiền khi thu nhập thấp?",
+    "input": "",
+    "output": "Với thu nhập thấp, bạn vẫn có thể tiết kiệm bằng các bước:\n- **Tiết kiệm trước, chi tiêu sau:** Trích ra 5-10% thu nhập ngay khi nhận.\n- **Cắt giảm chi phí ẩn:** Hủy các gói đăng ký không dùng, tự nấu ăn ở nhà.\n- **Sử dụng ứng dụng ghi chép:** Theo dõi từng khoản chi nhỏ nhất để biết tiền trôi đi đâu."
+  },
+  {
+    "instruction": "Cho mình hỏi: Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Làm sao để Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Trợ lý ơi, Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Cho mình hỏi: Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Trợ lý ơi, Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Làm sao để quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Trợ lý ơi, tiết kiệm tiền khi thu nhập thấp?",
+    "input": "",
+    "output": "Với thu nhập thấp, bạn vẫn có thể tiết kiệm bằng các bước:\n- **Tiết kiệm trước, chi tiêu sau:** Trích ra 5-10% thu nhập ngay khi nhận.\n- **Cắt giảm chi phí ẩn:** Hủy các gói đăng ký không dùng, tự nấu ăn ở nhà.\n- **Sử dụng ứng dụng ghi chép:** Theo dõi từng khoản chi nhỏ nhất để biết tiền trôi đi đâu."
+  },
+  {
+    "instruction": "Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Trợ lý ơi, Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Trợ lý ơi, quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Cho mình hỏi: Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Cho mình hỏi: Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Trợ lý ơi, Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Làm sao để quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Cho mình hỏi: Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Trợ lý ơi, Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Làm sao để quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Làm sao để Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Trợ lý ơi, quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Làm sao để quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Cho mình hỏi: Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Trợ lý ơi, Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Trợ lý ơi, Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Cho mình hỏi: Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Trợ lý ơi, Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Làm sao để Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Làm sao để quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Trợ lý ơi, Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Trợ lý ơi, Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Trợ lý ơi, Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Trợ lý ơi, Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Cho mình hỏi: Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Cho mình hỏi: quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Trợ lý ơi, Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Cho mình hỏi: Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Cho mình hỏi: Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Làm sao để tiết kiệm tiền khi thu nhập thấp?",
+    "input": "",
+    "output": "Với thu nhập thấp, bạn vẫn có thể tiết kiệm bằng các bước:\n- **Tiết kiệm trước, chi tiêu sau:** Trích ra 5-10% thu nhập ngay khi nhận.\n- **Cắt giảm chi phí ẩn:** Hủy các gói đăng ký không dùng, tự nấu ăn ở nhà.\n- **Sử dụng ứng dụng ghi chép:** Theo dõi từng khoản chi nhỏ nhất để biết tiền trôi đi đâu."
+  },
+  {
+    "instruction": "Cho mình hỏi: Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Làm sao để tiết kiệm tiền khi thu nhập thấp?",
+    "input": "",
+    "output": "Với thu nhập thấp, bạn vẫn có thể tiết kiệm bằng các bước:\n- **Tiết kiệm trước, chi tiêu sau:** Trích ra 5-10% thu nhập ngay khi nhận.\n- **Cắt giảm chi phí ẩn:** Hủy các gói đăng ký không dùng, tự nấu ăn ở nhà.\n- **Sử dụng ứng dụng ghi chép:** Theo dõi từng khoản chi nhỏ nhất để biết tiền trôi đi đâu."
+  },
+  {
+    "instruction": "Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Làm sao để Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Cho mình hỏi: quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Làm sao để Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Cho mình hỏi: Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Cho mình hỏi: Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Cho mình hỏi: quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Trợ lý ơi, quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Trợ lý ơi, Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Làm sao để Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Làm sao để quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Làm sao để Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Trợ lý ơi, quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Cho mình hỏi: tiết kiệm tiền khi thu nhập thấp?",
+    "input": "",
+    "output": "Với thu nhập thấp, bạn vẫn có thể tiết kiệm bằng các bước:\n- **Tiết kiệm trước, chi tiêu sau:** Trích ra 5-10% thu nhập ngay khi nhận.\n- **Cắt giảm chi phí ẩn:** Hủy các gói đăng ký không dùng, tự nấu ăn ở nhà.\n- **Sử dụng ứng dụng ghi chép:** Theo dõi từng khoản chi nhỏ nhất để biết tiền trôi đi đâu."
+  },
+  {
+    "instruction": "Cho mình hỏi: Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Cho mình hỏi: tiết kiệm tiền khi thu nhập thấp?",
+    "input": "",
+    "output": "Với thu nhập thấp, bạn vẫn có thể tiết kiệm bằng các bước:\n- **Tiết kiệm trước, chi tiêu sau:** Trích ra 5-10% thu nhập ngay khi nhận.\n- **Cắt giảm chi phí ẩn:** Hủy các gói đăng ký không dùng, tự nấu ăn ở nhà.\n- **Sử dụng ứng dụng ghi chép:** Theo dõi từng khoản chi nhỏ nhất để biết tiền trôi đi đâu."
+  },
+  {
+    "instruction": "Trợ lý ơi, Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Cho mình hỏi: Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Cho mình hỏi: Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Làm sao để tiết kiệm tiền khi thu nhập thấp?",
+    "input": "",
+    "output": "Với thu nhập thấp, bạn vẫn có thể tiết kiệm bằng các bước:\n- **Tiết kiệm trước, chi tiêu sau:** Trích ra 5-10% thu nhập ngay khi nhận.\n- **Cắt giảm chi phí ẩn:** Hủy các gói đăng ký không dùng, tự nấu ăn ở nhà.\n- **Sử dụng ứng dụng ghi chép:** Theo dõi từng khoản chi nhỏ nhất để biết tiền trôi đi đâu."
+  },
+  {
+    "instruction": "Trợ lý ơi, tiết kiệm tiền khi thu nhập thấp?",
+    "input": "",
+    "output": "Với thu nhập thấp, bạn vẫn có thể tiết kiệm bằng các bước:\n- **Tiết kiệm trước, chi tiêu sau:** Trích ra 5-10% thu nhập ngay khi nhận.\n- **Cắt giảm chi phí ẩn:** Hủy các gói đăng ký không dùng, tự nấu ăn ở nhà.\n- **Sử dụng ứng dụng ghi chép:** Theo dõi từng khoản chi nhỏ nhất để biết tiền trôi đi đâu."
+  },
+  {
+    "instruction": "Cho mình hỏi: Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Trợ lý ơi, tiết kiệm tiền khi thu nhập thấp?",
+    "input": "",
+    "output": "Với thu nhập thấp, bạn vẫn có thể tiết kiệm bằng các bước:\n- **Tiết kiệm trước, chi tiêu sau:** Trích ra 5-10% thu nhập ngay khi nhận.\n- **Cắt giảm chi phí ẩn:** Hủy các gói đăng ký không dùng, tự nấu ăn ở nhà.\n- **Sử dụng ứng dụng ghi chép:** Theo dõi từng khoản chi nhỏ nhất để biết tiền trôi đi đâu."
+  },
+  {
+    "instruction": "Làm sao để Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Làm sao để tiết kiệm tiền khi thu nhập thấp?",
+    "input": "",
+    "output": "Với thu nhập thấp, bạn vẫn có thể tiết kiệm bằng các bước:\n- **Tiết kiệm trước, chi tiêu sau:** Trích ra 5-10% thu nhập ngay khi nhận.\n- **Cắt giảm chi phí ẩn:** Hủy các gói đăng ký không dùng, tự nấu ăn ở nhà.\n- **Sử dụng ứng dụng ghi chép:** Theo dõi từng khoản chi nhỏ nhất để biết tiền trôi đi đâu."
+  },
+  {
+    "instruction": "Trợ lý ơi, Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Làm sao để Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Làm sao để tiết kiệm tiền khi thu nhập thấp?",
+    "input": "",
+    "output": "Với thu nhập thấp, bạn vẫn có thể tiết kiệm bằng các bước:\n- **Tiết kiệm trước, chi tiêu sau:** Trích ra 5-10% thu nhập ngay khi nhận.\n- **Cắt giảm chi phí ẩn:** Hủy các gói đăng ký không dùng, tự nấu ăn ở nhà.\n- **Sử dụng ứng dụng ghi chép:** Theo dõi từng khoản chi nhỏ nhất để biết tiền trôi đi đâu."
+  },
+  {
+    "instruction": "Làm sao để quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Làm sao để quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Cho mình hỏi: Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Trợ lý ơi, Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Cho mình hỏi: Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Cho mình hỏi: quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Làm sao để quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Trợ lý ơi, Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Cho mình hỏi: Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Trợ lý ơi, Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Cho mình hỏi: quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Cho mình hỏi: quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Trợ lý ơi, Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Trợ lý ơi, quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Cho mình hỏi: Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Cho mình hỏi: Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Làm sao để tiết kiệm tiền khi thu nhập thấp?",
+    "input": "",
+    "output": "Với thu nhập thấp, bạn vẫn có thể tiết kiệm bằng các bước:\n- **Tiết kiệm trước, chi tiêu sau:** Trích ra 5-10% thu nhập ngay khi nhận.\n- **Cắt giảm chi phí ẩn:** Hủy các gói đăng ký không dùng, tự nấu ăn ở nhà.\n- **Sử dụng ứng dụng ghi chép:** Theo dõi từng khoản chi nhỏ nhất để biết tiền trôi đi đâu."
+  },
+  {
+    "instruction": "Làm sao để Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Làm sao để quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Trợ lý ơi, quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Trợ lý ơi, tiết kiệm tiền khi thu nhập thấp?",
+    "input": "",
+    "output": "Với thu nhập thấp, bạn vẫn có thể tiết kiệm bằng các bước:\n- **Tiết kiệm trước, chi tiêu sau:** Trích ra 5-10% thu nhập ngay khi nhận.\n- **Cắt giảm chi phí ẩn:** Hủy các gói đăng ký không dùng, tự nấu ăn ở nhà.\n- **Sử dụng ứng dụng ghi chép:** Theo dõi từng khoản chi nhỏ nhất để biết tiền trôi đi đâu."
+  },
+  {
+    "instruction": "Làm sao để Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Trợ lý ơi, Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Cho mình hỏi: Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Cho mình hỏi: Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Làm sao để tiết kiệm tiền khi thu nhập thấp?",
+    "input": "",
+    "output": "Với thu nhập thấp, bạn vẫn có thể tiết kiệm bằng các bước:\n- **Tiết kiệm trước, chi tiêu sau:** Trích ra 5-10% thu nhập ngay khi nhận.\n- **Cắt giảm chi phí ẩn:** Hủy các gói đăng ký không dùng, tự nấu ăn ở nhà.\n- **Sử dụng ứng dụng ghi chép:** Theo dõi từng khoản chi nhỏ nhất để biết tiền trôi đi đâu."
+  },
+  {
+    "instruction": "Cho mình hỏi: tiết kiệm tiền khi thu nhập thấp?",
+    "input": "",
+    "output": "Với thu nhập thấp, bạn vẫn có thể tiết kiệm bằng các bước:\n- **Tiết kiệm trước, chi tiêu sau:** Trích ra 5-10% thu nhập ngay khi nhận.\n- **Cắt giảm chi phí ẩn:** Hủy các gói đăng ký không dùng, tự nấu ăn ở nhà.\n- **Sử dụng ứng dụng ghi chép:** Theo dõi từng khoản chi nhỏ nhất để biết tiền trôi đi đâu."
+  },
+  {
+    "instruction": "Cho mình hỏi: Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Trợ lý ơi, Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Cho mình hỏi: tiết kiệm tiền khi thu nhập thấp?",
+    "input": "",
+    "output": "Với thu nhập thấp, bạn vẫn có thể tiết kiệm bằng các bước:\n- **Tiết kiệm trước, chi tiêu sau:** Trích ra 5-10% thu nhập ngay khi nhận.\n- **Cắt giảm chi phí ẩn:** Hủy các gói đăng ký không dùng, tự nấu ăn ở nhà.\n- **Sử dụng ứng dụng ghi chép:** Theo dõi từng khoản chi nhỏ nhất để biết tiền trôi đi đâu."
+  },
+  {
+    "instruction": "Cho mình hỏi: Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Làm sao để quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Cho mình hỏi: Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Cho mình hỏi: Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Cho mình hỏi: Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Trợ lý ơi, Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Làm sao để Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Làm sao để tiết kiệm tiền khi thu nhập thấp?",
+    "input": "",
+    "output": "Với thu nhập thấp, bạn vẫn có thể tiết kiệm bằng các bước:\n- **Tiết kiệm trước, chi tiêu sau:** Trích ra 5-10% thu nhập ngay khi nhận.\n- **Cắt giảm chi phí ẩn:** Hủy các gói đăng ký không dùng, tự nấu ăn ở nhà.\n- **Sử dụng ứng dụng ghi chép:** Theo dõi từng khoản chi nhỏ nhất để biết tiền trôi đi đâu."
+  },
+  {
+    "instruction": "Trợ lý ơi, tiết kiệm tiền khi thu nhập thấp?",
+    "input": "",
+    "output": "Với thu nhập thấp, bạn vẫn có thể tiết kiệm bằng các bước:\n- **Tiết kiệm trước, chi tiêu sau:** Trích ra 5-10% thu nhập ngay khi nhận.\n- **Cắt giảm chi phí ẩn:** Hủy các gói đăng ký không dùng, tự nấu ăn ở nhà.\n- **Sử dụng ứng dụng ghi chép:** Theo dõi từng khoản chi nhỏ nhất để biết tiền trôi đi đâu."
+  },
+  {
+    "instruction": "Trợ lý ơi, Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "Làm sao để Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Trợ lý ơi, tiết kiệm tiền khi thu nhập thấp?",
+    "input": "",
+    "output": "Với thu nhập thấp, bạn vẫn có thể tiết kiệm bằng các bước:\n- **Tiết kiệm trước, chi tiêu sau:** Trích ra 5-10% thu nhập ngay khi nhận.\n- **Cắt giảm chi phí ẩn:** Hủy các gói đăng ký không dùng, tự nấu ăn ở nhà.\n- **Sử dụng ứng dụng ghi chép:** Theo dõi từng khoản chi nhỏ nhất để biết tiền trôi đi đâu."
+  },
+  {
+    "instruction": "Trợ lý ơi, Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "Trợ lý ơi, Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  },
+  {
+    "instruction": "quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Làm sao để Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Tại sao tôi luôn hết tiền trước cuối tháng?",
+    "input": "",
+    "output": "Tình trạng này xảy ra do bạn gặp phải hiện tượng 'lạm phát lối sống' hoặc chưa thiết lập ngân sách rõ ràng. Để khắc phục:\n1. **Đặt hạn mức chi tiêu** cho từng danh mục ở tab 'Ngân sách'.\n2. **Phân biệt Nhu cầu và Mong muốn** trước khi thanh toán.\n3. **Tự động tiết kiệm** ngay khi nhận lương trước khi chi tiêu."
+  },
+  {
+    "instruction": "quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Cho mình hỏi: Có nên đầu tư khi chưa có nhiều tiền tiết kiệm?",
+    "input": "",
+    "output": "Trước khi đầu tư, bạn cần ưu tiên xây dựng **Quỹ khẩn cấp** và **Thanh toán các khoản nợ có lãi suất cao**. Khi đã có quỹ phòng vệ cơ bản, bạn có thể bắt đầu đầu tư với số tiền nhỏ (như quỹ mở, chứng chỉ quỹ) để tận dụng lãi kép."
+  },
+  {
+    "instruction": "Trợ lý ơi, quản lý tài chính cá nhân tốt hơn?",
+    "input": "",
+    "output": "Để quản lý tài chính cá nhân hiệu quả, bạn nên áp dụng quy tắc 50/30/20:\n- **50% cho nhu cầu thiết yếu** (Tiền nhà, ăn uống, hóa đơn).\n- **30% cho sở thích cá nhân** (Giải trí, mua sắm, du lịch).\n- **20% cho tích lũy** (Tiết kiệm, quỹ khẩn cấp, đầu tư).\nHãy tập thói quen ghi chép mọi giao dịch hàng ngày trong ứng dụng Smart Expense để theo dõi dòng tiền dễ dàng nhất."
+  },
+  {
+    "instruction": "Trợ lý ơi, Quỹ khẩn cấp là gì và nên tích lũy bao nhiêu?",
+    "input": "",
+    "output": "Quỹ khẩn cấp là khoản tiền dự phòng dành riêng cho các sự kiện bất ngờ (thất nghiệp, ốm đau, sửa xe). Bạn nên tích lũy khoản tiền tương đương từ **3 đến 6 tháng chi phí sinh hoạt thiết yếu** của mình để đảm bảo an toàn tài chính."
+  }
+]

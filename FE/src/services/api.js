@@ -24,6 +24,9 @@ export const login = (userData) => api.post('/auth/login', userData);
 export const getProfile = () => api.get('/auth/profile');
 export const getUsers = () => api.get('/auth/users');
 export const resetPassword = (email, new_password) => api.post('/auth/reset-password', { email, new_password });
+export const forgotPassword = (email) => api.post('/auth/forgot-password', { email });
+export const resetPasswordWithOtp = (email, otp, new_password) => api.post('/auth/reset-password-with-otp', { email, otp, new_password });
+export const changePassword = (data) => api.post('/auth/change-password', data);
 
 // Transaction APIs
 export const getTransactions = (params) => api.get('/transactions', { params });

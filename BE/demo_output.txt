@@ -1,0 +1,38 @@
+============================================================
+DEMO TRUY XUẤT BỘ DỮ LIỆU HUẤN LUYỆN AI ADVISOR
+============================================================
+[*] Tìm thấy 450 mẫu dữ liệu huấn luyện.
+[*] Đang tiến hành mô phỏng hội thoại...
+------------------------------------------------------------
+
+[Câu hỏi của bạn #1]:
+ => "Làm sao để tiết kiệm tiền khi thu nhập thấp?"
+..............................
+[AI Advisor Phản hồi]:
+Với thu nhập thấp, bạn vẫn có thể tiết kiệm bằng các bước:
+- **Tiết kiệm trước, chi tiêu sau:** Trích ra 5-10% thu nhập ngay khi nhận.
+- **Cắt giảm chi phí ẩn:** Hủy các gói đăng ký không dùng, tự nấu ăn ở nhà.
+- **Sử dụng ứng dụng ghi chép:** Theo dõi từng khoản chi nhỏ nhất để biết tiền trôi đi đâu.
+------------------------------------------------------------
+
+[Câu hỏi của bạn #2]:
+ => "Hôm nay mình tiêu 350,000đ cho chi tiêu"
+..............................
+[AI Advisor Phản hồi]:
+Đã hiểu! Tôi đã tự động ghi nhận khoản chi tiêu cho **Sức khỏe** (chi tiêu) với số tiền **350,000đ** vào sổ ghi chép của bạn.
+
+[TRANSACTION_ACTION]
+{"amount": 350000, "type": "expense", "category_name": "Healthcare", "note": "chi tiêu"}
+[/TRANSACTION_ACTION]
+------------------------------------------------------------
+
+[Câu hỏi của bạn #3]:
+ => "Mới có 20000 từ chi tiêu"
+..............................
+[AI Advisor Phản hồi]:
+Tuyệt vời! Tôi đã ghi nhận khoản thu nhập mới từ **Đầu tư** (chi tiêu) trị giá **20,000đ** vào tài khoản của bạn.
+
+[TRANSACTION_ACTION]
+{"amount": 20000, "type": "income", "category_name": "Investment", "note": "chi tiêu"}
+[/TRANSACTION_ACTION]
+------------------------------------------------------------
