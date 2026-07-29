@@ -11,6 +11,14 @@ class Config:
     SQLALCHEMY_DATABASE_URI = os.getenv('SQLALCHEMY_DATABASE_URI', 'sqlite:///expense_tracker.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     
+    # Cấu hình tối ưu hóa kết nối Pool cho PostgreSQL (Tránh lỗi SSL/EOF khi dùng PgBouncer)
+    SQLALCHEMY_ENGINE_OPTIONS = {
+        "pool_pre_ping": True,
+        "pool_recycle": 280,
+        "pool_size": 10,
+        "max_overflow": 20
+    }
+    
     # JWT Config - THÊM CÁC DÒNG NÀY
     JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY', 'jwt-secret-key')
     JWT_ACCESS_TOKEN_EXPIRES = timedelta(hours=24)
