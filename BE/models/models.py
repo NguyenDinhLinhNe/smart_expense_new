@@ -41,7 +41,7 @@ class Category(db.Model):
     name = db.Column(db.String(50), nullable=False)
     icon = db.Column(db.String(50), default='📌')
     color = db.Column(db.String(20), default='#6B7280')
-    type = db.Column(db.Enum('income', 'expense'), default='expense')
+    type = db.Column(db.Enum('income', 'expense', name='category_type'), default='expense')
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=True)
     
     # Relationship
@@ -65,7 +65,7 @@ class Transaction(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     category_id = db.Column(db.Integer, db.ForeignKey('categories.id'), nullable=False)
     amount = db.Column(db.Numeric(10, 2), nullable=False)
-    type = db.Column(db.Enum('income', 'expense'), nullable=False)
+    type = db.Column(db.Enum('income', 'expense', name='transaction_type'), nullable=False)
     note = db.Column(db.Text)
     date = db.Column(db.Date, nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
@@ -113,7 +113,7 @@ class RecurringTransaction(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     category_id = db.Column(db.Integer, db.ForeignKey('categories.id'), nullable=False)
     amount = db.Column(db.Numeric(10, 2), nullable=False)
-    type = db.Column(db.Enum('income', 'expense'), nullable=False)
+    type = db.Column(db.Enum('income', 'expense', name='recurring_type'), nullable=False)
     description = db.Column(db.String(255), nullable=True)
     frequency = db.Column(db.String(20), nullable=False, default='monthly')
     day_of_period = db.Column(db.Integer, nullable=False, default=1)
