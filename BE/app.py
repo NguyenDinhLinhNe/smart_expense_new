@@ -18,6 +18,54 @@ db.init_app(app)
 # Ensure database tables and columns exist (runs during Gunicorn startup)
 with app.app_context():
     db.create_all()
+    
+    # Tự động gieo (seed) tài khoản Admin nếu chưa tồn tại trên Supabase
+    from models.models import User, Category
+    from werkzeug.security import generate_password_hash
+    
+    admin_user = User.query.filter_by(role='admin').first()
+    if not admin_user:
+        admin_user = User(
+            name="Admin User",
+            email="admin@example.com",
+            password=generate_password_hash("SecureExpense2026#"),
+            role='admin'
+        )
+        db.session.add(admin_user)
+        try:
+            db.session.commit()
+            print("[OK] Default admin user created successfully on Supabase!")
+        except Exception as e:
+            db.session.rollback()
+            print(f"[Warning] Failed to seed admin user: {e}")
+            
+    # Tự động gieo các danh mục mặc định nếu CSDL trống
+    if Category.query.filter_by(user_id=None).count() == 0:
+        default_categories = [
+            {'name': 'Food', 'icon': '🍔', 'color': '#FF6B6B', 'type': 'expense'},
+            {'name': 'Transport', 'icon': '🚗', 'color': '#4ECDC4', 'type': 'expense'},
+            {'name': 'Shopping', 'icon': '🛍️', 'color': '#45B7D1', 'type': 'expense'},
+            {'name': 'Entertainment', 'icon': '🎬', 'color': '#96CEB4', 'type': 'expense'},
+            {'name': 'Bills', 'icon': '💡', 'color': '#FFEAA7', 'type': 'expense'},
+            {'name': 'Salary', 'icon': '💰', 'color': '#10B981', 'type': 'income'},
+            {'name': 'Freelance', 'icon': '💻', 'color': '#8B5CF6', 'type': 'income'},
+        ]
+        for cat in default_categories:
+            category = Category(
+                name=cat['name'],
+                icon=cat['icon'],
+                color=cat['color'],
+                type=cat['type'],
+                user_id=None
+            )
+            db.session.add(category)
+        try:
+            db.session.commit()
+            print("[OK] Default categories seeded successfully on Supabase!")
+        except Exception as e:
+            db.session.rollback()
+            print(f"[Warning] Failed to seed default categories: {e}")
+
     try:
         with db.engine.connect() as conn:
             # Add columns if they do not exist (will fail silently if they already exist)
